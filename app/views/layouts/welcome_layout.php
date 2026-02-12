@@ -29,7 +29,7 @@ $contacts = json_decode($data['contacts'], true);
         Html::page_meta('viewport', META_VIEWPORT);
         
         //Vendor CSS Files
-        Html::page_asset('vendor/bootstrap/css/bootstrap.min.css');
+        Html::page_css('bootstrap.min.css');
         Html::page_asset('vendor/bootstrap-icons/bootstrap-icons.css');
         Html::page_asset('vendor/aos/aos.css');
         Html::page_asset('vendor/swiper/swiper-bundle.min.css');
@@ -56,12 +56,8 @@ $contacts = json_decode($data['contacts'], true);
         <?php
         Html::page_asset('vendor/bootstrap/js/bootstrap.bundle.min.js');
         Html::page_asset('vendor/php-email-form/validate.js');
-        Html::page_asset('vendor/aos/aos.js');
-        Html::page_asset('vendor/purecounter/purecounter_vanilla.js');
-        Html::page_asset('vendor/swiper/swiper-bundle.min.js');
         Html::page_asset('vendor/isotope-layout/isotope.pkgd.min.js');
         Html::page_asset('vendor/imagesloaded/imagesloaded.pkgd.min.js');
-        Html::page_asset('vendor/glightbox/js/glightbox.min.js');
         Html::page_js('aos.js');
         Html::page_js('purecounter_vanilla.js');
         Html::page_js('glightbox.min.js');
