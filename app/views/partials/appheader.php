@@ -47,6 +47,6 @@ $page_id = Router::$page_id;
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="<?= get_link('info/contact') ?>#quote">Request a Quote</a>
+        <a class="btn-getstarted" href="<?= get_link('index/quote') ?>">Request a Quote</a>
     </div>
 </header>
