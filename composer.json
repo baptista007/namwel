@@ -1,0 +1,7 @@
+{
+    "require": {
+        "dompdf/dompdf": "^0.8.3",
+        "gumlet/php-image-resize": "^2.0",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

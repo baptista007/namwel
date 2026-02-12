@@ -1,0 +1,194 @@
+.destinations-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #55a6b0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: var(--primary-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* Card Styling */
+.dest-card {
+  position: relative;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: var(--transition);
+}
+
+.dest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Background Zoom Effect */
+.dest-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.dest-card:hover::before {
+  transform: scale(1.1);
+}
+
+.dest-card .card-content {
+  color: #ffffff;
+}
+
+.card-content {
+  padding: 30px;
+  color: var(--text-light);
+  width: 100%;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.cta-link {
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.dest-card:hover .cta-link {
+  border-bottom: 2px solid #55a6b0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Improved Package Cards */
+#packages .service-item {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+#packages .service-item:hover {
+    transform: translateY(-10px);
+    border-color: #689f38; /* NamWel Green */
+    box-shadow: 0px 10px 35px rgba(104, 159, 56, 0.15);
+}
+
+#packages .icon {
+    width: 60px;
+    height: 60px;
+    background: #f1f8e9; /* Light Green background */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #689f38;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+#packages .service-item:hover .icon {
+    background: #689f38;
+    color: #fff;
+}
+
+#packages h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #2d3436;
+}
+
+#packages .readmore {
+    margin-top: 15px;
+    display: inline-block;
+    color: #689f38;
+    font-weight: 600;
+}
+
+/* Section Title Styling */
+.section-title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    background: #f1f8e9;
+    color: #689f38;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.testimonials-home .testimonial-item {
+  min-height: 100px;
+}
+
+.testimonial-message {
+    display: block;
+    max-height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.dest-card h3 {
+  color: #689f38;
+}
+
+.main .page-title {
+  padding-top: 100px;
+}
