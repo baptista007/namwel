@@ -30,10 +30,10 @@ $contacts = json_decode($data['contacts'], true);
         
         //Vendor CSS Files
         Html::page_css('bootstrap.min.css');
-        Html::page_asset('vendor/bootstrap-icons/bootstrap-icons.css');
-        Html::page_asset('vendor/aos/aos.css');
-        Html::page_asset('vendor/swiper/swiper-bundle.min.css');
-        Html::page_asset('vendor/glightbox/css/glightbox.min.css');
+        Html::page_css('bootstrap-icons.css');
+        Html::page_css('aos.css');
+        Html::page_css('swiper-bundle.min.css');
+        Html::page_css('glightbox.min.css');
 
         //Main CSS
         Html::page_css('main.css');
@@ -54,10 +54,7 @@ $contacts = json_decode($data['contacts'], true);
         <!-- Preloader -->
         <div id="preloader"></div>
         <?php
-        Html::page_asset('vendor/bootstrap/js/bootstrap.bundle.min.js');
-        Html::page_asset('vendor/php-email-form/validate.js');
-        Html::page_asset('vendor/isotope-layout/isotope.pkgd.min.js');
-        Html::page_asset('vendor/imagesloaded/imagesloaded.pkgd.min.js');
+        Html::page_js('bootstrap.bundle.min.js');
         Html::page_js('aos.js');
         Html::page_js('purecounter_vanilla.js');
         Html::page_js('glightbox.min.js');
