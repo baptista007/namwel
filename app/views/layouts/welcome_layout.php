@@ -254,7 +254,9 @@ $contacts = json_decode($data['contacts'], true);
             });
 
             document.addEventListener('DOMContentLoaded', function() {
-                openModal('welcome-modal');
+                setTimeout(() => {
+                    openModal('welcome-modal');
+                }, 10000);
             });
         </script>
     </body>
