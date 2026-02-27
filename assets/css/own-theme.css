@@ -1548,3 +1548,381 @@ h6 {
 .main {
     padding: 30px 0;
 }
+
+/* How It Works */
+.how-it-works {
+    padding: 80px 0;
+    background: var(--light-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: var(--bush-green);
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--vibrant-green) 0%, var(--dark-forest-green) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--golden-yellow);
+}
+
+.step-card h3 {
+    font-size: 18px;
+    color: var(--bush-green);
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Quote Form Section */
+.quote-section {
+    padding: 80px 0;
+    background: var(--warm-sand);
+}
+
+.quote-container {
+    margin: 0 auto;
+    background: var(--light-white);
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 20px 50px var(--shadow-medium);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    color: var(--bush-green);
+    margin-bottom: 12px;
+}
+
+.form-header p {
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section-title {
+    font-size: 18px;
+    color: var(--bush-green);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--warm-sand);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-option:hover {
+    border-color: var(--primary-orange);
+}
+
+.checkbox-option.selected {
+    border-color: var(--primary-orange);
+    background: rgba(230, 81, 0, 0.05);
+}
+
+.checkbox-option input {
+    display: none;
+}
+
+.checkbox-option i {
+    color: var(--vibrant-green);
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.checkbox-option.selected i {
+    opacity: 1;
+}
+
+.checkbox-option span {
+    font-size: 14px;
+    color: var(--dark-text);
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    border-color: var(--primary-orange);
+}
+
+.radio-option.selected {
+    border-color: var(--primary-orange);
+    background: rgba(230, 81, 0, 0.05);
+}
+
+.radio-option input {
+    display: none;
+}
+
+.radio-option i {
+    color: var(--bush-green);
+    font-size: 18px;
+}
+
+.form-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.btn-secondary {
+    background: #eee;
+    color: var(--dark-text);
+}
+
+.btn-secondary:hover {
+    background: #ddd;
+}
+
+/* Success State */
+.success-message {
+    text-align: center;
+    padding: 60px 40px;
+    display: none;
+}
+
+.success-message.active {
+    display: block;
+}
+
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--vibrant-green) 0%, var(--dark-forest-green) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.success-icon i {
+    font-size: 48px;
+    color: var(--golden-yellow);
+}
+
+.success-message h3 {
+    font-size: 28px;
+    color: var(--bush-green);
+    margin-bottom: 16px;
+}
+
+.success-message p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Trust Badges */
+.trust-badges {
+    padding: 40px 0;
+    background: var(--light-white);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-item i {
+    font-size: 36px;
+    color: var(--vibrant-green);
+    margin-bottom: 12px;
+}
+
+.trust-item h4 {
+    font-size: 16px;
+    color: var(--bush-green);
+    margin-bottom: 6px;
+}
+
+.trust-item p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: var(--light-white);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--warm-sand);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--bush-green);
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f0ebe4;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #666;
+    font-size: 15px;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 24px 20px;
+    max-height: 200px;
+}
+
+/* Contact Info */
+.contact-info {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--vibrant-green) 0%, var(--dark-forest-green) 100%);
+    color: var(--light-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 32px;
+    color: var(--golden-yellow);
+    margin-bottom: 16px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.contact-item a {
+    color: var(--light-white);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--golden-yellow);
+}
