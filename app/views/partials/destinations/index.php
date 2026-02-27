@@ -71,7 +71,7 @@
           <div class="card-body">
             <h4 class="mb-2"><i class="bi bi-map me-2"></i>Multi‑country routes</h4>
             <p class="text-muted mb-3">Combine destinations into a seamless cross‑border itinerary.</p>
-            <a class="btn btn-primary btn-sm" href="<?= get_link('info/contact') ?>#quote">Request a custom itinerary</a>
+            <a class="btn btn-primary btn-sm" href="<?= get_link('index/quote') ?>">Request a custom itinerary</a>
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ $contacts = json_decode($data['contacts'], true);
                 <div class="breadcrumb">
                     <a href="<?= $page_name ?>"><?=  ucfirst($page_name) ?></a>
                     <span>/</span>
-                    <span><?= $page_action ?><?=  ucfirst($page_action) ?></span>
+                    <span><?=  ucfirst($page_action) ?></span>
                 </div>
             </div>
         </section>

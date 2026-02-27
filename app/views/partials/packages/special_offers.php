@@ -28,7 +28,7 @@
       <ul class="mb-3">
         <li>Sossusvlei & Deadvlei sunrise</li><li>Swakopmund optional activities</li><li>Tailor start/end city</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
       <ul class="mb-3">
         <li>2–3 game drive days</li><li>Self‑drive or guided options</li><li>Best during dry season</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@
       <ul class="mb-3">
         <li>Falls viewpoints & tour</li><li>Sunset cruise</li><li>Activity add‑ons</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -79,7 +79,7 @@
         </ul>
       </div>
       <div class="col-lg-4 text-lg-end">
-        <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-primary">Request a quote</a>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a quote</a>
         <a href="<?= get_link('destinations/index') ?>" class="btn btn-outline ms-2">Explore destinations</a>
       </div>
     </div>

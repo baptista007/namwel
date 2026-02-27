@@ -28,7 +28,7 @@
       <ul class="mb-3">
         <li>Campsites or mixed lodge nights</li><li>Suggested gear checklist</li><li>Route support & planning</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
       <ul class="mb-3">
         <li>4x4 recommended</li><li>Park fees guidance</li><li>Optional guided segments</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@
       <ul class="mb-3">
         <li>Border-ready planning</li><li>Flexible start/end points</li><li>Mix camping and lodges</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -79,7 +79,7 @@
         </ul>
       </div>
       <div class="col-lg-4 text-lg-end">
-        <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-primary">Request a quote</a>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a quote</a>
         <a href="<?= get_link('destinations/index') ?>" class="btn btn-outline ms-2">Explore destinations</a>
       </div>
     </div>

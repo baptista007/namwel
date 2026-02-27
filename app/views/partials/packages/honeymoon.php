@@ -28,7 +28,7 @@
       <ul class="mb-3">
         <li>Private moments & sunsets</li><li>Optional spa and scenic flights</li><li>Flexible pacing</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
       <ul class="mb-3">
         <li>Etosha / private reserve options</li><li>Photography-friendly</li><li>Candle-lit dinners</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@
       <ul class="mb-3">
         <li>Cape Peninsula highlights</li><li>Winelands tastings</li><li>Optional safari add‑on</li>
       </ul>
-      <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-outline-primary btn-sm">Request this package</a>
+      <a href="<?= get_link('index/quote') ?>" class="btn btn-outline-primary btn-sm">Request this package</a>
     </div>
   </div>
 </div>
@@ -79,7 +79,7 @@
         </ul>
       </div>
       <div class="col-lg-4 text-lg-end">
-        <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-primary">Request a quote</a>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a quote</a>
         <a href="<?= get_link('destinations/index') ?>" class="btn btn-outline ms-2">Explore destinations</a>
       </div>
     </div>

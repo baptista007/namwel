@@ -44,7 +44,7 @@
           </ul>
 
           <div class="mt-3 d-grid">
-            <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-primary">Request a Zambia itinerary</a>
+            <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a Zambia itinerary</a>
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@
       </div>
       <div class="col-lg-4 text-lg-end">
         <a href="<?= get_link('packages/index') ?>" class="btn btn-outline">Browse packages</a>
-        <a href="<?= get_link('info/contact') ?>#quote" class="btn btn-primary ms-2">Get a quote</a>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary ms-2">Get a quote</a>
       </div>
     </div>
   </div>

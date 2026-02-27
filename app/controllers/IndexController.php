@@ -209,7 +209,7 @@ class IndexController extends BaseController {
     }
 
     function quote() {
-        
+        $this->view->page_title = "Request a quote";
         $this->render_view("index/quote.php", null, "index_layout.php");
     }
 }

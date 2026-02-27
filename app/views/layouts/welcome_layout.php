@@ -58,10 +58,10 @@ $contacts = json_decode($data['contacts'], true);
                         <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <button class="btn btn-primary" onclick="openModal('lead-modal')">
+                        <a class="btn btn-primary" href="<?= get_link('index/quote') ?>">
                             <i class="fas fa-map-marker-alt"></i>
                             Plan My Trip
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

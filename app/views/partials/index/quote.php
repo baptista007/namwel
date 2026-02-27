@@ -21,7 +21,7 @@
                 <h3 class="form-title">Request a Quote</h3>
                 <p class="text-muted mb-3">We respond within 24 hours on business days.</p>
 
-                <form action="<?= get_link('info/contact') ?>#quote" method="get">
+                <form action="<?= get_link('index/quote') ?>" method="get">
                     <div class="form-group mb-3">
                         <label for="destination">Destination</label>
                         <select name="destination" id="destination" class="form-select" required>
