@@ -22,7 +22,7 @@ class IndexController extends BaseController {
     
     function about() {
         $this->view->page_title = SITE_NAME . " - About";
-        $this->render_view("index/about.php", null, "welcome_layout.php");
+        $this->render_view("index/about.php", null, "index_layout.php");
     }
 
     function news() {
@@ -43,7 +43,7 @@ class IndexController extends BaseController {
             $this->set_page_error();
         }
         $this->view->page_title = get_lang('news_title');
-        $this->render_view("index/news.php", $data, "welcome_layout.php");
+        $this->render_view("index/news.php", $data, "index_layout.php");
     }
 
     function contact() {
@@ -134,7 +134,7 @@ class IndexController extends BaseController {
         $contacts = json_decode($data['contacts'], true);
 
         $this->view->page_title = get_lang('contact_title');
-        $this->render_view("index/contact.php", $contacts, "welcome_layout.php");
+        $this->render_view("index/contact.php", $contacts, "index_layout.php");
     }
 
     function gallery() {
@@ -155,7 +155,7 @@ class IndexController extends BaseController {
             $this->set_page_error();
         }
         $this->view->page_title = get_lang('gallery_title');
-        $this->render_view("index/gallery.php", $data, "welcome_layout.php"); //render the full page
+        $this->render_view("index/gallery.php", $data, "index_layout.php"); //render the full page
     }
 
     function news_item($rec_id) {
@@ -175,9 +175,9 @@ class IndexController extends BaseController {
             $record['other_records'] = $other_records;
 
             $this->view->page_title = $record['title'];
-            $this->render_view("index/news_item.php", $record, "welcome_layout.php");
+            $this->render_view("index/news_item.php", $record, "index_layout.php");
         } else {
-            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "welcome_layout.php");
+            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "index_layout.php");
         }
     }
 
@@ -197,19 +197,19 @@ class IndexController extends BaseController {
             $other_records = $db->get(SqlTables::tbl_service);
             $record['other_records'] = $other_records;
 
-            $this->render_view("index/service_item.php", $record, "welcome_layout.php");
+            $this->render_view("index/service_item.php", $record, "index_layout.php");
         } else {
-            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "welcome_layout.php");
+            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "index_layout.php");
         }
     }
     
     function subscribe() {
         
-        $this->render_view("index/subscribe.php", null, "welcome_layout.php");
+        $this->render_view("index/subscribe.php", null, "index_layout.php");
     }
 
     function quote() {
         
-        $this->render_view("index/quote.php", null, "welcome_layout.php");
+        $this->render_view("index/quote.php", null, "index_layout.php");
     }
 }

@@ -1,58 +1,33 @@
-<?php
-// Set url Variable From Router Class
-$controller_name = Router::$controller_name;
-$page_name = Router::$page_name;
-$page_action = Router::$page_action;
-$page_id = Router::$page_id;
-$body_class = "$page_name-" . str_ireplace('list', 'index', $page_action);
-$page_title = $this->get_page_title();
 
-$comp_model = new SharedController;
-$data = $comp_model->GetModel()->getOne(SqlTables::tbl_core);
-$contacts = json_decode($data['contacts'], true);
-?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
     <head>
-        <title><?php echo $page_title; ?></title>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="facebook-domain-verification" content="xsgcdet01y0f5mcxff96i5piywvtqm" />
-        <link rel="shortcut icon" href="<?php print_link(SITE_FAVICON); ?>" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <?php
-        Html::page_meta('theme-color', META_THEME_COLOR);
-        Html::page_meta('author', META_AUTHOR);
-        Html::page_meta('keyword', META_KEYWORDS);
-        Html::page_meta('description', META_DESCRIPTION);
-        Html::page_meta('viewport', META_VIEWPORT);
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Namwel Tours & Car Rentals | Namibia Safari Adventures</title>
+        <meta name="description" content="Experience the adventure of a lifetime with our premium Southern Africa safari tours. Big Five game drives, luxury lodges, expert guides. Book your journey today.">
 
-        //Vendor CSS Files
-        // Html::page_css('bootstrap.min.css');
-        // Html::page_css('bootstrap-icons.css');
-        // Html::page_css('aos.css');
-        // Html::page_css('swiper-bundle.min.css');
-        // Html::page_css('glightbox.min.css');
-        //Main CSS
-        Html::page_css('own-theme.css?ts=' . time());
-        Html::page_js('jquery-3.3.1.min.js');
-        ?>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
-    <body class="index-page">
+    <body>
         <!-- Header -->
         <header class="header" id="header">
             <div class="container">
                 <div class="header-inner">
                     <a href="#" class="logo">
-                        <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="<?= SITE_NAME ?>" class="img-fluid" alt="Namwel Tours & Car Rentals">
+                        <img src="user_input_files/namwel-logo-new.png" alt="Namwel Tours & Car Rentals">
                     </a>
                     <nav class="nav-menu">
-                        <a href="<?= get_link('index/index') ?>">Home</a>
-                        <a href="<?= get_link('packages') ?>">Tours</a>
-                        <a href="<?= get_link('index/gallery') ?>">Gallery</a>
-                        <a href="<?= get_link('index/contact') ?>">Contact</a>
+                        <a href="#hero">Home</a>
+                        <a href="#packages">Tours</a>
+                        <a href="#testimonials">Gallery</a>
+                        <a href="#lead-form">Contact</a>
                     </nav>
                     <div class="header-right">
                         <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank" aria-label="WhatsApp">
@@ -66,34 +41,37 @@ $contacts = json_decode($data['contacts'], true);
                 </div>
             </div>
         </header>
-        <main>
-            <?php $this->render_body(); ?>
-        </main>
+
+
+
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer-inner">
                     <div class="footer-brand">
                         <a href="#" class="logo">
-                            <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="<?= SITE_NAME ?>" class="img-fluid" alt="Namwel Tours & Car Rentals">
+                            <img src="user_input_files/namwel-logo-new.png" alt="Namwel Tours & Car Rentals">
                         </a>
                         <p>Creating unforgettable African adventures since 2009. We specialize in luxury safaris across Southern Africa's most incredible destinations.</p>
                     </div>
                     <div class="footer-col">
                         <h4>Destinations</h4>
                         <ul>
-                            <li><a href="<?= get_link('destinations/south-africa') ?>">South Africa</a></li>
-                            <li><a href="<?= get_link('destinations/botswana') ?>">Botswana</a></li>
-                            <li><a href="<?= get_link('destinations/zambia') ?>">Zambia</a></li>
-                            <li><a href="<?= get_link('destinations/zimbabwe') ?>">Zimbabwe</a></li>
-                            <li><a href="<?= get_link('destinations/namibia') ?>">Namibia</a></li>
+                            <li><a href="#">South Africa</a></li>
+                            <li><a href="#">Botswana</a></li>
+                            <li><a href="#">Zambia</a></li>
+                            <li><a href="#">Zimbabwe</a></li>
+                            <li><a href="#">Namibia</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="<?= get_link('index/about') ?>">About Us</a></li>
-                            <li><a href="<?= get_link('index/contact') ?>">Contact</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -101,11 +79,9 @@ $contacts = json_decode($data['contacts'], true);
                         <div class="social-links">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
-                        <a href="<?= get_link("payment/index") ?>" aria-label="Visa Master American Express">
-                            <img src="<?= SITE_ADDR ?>assets/images/visa_master_american.png" alt="Visa Master American Express" style="width: 100%;" />
-                        </a>
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -157,29 +133,6 @@ $contacts = json_decode($data['contacts'], true);
             </div>
         </div>
 
-        <div class="modal-overlay" id="welcome-modal">
-            <div class="modal">
-                <button class="modal-close" onclick="closeModal('welcome-modal')">&times;</button>
-                <div class="modal-content">
-                    <div class="exit-offer">
-                        <h4>Hello there! We have a welcome offer for you.</h4>
-                        <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
-                    </div>
-                    <button class="btn btn-primary" style="width: 100%;" onclick="closeModal('welcome-modal'); document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'});">
-                        Claim My 5% Discount
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Preloader -->
-        <div id="preloader"></div>
-        <?php
-        Html::page_js('bootstrap.bundle.min.js');
-        Html::page_js('aos.js');
-        Html::page_js('swiper-bundle.min.js');
-        // Html::page_js('main.js');
-        ?>
         <script>
             // Header Scroll Effect
             const header = document.getElementById('header');
@@ -352,10 +305,6 @@ $contacts = json_decode($data['contacts'], true);
                         document.body.style.overflow = 'auto';
                     }
                 });
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                openModal('welcome-modal');
             });
         </script>
     </body>

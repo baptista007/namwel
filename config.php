@@ -39,9 +39,9 @@ define('META_THEME_COLOR', "#000000");
 // Application Files and Directories 
 define('IMG_DIR', "assets/images/");
 define('SITE_FAVICON', IMG_DIR . "favicon.png");
-define('SITE_LOGO', IMG_DIR . "logo.png");
-define('SITE_LOGO_SM', IMG_DIR . "chivembe-logo.png");
-define('SITE_LOGO_SIGN_ONLY', IMG_DIR . "chivembe-logo.png");
+define('SITE_LOGO', IMG_DIR . "namwel-logo-new.png");
+define('SITE_LOGO_SM', IMG_DIR . "namwel-logo-new.png");
+define('SITE_LOGO_SIGN_ONLY', IMG_DIR . "namwel-logo-new.png");
 
 define('CSS_DIR', SITE_ADDR . "assets/css/");
 define('JS_DIR', SITE_ADDR . "assets/js/");

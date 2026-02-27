@@ -1,1 +1,7 @@
 vendor
+.env
+*.log
+*.lock
+*.csv
+*.sqlite
+nbproject
