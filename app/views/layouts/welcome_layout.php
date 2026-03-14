@@ -30,11 +30,9 @@ $contacts = json_decode($data['contacts'], true);
         Html::page_meta('viewport', META_VIEWPORT);
 
         //Vendor CSS Files
-        // Html::page_css('bootstrap.min.css');
-        // Html::page_css('bootstrap-icons.css');
-        // Html::page_css('aos.css');
-        // Html::page_css('swiper-bundle.min.css');
-        // Html::page_css('glightbox.min.css');
+        Html::page_css('bootstrap.min.css');
+        Html::page_css('bootstrap-icons.min.css');
+        Html::page_css('aos.css');
         //Main CSS
         Html::page_css('own-theme.css?ts=' . time());
         Html::page_js('jquery-3.3.1.min.js');
