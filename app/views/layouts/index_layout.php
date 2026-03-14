@@ -61,6 +61,7 @@ $contacts = json_decode($data['contacts'], true);
             </div>
         </header>
         <section class="page-hero">
+            <div class="container">
             <div class="page-hero-content">
                 <h1><?= $page_title ?></h1>
                 <div class="breadcrumb">
@@ -68,6 +69,7 @@ $contacts = json_decode($data['contacts'], true);
                     <span>/</span>
                     <span><?=  ucfirst($page_action) ?></span>
                 </div>
+            </div>
             </div>
         </section>
         <main class="main">
