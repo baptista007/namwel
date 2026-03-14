@@ -16,34 +16,13 @@ class IndexController extends BaseController {
      * @return null
      */
     function index() {
-        $this->view->page_title = SITE_NAME . ' - Welcome';
+        $this->view->page_title = 'Welcome';
         $this->render_view("index/index.php", null, "welcome_layout.php");
     }
     
     function about() {
-        $this->view->page_title = SITE_NAME . " - About";
+        $this->view->page_title = "About " . SITE_NAME;
         $this->render_view("index/about.php", null, "index_layout.php");
-    }
-
-    function news() {
-        $db = $this->GetModel();
-        $pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
-        $tc = $db->withTotalCount();
-        $records = $db->get(SqlTables::tbl_news, $pagination);
-        $records_count = count($records);
-        $total_records = intval($tc->totalCount);
-        $page_limit = $pagination[1];
-        $total_pages = ceil($total_records / $page_limit);
-        $data = new stdClass;
-        $data->records = $records;
-        $data->record_count = $records_count;
-        $data->total_records = $total_records;
-        $data->total_page = $total_pages;
-        if ($db->getLastError()) {
-            $this->set_page_error();
-        }
-        $this->view->page_title = get_lang('news_title');
-        $this->render_view("index/news.php", $data, "index_layout.php");
     }
 
     function contact() {
@@ -158,50 +137,6 @@ class IndexController extends BaseController {
         $this->render_view("index/gallery.php", $data, "index_layout.php"); //render the full page
     }
 
-    function news_item($rec_id) {
-        $db = $this->GetModel();
-
-        $db->where("id", $rec_id);
-        $record = $db->getOne(SqlTables::tbl_news);
-
-        $db->where("news_id", $rec_id);
-        $files = $db->get(SqlTables::tbl_news_file);
-
-        if ($record) {
-            $record['files'] = $files;
-
-            $db->where("id", $rec_id, "!=");
-            $other_records = $db->get(SqlTables::tbl_news);
-            $record['other_records'] = $other_records;
-
-            $this->view->page_title = $record['title'];
-            $this->render_view("index/news_item.php", $record, "index_layout.php");
-        } else {
-            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "index_layout.php");
-        }
-    }
-
-    function service_item($rec_id) {
-        $db = $this->GetModel();
-
-        $db->where("id", $rec_id);
-        $record = $db->getOne(SqlTables::tbl_service);
-
-        $db->where("service_id", $rec_id);
-        $files = $db->get(SqlTables::tbl_service_file);
-
-        if ($record) {
-            $record['files'] = $files;
-
-            $db->where("id", $rec_id, "!=");
-            $other_records = $db->get(SqlTables::tbl_service);
-            $record['other_records'] = $other_records;
-
-            $this->render_view("index/service_item.php", $record, "index_layout.php");
-        } else {
-            $this->render_view(RECORD_NOT_FOUND_PAGE, null, "index_layout.php");
-        }
-    }
     
     function subscribe() {
         
@@ -209,7 +144,87 @@ class IndexController extends BaseController {
     }
 
     function quote() {
-        $this->view->page_title = "Request a quote";
+        if (is_post_request()) {
+            try {
+                $errors = [];
+                $p = $_POST;
+
+                $firstName = trim($p['firstName'] ?? '');
+                $lastName  = trim($p['lastName']  ?? '');
+                $email     = trim($p['email']     ?? '');
+                $travelers = trim($p['travelers'] ?? '');
+
+                if (empty($firstName)) $errors[] = 'First name is required.';
+                if (empty($lastName))  $errors[] = 'Last name is required.';
+                if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'A valid email address is required.';
+                if (empty($travelers)) $errors[] = 'Number of travelers is required.';
+
+                $phone         = trim($p['phone']           ?? '');
+                $country       = trim($p['country']         ?? '');
+                $tripType      = trim($p['tripType']        ?? '');
+                $accommodation = trim($p['accommodation']   ?? '');
+                $startDate     = trim($p['startDate']       ?? '');
+                $endDate       = trim($p['endDate']         ?? '');
+                $flexibility   = trim($p['dateFlexibility'] ?? '');
+                $budget        = trim($p['budget']          ?? '');
+                $message       = trim($p['message']         ?? '');
+                $referral      = trim($p['referral']        ?? '');
+
+                $destinations = isset($p['destination']) && is_array($p['destination'])
+                    ? implode(', ', array_map('trim', $p['destination']))
+                    : trim($p['destination'] ?? '');
+
+                $interests = isset($p['interest']) && is_array($p['interest'])
+                    ? implode(', ', array_map('trim', $p['interest']))
+                    : '';
+
+                if (empty($errors)) {
+                    $body  = "New quote request received from the Namwel website.\n\n";
+                    $body .= "--- CONTACT ---\n";
+                    $body .= "Name:    {$firstName} {$lastName}\n";
+                    $body .= "Email:   {$email}\n";
+                    if ($phone)    $body .= "Phone:   {$phone}\n";
+                    if ($country)  $body .= "Country: {$country}\n";
+                    if ($referral) $body .= "Referral: {$referral}\n";
+                    $body .= "\n--- TRIP DETAILS ---\n";
+                    if ($destinations)  $body .= "Destinations: {$destinations}\n";
+                    if ($tripType)      $body .= "Trip type:    {$tripType}\n";
+                    if ($accommodation) $body .= "Accommodation: {$accommodation}\n";
+                    $body .= "Travelers:    {$travelers}\n";
+                    $body .= "\n--- DATES & BUDGET ---\n";
+                    if ($startDate)   $body .= "Start date:  {$startDate}\n";
+                    if ($endDate)     $body .= "End date:    {$endDate}\n";
+                    if ($flexibility) $body .= "Flexibility: {$flexibility}\n";
+                    if ($budget)      $body .= "Budget (pp): {$budget}\n";
+                    if ($interests)   $body .= "Interests:   {$interests}\n";
+                    if ($message)     $body .= "\n--- ADDITIONAL NOTES ---\n{$message}\n";
+
+                    $headers = 'From: website@namwel.com' . "\r\n"
+                             . 'Reply-To: ' . $email . "\r\n"
+                             . 'X-Mailer: PHP/' . phpversion();
+                    mail(DEFAULT_EMAIL, 'New Quote Request - ' . $firstName . ' ' . $lastName, $body, $headers);
+
+                    $autoReply  = "Dear {$firstName},\n\n";
+                    $autoReply .= "Thank you for your interest in Namwel Tours & Car Rentals!\n\n";
+                    $autoReply .= "We have received your quote request and our team will send you a personalised itinerary within 24 hours.\n\n";
+                    $autoReply .= "Warm regards,\nThe Namwel Team\n";
+                    $arHeaders = 'From: ' . DEFAULT_EMAIL . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+                    mail($email, 'Your Quote Request - Namwel Tours', $autoReply, $arHeaders);
+                }
+
+                $msg = empty($errors)
+                    ? 'Your quote request has been received. We will be in touch within 24 hours!'
+                    : implode(' ', $errors);
+
+                echo json_encode(['success' => empty($errors), 'message' => $msg]);
+
+            } catch (Exception $ex) {
+                echo json_encode(['success' => false, 'message' => $ex->getMessage()]);
+            }
+            return;
+        }
+
+        $this->view->page_title = "Request a Quote";
         $this->render_view("index/quote.php", null, "index_layout.php");
     }
 }

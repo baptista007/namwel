@@ -17,14 +17,8 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Destinations</h4>
-                <ul>
-                    <li><a href="<?= get_link('destinations/south-africa') ?>">South Africa</a></li>
-                    <li><a href="<?= get_link('destinations/botswana') ?>">Botswana</a></li>
-                    <li><a href="<?= get_link('destinations/zambia') ?>">Zambia</a></li>
-                    <li><a href="<?= get_link('destinations/zimbabwe') ?>">Zimbabwe</a></li>
-                    <li><a href="<?= get_link('destinations/namibia') ?>">Namibia</a></li>
-                </ul>
+                <h4>Affiliations</h4>
+                <img src="<?= SITE_ADDR . IMG_DIR . "affiliations.png" ?>" alt="Affiliations" class="img-fluid">
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -46,7 +40,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Namwel Tours & Car Rentals. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+            <p>&copy; 2025 Namwel Tours & Car Rentals. All rights reserved. | <a href="<?= get_link('info/privacy') ?>">Privacy Policy</a> | <a href="<?= get_link('info/terms') ?>">Terms & Conditions</a></p>
         </div>
     </div>
 </footer>
@@ -57,54 +51,69 @@
 </a>
 
 <!-- Lead Modal -->
-<div class="modal-overlay" id="lead-modal">
-    <div class="modal">
-        <button class="modal-close" onclick="closeModal('lead-modal')">&times;</button>
+<div class="modal fade" id="lead-modal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-icon">
-                <i class="fas fa-envelope"></i>
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <h3>Get Your Free Safari Guide</h3>
-            <p>Enter your email to receive our comprehensive 2025 Safari Planning Guide with insider tips, best times to visit, and exclusive offers.</p>
-            <form onsubmit="handleModalSubmit(event)">
-                <div class="form-group">
-                    <input type="email" placeholder="Your email address" required>
+            <div class="modal-body text-center px-4 pb-4">
+                <div class="modal-icon mb-3">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    Send Me the Guide
-                </button>
-            </form>
+                <h3 id="leadModalLabel">Get Your Free Safari Guide</h3>
+                <p>Enter your email to receive our comprehensive 2025 Safari Planning Guide with insider tips, best times to visit, and exclusive offers.</p>
+                <form onsubmit="handleModalSubmit(event)">
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        Send Me the Guide
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Exit Intent Modal -->
-<div class="modal-overlay" id="exit-modal">
-    <div class="modal">
-        <button class="modal-close" onclick="closeModal('exit-modal')">&times;</button>
+<div class="modal fade" id="exit-modal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="exit-offer">
-                <h4>Wait! Don't Miss Out!</h4>
-                <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <button class="btn btn-primary" style="width: 100%;" onclick="closeModal('exit-modal'); document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'});">
-                Claim My 5% Discount
-            </button>
+            <div class="modal-body text-center px-4 pb-4">
+                <div class="exit-offer">
+                    <h4 id="exitModalLabel">Wait! Don't Miss Out!</h4>
+                    <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+                </div>
+                <button class="btn btn-primary w-100" data-bs-dismiss="modal"
+                    onclick="document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'})">
+                    Claim My 5% Discount
+                </button>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="modal-overlay" id="welcome-modal">
-    <div class="modal">
-        <button class="modal-close" onclick="closeModal('welcome-modal')">&times;</button>
+<!-- Welcome Modal -->
+<div class="modal fade" id="welcome-modal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="exit-offer">
-                <h4>Hello there! We have a welcome offer for you.</h4>
-                <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <button class="btn btn-primary" style="width: 100%;" onclick="closeModal('welcome-modal'); document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'});">
-                Claim My 5% Discount
-            </button>
+            <div class="modal-body text-center px-4 pb-4">
+                <div class="exit-offer">
+                    <h4 id="welcomeModalLabel">Hello there! We have a welcome offer for you.</h4>
+                    <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+                </div>
+                <button class="btn btn-primary w-100" data-bs-dismiss="modal"
+                    onclick="document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'})">
+                    Claim My 5% Discount
+                </button>
+            </div>
         </div>
     </div>
 </div>

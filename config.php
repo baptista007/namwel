@@ -38,7 +38,7 @@ define('META_THEME_COLOR', "#000000");
 
 // Application Files and Directories 
 define('IMG_DIR', "assets/images/");
-define('SITE_FAVICON', IMG_DIR . "favicon.png");
+define('SITE_FAVICON', IMG_DIR . "cropped-favicon-32x32.png");
 define('SITE_LOGO', IMG_DIR . "namwel-logo-new.png");
 define('SITE_LOGO_SM', IMG_DIR . "namwel-logo-new.png");
 define('SITE_LOGO_SIGN_ONLY', IMG_DIR . "namwel-logo-new.png");

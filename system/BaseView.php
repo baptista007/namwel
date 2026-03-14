@@ -266,6 +266,12 @@ class BaseView {
      */
     public $force_print = false;
 
+    /**
+     * Show Page Header Component
+     * @var boolean
+     */
+    public $show_page_tile = true;
+
     function __construct($arg = null) {
         // Pass All Query String Data to the View.
         $get = $this->form_data = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);

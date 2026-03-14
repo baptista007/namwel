@@ -10,10 +10,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     <video autoplay muted loop playsinline>
         <source src="<?= SITE_ADDR ?>assets/videos/NAMIBIA.mp40001.mp4" type="video/mp4">
     </video>
-    <div class="hero-overlay"></div>    
+    <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Namibia & Southern Africa, the way you imagined it</h1>
-        <p class="hero-subtitle">NamWel offers you a memorable experience with tailor-made tours. Guided tour, Car rental, Camping circuits, Honeymoon, and more.</p>
+        <p class="hero-subtitle">Guided tours, Car rental, Camping circuits, Honeymoon, and more.</p>
         <div class="hero-buttons">
             <a href="#lead-form" class="btn btn-primary pulse">
                 <i class="fas fa-compass"></i>
@@ -103,7 +103,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     <div class="container">
         <div class="section-header">
             <h2>Why Travel With Namwel</h2>
-            <p>We don't just show you Africa — we help you fall in love with it.</p>
+            <p>We offer you a memorable experience with tailor-made tours. Guided tour, Car rental, Camping circuits, Honeymoon, and more.</p>
         </div>
         <div class="value-grid">
             <div class="value-card fade-in">
@@ -341,34 +341,34 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         <div class="testimonial-slider">
             <div class="testimonial-track">
                 <?php
-                    $count = 0;
-                    foreach ($testimonials as $testimonial) {
-                        echo '<div class="testimonial-slide ' . ($count == 0 ? 'active' : '') . '">';
-                        echo '<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah M." class="testimonial-image">';
-                        echo '<div class="testimonial-stars">
+                $count = 0;
+                foreach ($testimonials as $testimonial) {
+                    echo '<div class="testimonial-slide ' . ($count == 0 ? 'active' : '') . '">';
+                    echo '<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah M." class="testimonial-image">';
+                    echo '<div class="testimonial-stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>';
-                        echo '<p class="testimonial-quote">';
-                        echo '<i class="bi bi-quote quote-icon-left"></i>';
-                        echo $testimonial['message'];
-                        echo '<i class="bi bi-quote quote-icon-right"></i>';
-                        echo '</p>';
-                        echo '<p class="testimonial-author">' . $testimonial['fullname'] . '</p>';
-                        echo '<p class="testimonial-country">' . $testimonial['country'] . '</p>';
-                        echo '</div>';
-                        $count++;
-                    }
+                    echo '<p class="testimonial-quote">';
+                    echo '<i class="bi bi-quote quote-icon-left"></i>';
+                    echo $testimonial['message'];
+                    echo '<i class="bi bi-quote quote-icon-right"></i>';
+                    echo '</p>';
+                    echo '<p class="testimonial-author">' . $testimonial['fullname'] . '</p>';
+                    echo '<p class="testimonial-country">' . $testimonial['country'] . '</p>';
+                    echo '</div>';
+                    $count++;
+                }
                 ?>
             </div>
             <div class="testimonial-dots">
                 <?php
-                    for ($i = 0; $i < $count; $i++) {
-                        echo '<span class="testimonial-dot' . ($i == 0 ? ' active' : '') . '" data-index="' . $i . '"></span>';
-                    }
+                for ($i = 0; $i < $count; $i++) {
+                    echo '<span class="testimonial-dot' . ($i == 0 ? ' active' : '') . '" data-index="' . $i . '"></span>';
+                }
                 ?>
             </div>
         </div>
@@ -489,3 +489,171 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         </div>
     </div>
 </section>
+
+<script>
+    // Countdown Timer
+    function updateCountdown() {
+        const endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime(); // 7 days from now
+        const now = new Date().getTime();
+        const diff = endDate - now;
+
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Testimonial Slider
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 5000);
+
+    // Multi-step Form
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    function updateProgress() {
+        document.querySelectorAll('.progress-step').forEach((step, index) => {
+            step.classList.remove('active', 'completed');
+            if (index + 1 < currentStep) {
+                step.classList.add('completed');
+            } else if (index + 1 === currentStep) {
+                step.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('.progress-line').forEach((line, index) => {
+            line.classList.toggle('active', index + 1 < currentStep);
+        });
+
+        document.querySelectorAll('.form-step').forEach((step, index) => {
+            step.classList.toggle('active', index + 1 === currentStep);
+        });
+    }
+
+    function nextStep() {
+        const currentFormStep = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+        const inputs = currentFormStep.querySelectorAll('[required]');
+        let valid = true;
+
+        inputs.forEach(input => {
+            if (!input.value) {
+                valid = false;
+                input.style.borderColor = '#E65100';
+            } else {
+                input.style.borderColor = '#eee';
+            }
+        });
+
+        if (valid && currentStep < totalSteps) {
+            currentStep++;
+            updateProgress();
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 1) {
+            currentStep--;
+            updateProgress();
+        }
+    }
+
+    function selectRadio(element) {
+        document.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+        element.classList.add('selected');
+        element.querySelector('input').checked = true;
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        document.querySelector('.form-header h2').textContent = 'Thank You!';
+        document.querySelector('.form-header p').textContent = 'We\'ll be in touch within 24 hours with your personalized itinerary.';
+        document.getElementById('leadForm').innerHTML = `
+                    <div style="text-align: center; padding: 40px 0;">
+                        <i class="fas fa-check-circle" style="font-size: 60px; color: var(--bush-green);"></i>
+                        <p style="margin-top: 20px; font-size: 18px;">Check your inbox for next steps!</p>
+                    </div>
+                `;
+    }
+
+    // Modal Functions
+    function openModal(modalId) {
+        const modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+    }
+
+    function closeModal(modalId) {
+        const modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.hide();
+    }
+
+    function handleModalSubmit(event) {
+        event.preventDefault();
+        closeModal('lead-modal');
+        openModal('success-modal');
+    }
+
+    // Exit Intent
+    // let exitIntentTriggered = false;
+    // document.addEventListener('mouseleave', (e) => {
+    //     if (e.clientY <= 0 && !exitIntentTriggered) {
+    //         exitIntentTriggered = true;
+    //         setTimeout(() => {
+    //             openModal('exit-modal');
+    //         }, 500);
+    //     }
+    // });
+
+    // Scroll Animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Close modal on outside click
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                const modalInstance = bootstrap.Modal.getInstance(modal);
+                modalInstance.hide();
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+</script>

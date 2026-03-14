@@ -1,187 +1,227 @@
-<?php /* Destination page: South Africa */ ?>
+<?php /* Destination: South Africa */ ?>
 
-<section class="travel-hero section dark-background" style="min-height: 55vh;">
-  <div class="hero-background">
-    <video autoplay muted loop playsinline>
-      <source src="<?= SITE_ADDR ?>assets/videos/AFRIQUE-DU-SUD.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="container position-relative" data-aos="fade-up">
-    <h1 class="hero-title">South Africa</h1>
-    <p class="hero-subtitle">A diverse mix of cities, coastlines, wine routes, and renowned wildlife areas — ideal for couples, families, and first‑time Africa travellers.</p>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="<?= get_link('index/index') ?>">Home</a></li>
-        <li><a href="<?= get_link('destinations/index') ?>">Destinations</a></li>
-        <li class="current">South Africa</li>
-      </ol>
-    </nav>
-  </div>
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('<?= SITE_ADDR ?>assets/images/travel/south-africa.jpg')center/cover no-repeat;">
+    <div class="container text-center text-white">
+        <h1 class="display-5 fw-bold mb-2">South Africa</h1>
+        <p class="lead mb-3">The rainbow nation — breathtaking landscapes, iconic wildlife, world-class wine, and vibrant culture.</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item active text-white">South Africa</li>
+            </ol>
+        </nav>
+    </div>
 </section>
 
-
-<section class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-start">
-      <div class="col-lg-7">
-        <h2 class="mb-3">Overview</h2>
-        <p>A diverse mix of cities, coastlines, wine routes, and renowned wildlife areas — ideal for couples, families, and first‑time Africa travellers.</p>
-
-        <h3 class="mt-4 mb-3">Trip highlights</h3>
-        <ul class="list-unstyled">
-          <li class='mb-2'><i class='bi bi-check2 me-2'></i>Cape Town, Table Mountain, and Cape Peninsula day tours</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Garden Route coastal drives and scenic towns</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Winelands tastings and boutique stays</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Kruger-region safari options (private reserves or park stays)</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Add-on connections to Namibia/Botswana/Zambia for multi‑country tours</li>
-        </ul>
-
-        <div class="p-4 border rounded-4 mt-4">
-          <h4 class="mb-2">Best time to visit</h4>
-          <p class="mb-0 text-muted">Year‑round travel is possible. Cape Town is best in summer (Nov–Mar). Wildlife safaris are excellent in the dry winter months (May–Sep), with crisp mornings and strong game viewing.</p>
+<!-- Overview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
+                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <p class="text-muted">South Africa, the rainbow nation nestled at the southern tip of the African continent, is a captivating kaleidoscope of wonders. From breathtaking landscapes and authentic cultural encounters to extraordinary wildlife and flora, South Africa promises an unforgettable journey for adventurous souls seeking unique experiences off the ordinary path.</p>
+                <div class="row g-3 mt-2">
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-city text-primary mt-1"></i>
+                            <div><strong class="d-block small">Capitals</strong><span class="text-muted small">Pretoria &amp; Cape Town</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-ruler-combined text-primary mt-1"></i>
+                            <div><strong class="d-block small">Area</strong><span class="text-muted small">1 221 037 km²</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-language text-primary mt-1"></i>
+                            <div><strong class="d-block small">Languages</strong><span class="text-muted small">English + 11 others</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-users text-primary mt-1"></i>
+                            <div><strong class="d-block small">Population</strong><span class="text-muted small">60.1 million</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-coins text-primary mt-1"></i>
+                            <div><strong class="d-block small">Currency</strong><span class="text-muted small">South African Rand (ZAR)</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map text-primary mt-1"></i>
+                            <div><strong class="d-block small">Provinces</strong><span class="text-muted small">9</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/south-africa.jpeg" class="img-fluid rounded-4 shadow" alt="South Africa">
+            </div>
         </div>
-      </div>
+    </div>
+</section>
 
-      <div class="col-lg-5">
-        <div class="p-4 border rounded-4 shadow-sm">
-          <h4 class="mb-3">Quick planning</h4>
-          <ul class="mb-0">
-            <li class="mb-2"><strong>Ideal trip length:</strong> 5–10 days (or add to a multi‑country loop)</li>
-            <li class="mb-2"><strong>Travel styles:</strong> guided, private, self‑drive (selected routes)</li>
-            <li class="mb-2"><strong>Good for:</strong> couples, families, photographers, adventure travellers</li>
-            <li class="mb-0"><strong>Custom route:</strong> we can combine this destination with others</li>
-          </ul>
-
-          <div class="mt-3 d-grid">
-            <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a South Africa itinerary</a>
-          </div>
+<!-- Must-See Places -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Must-See Places in South Africa</h2>
+            <p class="text-muted">Iconic landscapes, extraordinary wildlife, and world-class experiences.</p>
         </div>
-      </div>
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-5">
+                            <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/south-africa.jpeg" class="img-fluid h-100" alt="Table Mountain" style="object-fit:cover; min-height:180px;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <h5 class="fw-bold mb-0">Table Mountain</h5>
+                                    <span class="badge bg-success small">From €2,645</span>
+                                </div>
+                                <p class="text-muted small mb-2">Cape Town's iconic flat-topped mountain overlooks one of the world's most beautiful cities. Take the cable car for panoramic views, or hike one of several trails to the summit.</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-5">
+                            <img src="<?= SITE_ADDR ?>assets/images/travel/lions-kruger.jpg" class="img-fluid h-100" alt="Kruger National Park" style="object-fit:cover; min-height:180px;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <h5 class="fw-bold mb-0">Kruger National Park</h5>
+                                    <span class="badge bg-success small">From €2,645</span>
+                                </div>
+                                <p class="text-muted small mb-2">One of Africa's largest national parks and a world-class safari destination, home to the Big Five — elephants, lions, leopards, rhinos, and buffalo.</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-5">
+                            <img src="<?= SITE_ADDR ?>assets/images/travel/national-park.jpg" class="img-fluid h-100" alt="Garden Route" style="object-fit:cover; min-height:180px;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <h5 class="fw-bold mb-0">The Garden Route</h5>
+                                    <span class="badge bg-success small">From €2,645</span>
+                                </div>
+                                <p class="text-muted small mb-2">This scenic coastal drive along the south coast offers spectacular Indian Ocean views, charming towns, hiking, surfing, and wildlife encounters along the way.</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-5">
+                            <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/south-africa.jpg" class="img-fluid h-100" alt="Drakensberg" style="object-fit:cover; min-height:180px;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <h5 class="fw-bold mb-0">Drakensberg Mountains</h5>
+                                    <span class="badge bg-success small">From €2,645</span>
+                                </div>
+                                <p class="text-muted small mb-2">A UNESCO World Heritage Site renowned for spectacular cliffs, verdant valleys, and panoramic views. Exceptional hiking, ancient San rock art, and dramatic escarpments.</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="section light-background">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Top places to include</h2>
-      <p>Popular stopovers and experiences we can build into your itinerary.</p>
-    </div>
-    <div class="row gy-4">
-      
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Cape Town</h5>
-      <p class="mb-0 text-muted">Iconic city landscapes, Table Mountain, beaches, and culture.</p>
-    </div>
-  </div>
-</div>
+<!-- FAQ -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="text-muted">Planning a trip to South Africa? Here are answers to the most common questions.</p>
+        </div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="saFaq">
 
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Cape Peninsula</h5>
-      <p class="mb-0 text-muted">Chapman’s Peak drive, Cape Point, and penguins at Boulders.</p>
-    </div>
-  </div>
-</div>
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What is the best time to visit South Africa?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#saFaq">
+                            <div class="accordion-body text-muted small">South Africa is a year-round destination, but the ideal time depends on your interests. For safaris, the dry winter months (May to September) are best. For beach holidays or the Garden Route, the summer months (November to March) are ideal.</div>
+                        </div>
+                    </div>
 
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Winelands</h5>
-      <p class="mb-0 text-muted">Stellenbosch/Franschhoek tastings, cuisine, and scenic stays.</p>
-    </div>
-  </div>
-</div>
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do I need a visa to visit South Africa?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#saFaq">
+                            <div class="accordion-body text-muted small">Visa requirements depend on your nationality. Many countries including the EU, USA, UK, and SADC enjoy visa-free entry for stays up to 90 days. Check with your nearest South African embassy before travel.</div>
+                        </div>
+                    </div>
 
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Garden Route</h5>
-      <p class="mb-0 text-muted">Knysna, Plettenberg Bay, and coastal adventures.</p>
-    </div>
-  </div>
-</div>
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What currency is used, and can I pay by card?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#saFaq">
+                            <div class="accordion-body text-muted small">The currency is the South African Rand (ZAR). Cards are widely accepted in cities, hotels, and restaurants. It's advisable to carry some cash for rural areas and local markets.</div>
+                        </div>
+                    </div>
 
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Kruger Region</h5>
-      <p class="mb-0 text-muted">Big wildlife experiences in parks and private reserves.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-mountains me-2"></i>Durban & KwaZulu‑Natal</h5>
-      <p class="mb-0 text-muted">Warm coast, culture, and family-friendly escapes.</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
 </section>
 
-<section class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Things to do</h2>
-      <p>Activities can be mixed across comfort levels — from relaxed to adventurous.</p>
+<!-- CTA -->
+<section class="py-5">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-3">Plan Your South Africa Journey</h3>
+        <p class="text-muted mb-4">Safari, coast, winelands, or all three — we'll craft the perfect South Africa itinerary for you.</p>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary px-4">
+            <i class="fas fa-paper-plane me-2"></i>Request a Free Quote
+        </a>
     </div>
-
-    <div class="row gy-4">
-      
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-buildings fs-1 mb-3"></i>
-    <h6 class="mb-2">City & culture</h6>
-    <p class="mb-0 text-muted">Guided city experiences, museums, markets, and cuisine.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-car-front fs-1 mb-3"></i>
-    <h6 class="mb-2">Scenic drives</h6>
-    <p class="mb-0 text-muted">Coastal routes, viewpoints, and photography stops.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-cup-straw fs-1 mb-3"></i>
-    <h6 class="mb-2">Wine & food</h6>
-    <p class="mb-0 text-muted">Tastings and restaurants in the Winelands.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-binoculars fs-1 mb-3"></i>
-    <h6 class="mb-2">Safari add‑on</h6>
-    <p class="mb-0 text-muted">2–4 day safari extensions in Kruger areas.</p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section dark-background">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-center">
-      <div class="col-lg-8">
-        <h3 class="mb-2">Travel tips</h3>
-        <ul class="mb-0 opacity-75">
-          <li class='mb-2'>Domestic flights can save time on longer loops (e.g., Cape Town to safari region).</li><li class='mb-2'>We can tailor itineraries for foodies, adventure travellers, and family travel.</li><li class='mb-2'>Consider combining with Namibia for an epic self‑drive loop.</li><li class='mb-2'>Book peak holiday season early (Dec–Jan and school holidays).</li>
-        </ul>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="<?= get_link('packages/index') ?>" class="btn btn-outline">Browse packages</a>
-        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary ms-2">Get a quote</a>
-      </div>
-    </div>
-  </div>
 </section>

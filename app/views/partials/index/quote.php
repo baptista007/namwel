@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <form id="quoteForm">
+            <form id="quoteForm" method="POST" action="<?= get_link('index/quote') ?>">
                 <!-- Step 1: Trip Details -->
                 <div class="form-step active" data-step="1">
                     <h3 class="form-section-title">Trip Preferences</h3>
@@ -324,7 +324,7 @@
                 <h3>Quote Request Received!</h3>
                 <p>Thank you for your interest in Namibia! Our team will review your request and send a personalized quote to your email within 24 hours.</p>
                 <p>In the meantime, feel free to explore our tours or contact us directly on WhatsApp.</p>
-                <a href="index.html" class="btn btn-primary">
+                <a href="<?= get_link('index/index') ?>" class="btn btn-primary">
                     <i class="fas fa-home"></i> Back to Home
                 </a>
             </div>
@@ -473,15 +473,45 @@
         element.querySelector('input').checked = true;
     }
 
-    // Form Submit
+    // Form Submit — AJAX POST
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        document.getElementById('quoteForm').style.display = 'none';
-        document.querySelector('.form-progress-bar').style.display = 'none';
-        document.getElementById('successMessage').classList.add('active');
-        window.scrollTo({
-            top: 300,
-            behavior: 'smooth'
+        const form = this;
+        const submitBtn = form.querySelector('[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending…';
+
+        const data = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: { 'X-Requested-With': 'XMLHttpRequest' },
+            body: data
+        })
+        .then(r => r.json())
+        .then(res => {
+            if (res.success) {
+                form.style.display = 'none';
+                document.querySelector('.form-progress-bar').style.display = 'none';
+                document.getElementById('successMessage').classList.add('active');
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+            } else {
+                // Show error inline above the nav buttons
+                let alert = form.querySelector('.quote-error-alert');
+                if (!alert) {
+                    alert = document.createElement('div');
+                    alert.className = 'alert alert-danger quote-error-alert mt-3';
+                    form.querySelector('.form-step.active .form-nav').before(alert);
+                }
+                alert.textContent = res.message || 'Something went wrong. Please try again.';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        })
+        .catch(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
         });
     });
 

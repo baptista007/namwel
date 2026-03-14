@@ -1,181 +1,147 @@
-<?php /* Destination page: Angola */ ?>
+<?php /* Destination: Angola */ ?>
 
-<section class="page-title section dark-background">
-  <div class="container position-relative" data-aos="fade-up">
-    <h1>Angola</h1>
-    <p>A rising adventure destination with Atlantic beaches, dramatic escarpments, waterfalls, and vibrant cities — perfect for travellers looking beyond the usual routes.</p>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="<?= get_link('index/index') ?>">Home</a></li>
-        <li><a href="<?= get_link('destinations/index') ?>">Destinations</a></li>
-        <li class="current">Angola</li>
-      </ol>
-    </nav>
-  </div>
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('<?= SITE_ADDR ?>assets/images/travel/destinations/angola.jpg')center/cover no-repeat;">
+    <div class="container text-center text-white">
+        <h1 class="display-5 fw-bold mb-2">Angola</h1>
+        <p class="lead mb-3">A captivating destination off the beaten track — breathtaking landscapes, rich culture, and unique wildlife.</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item active text-white">Angola</li>
+            </ol>
+        </nav>
+    </div>
 </section>
 
-
-<section class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-start">
-      <div class="col-lg-7">
-        <h2 class="mb-3">Overview</h2>
-        <p>A rising adventure destination with Atlantic beaches, dramatic escarpments, waterfalls, and vibrant cities — perfect for travellers looking beyond the usual routes.</p>
-
-        <h3 class="mt-4 mb-3">Trip highlights</h3>
-        <ul class="list-unstyled">
-          <li class='mb-2'><i class='bi bi-check2 me-2'></i>Luanda city experiences: culture, food, and coastal energy</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Kalandula Falls and other scenic waterfall routes</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Coastal drives and beaches (seasonal conditions)</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Mountain and escarpment landscapes with photography stops</li><li class='mb-2'><i class='bi bi-check2 me-2'></i>Custom cross‑border routes from Namibia (where applicable)</li>
-        </ul>
-
-        <div class="p-4 border rounded-4 mt-4">
-          <h4 class="mb-2">Best time to visit</h4>
-          <p class="mb-0 text-muted">Generally, the dry season (May–October) offers easier road conditions and comfortable temperatures. Shoulder seasons can be great for scenery — we’ll align your route with current access and weather patterns.</p>
+<!-- Overview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
+                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <p class="text-muted">Set off on an adventure in Angola and discover stunning landscapes — from the spectacular Kalandula Falls to the beautiful coasts of Benguela. Enjoy a family safari in Quiçama National Park, observe wildlife in its natural habitat, and explore hidden gems such as the Tundavala Fissure and the ancient rock paintings of Tchitundu-Hulu. Relax on the serene beaches of Luanda and Namibe, or cruise the Kwanza River to admire diverse birdlife and picturesque scenery.</p>
+                <div class="row g-3 mt-2">
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-city text-primary mt-1"></i>
+                            <div><strong class="d-block small">Capital</strong><span class="text-muted small">Luanda</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-ruler-combined text-primary mt-1"></i>
+                            <div><strong class="d-block small">Area</strong><span class="text-muted small">1 246 700 km²</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-language text-primary mt-1"></i>
+                            <div><strong class="d-block small">Language</strong><span class="text-muted small">Portuguese</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-users text-primary mt-1"></i>
+                            <div><strong class="d-block small">Population</strong><span class="text-muted small">33.2 million</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-coins text-primary mt-1"></i>
+                            <div><strong class="d-block small">Currency</strong><span class="text-muted small">Angolan Kwanza (AOA)</span></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map text-primary mt-1"></i>
+                            <div><strong class="d-block small">Provinces</strong><span class="text-muted small">18</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/angola.jpg" class="img-fluid rounded-4 shadow" alt="Angola">
+            </div>
         </div>
-      </div>
+    </div>
+</section>
 
-      <div class="col-lg-5">
-        <div class="p-4 border rounded-4 shadow-sm">
-          <h4 class="mb-3">Quick planning</h4>
-          <ul class="mb-0">
-            <li class="mb-2"><strong>Ideal trip length:</strong> 5–10 days (or add to a multi‑country loop)</li>
-            <li class="mb-2"><strong>Travel styles:</strong> guided, private, self‑drive (selected routes)</li>
-            <li class="mb-2"><strong>Good for:</strong> couples, families, photographers, adventure travellers</li>
-            <li class="mb-0"><strong>Custom route:</strong> we can combine this destination with others</li>
-          </ul>
-
-          <div class="mt-3 d-grid">
-            <a href="<?= get_link('index/quote') ?>" class="btn btn-primary">Request a Angola itinerary</a>
-          </div>
+<!-- Must-See Places -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Must-See Places in Angola</h2>
+            <p class="text-muted">Discover paradise beaches, national parks, and historic cities.</p>
         </div>
-      </div>
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Luanda</h5>
+                        <p class="text-muted small mb-0">Angola's vibrant capital blends colonial history with modern architecture. Visitors can explore the fortified city of São Miguel, stroll the scenic Ilha do Mussulo promenade, and discover the country's rich culture across its many museums.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-paw text-primary me-2"></i>Kissama National Park</h5>
+                        <p class="text-muted small mb-0">This vast park is home to elephants, lions, giraffes, and zebras. Visitors can go on safari to observe these majestic creatures in their natural habitat, or walk through lush tropical forests.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-water text-primary me-2"></i>Kalandula Falls</h5>
+                        <p class="text-muted small mb-0">These spectacular falls — the second highest in Africa — are a true natural wonder. Admire them from afar or hike to the base for a closer view. A breathtaking spectacle not to be missed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-umbrella-beach text-primary me-2"></i>Benguela</h5>
+                        <p class="text-muted small mb-0">This historic city features well-preserved colonial buildings including the Fort of São Filipe de Benguela and the church of Nossa Senhora do Pópulo. Relax on sandy beaches or explore the city's lively markets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-waves text-primary me-2"></i>Lobito</h5>
+                        <p class="text-muted small mb-0">This coastal city is known for beautiful beaches, turquoise waters, and a relaxed atmosphere. Perfect for swimming, sunbathing, surfing, or exploring local shops and restaurants.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2"><i class="fas fa-tree text-primary me-2"></i>Luengue-Luiana National Park</h5>
+                        <p class="text-muted small mb-0">Located in southeastern Angola, this vast park spans savanna, forest, and wetlands. It is home to a rich wildlife including elephants, lions, leopards, and crocodiles.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="section light-background">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Top places to include</h2>
-      <p>Popular stopovers and experiences we can build into your itinerary.</p>
+<!-- CTA -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-3">Ready to Explore Angola?</h3>
+        <p class="text-muted mb-4">Let us craft a personalised Angola itinerary for you. Request a free quote and we'll be in touch within 24 hours.</p>
+        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary px-4">
+            <i class="fas fa-paper-plane me-2"></i>Request a Free Quote
+        </a>
     </div>
-    <div class="row gy-4">
-      
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Luanda</h5>
-      <p class="mb-0 text-muted">Capital city highlights, museums, cuisine, and coastline.</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Kalandula Falls</h5>
-      <p class="mb-0 text-muted">Spectacular waterfall — one of Angola’s iconic natural sights.</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Miradouro da Lua</h5>
-      <p class="mb-0 text-muted">Unique lunar-like cliffs and viewpoints near Luanda.</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Benguela & Lobito</h5>
-      <p class="mb-0 text-muted">Coastal towns and relaxed beach experiences.</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Lubango Highlands</h5>
-      <p class="mb-0 text-muted">Cooler highlands, viewpoints, and dramatic terrain.</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="card-body">
-      <h5 class="mb-2"><i class="bi bi-compass me-2"></i>Cross‑border routes</h5>
-      <p class="mb-0 text-muted">Tailored overland plans connecting to northern Namibia.</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Things to do</h2>
-      <p>Activities can be mixed across comfort levels — from relaxed to adventurous.</p>
-    </div>
-
-    <div class="row gy-4">
-      
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-buildings fs-1 mb-3"></i>
-    <h6 class="mb-2">City & culture</h6>
-    <p class="mb-0 text-muted">Guided city tours, markets, museums, and food experiences.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-camera fs-1 mb-3"></i>
-    <h6 class="mb-2">Scenic viewpoints</h6>
-    <p class="mb-0 text-muted">Escarpments and photo stops on curated driving routes.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-water fs-1 mb-3"></i>
-    <h6 class="mb-2">Coastal time</h6>
-    <p class="mb-0 text-muted">Beach days, boat trips, and relaxed coastal itineraries.</p>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-6">
-  <div class="feature-box text-center h-100 p-4 border rounded-3">
-    <i class="bi bi-car-front fs-1 mb-3"></i>
-    <h6 class="mb-2">Adventure drives</h6>
-    <p class="mb-0 text-muted">Overland exploration with experienced route planning.</p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section dark-background">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-center">
-      <div class="col-lg-8">
-        <h3 class="mb-2">Travel tips</h3>
-        <ul class="mb-0 opacity-75">
-          <li class='mb-2'>Route planning is key — we advise road conditions, timing, and best travel style (guided vs. self‑drive).</li><li class='mb-2'>Carry valid travel documents and allow flexible timing for longer overland legs.</li><li class='mb-2'>We recommend booking accommodation ahead in peak travel windows.</li><li class='mb-2'>Tell us your interests (beaches, culture, adventure) and we’ll design the best loop.</li>
-        </ul>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="<?= get_link('packages/index') ?>" class="btn btn-outline">Browse packages</a>
-        <a href="<?= get_link('index/quote') ?>" class="btn btn-primary ms-2">Get a quote</a>
-      </div>
-    </div>
-  </div>
 </section>
