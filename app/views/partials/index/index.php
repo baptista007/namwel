@@ -159,9 +159,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-current">$2,499</span>
                             <span class="price-original">$2,999</span>
                         </div>
-                        <button class="btn btn-primary package-btn" onclick="openModal('lead-modal')">
-                            Book Now
-                        </button>
+                        <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
+                            View Details
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,9 +188,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-current">$3,499</span>
                             <span class="price-original">$4,199</span>
                         </div>
-                        <button class="btn btn-primary package-btn" onclick="openModal('lead-modal')">
-                            Book Now
-                        </button>
+                        <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
+                            View Details
+                        </a>
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <!-- Package 3 -->
             <div class="package-card fade-in">
                 <div class="package-image">
-                    <img src="<?= SITE_ADDR ?>assets/images/travel/Grand-Spaces-of-Namibia-scaled.jpeg" alt="Namibia">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/namibia-south.jpg" alt="Namibia">
                     <span class="package-badge">Popular</span>
                     <span class="package-availability"><i class="fas fa-star"></i> Top Rated</span>
                 </div>
@@ -219,9 +219,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-current">$1,899</span>
                             <span class="price-original">$2,299</span>
                         </div>
-                        <button class="btn btn-primary package-btn" onclick="openModal('lead-modal')">
-                            Book Now
-                        </button>
+                        <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
+                            Get Quote
+                        </a>
                     </div>
                 </div>
             </div>
@@ -248,9 +248,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-current">$2,799</span>
                             <span class="price-original">$3,399</span>
                         </div>
-                        <button class="btn btn-primary package-btn" onclick="openModal('lead-modal')">
-                            Book Now
-                        </button>
+                        <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
+                            Get Quote
+                        </a>
                     </div>
                 </div>
             </div>
