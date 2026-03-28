@@ -59,6 +59,16 @@ if (user_login_status() == true) {
                         'icon' => 'dashboard'
                     ],
                     [
+                        'path' => 'quote',
+                        'label' => 'Quote Requests',
+                        'icon' => 'file-invoice'
+                    ],
+                    [
+                        'path' => 'paymentsecurity',
+                        'label' => 'Payment Security Codes',
+                        'icon' => 'barcode'
+                    ],
+                    [
                         'path' => 'bookings',
                         'label' => 'Bookings',
                         'icon' => 'calendar'
@@ -72,17 +82,7 @@ if (user_login_status() == true) {
                         'path' => 'vehicles',
                         'label' => 'Vehicles',
                         'icon' => 'bus'
-                    ],
-                    [
-                        'path' => 'paymentsecurity',
-                        'label' => 'Payment Security Codes',
-                        'icon' => 'barcode'
-                    ],
-                    [
-                        'path' => 'quote',
-                        'label' => 'Quote Requests',
-                        'icon' => 'file-invoice'
-                    ],
+                    ]
                 ];
 
                 foreach ($menu as $item) {
