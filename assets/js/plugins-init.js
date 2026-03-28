@@ -132,9 +132,9 @@ function toggleSubmitDisabled($submitButton) {
             .addClass('disabled');
 
     if ($submitButton.is('button')) {
-        $submitButton.text('Processando...');
+        $submitButton.text('Processing...');
     } else {
-        $submitButton.val('Processando...');
+        $submitButton.val('Processing...');
     }
 }
 

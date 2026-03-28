@@ -19,76 +19,6 @@ class AdminController extends SecureController {
         $this->render_view("admin/index.php", null, "main_layout.php");
     }
 
-    private function login_user($username, $password_text, $rememberme = false) {
-        $db = $this->GetModel();
-        $username = filter_var($username, FILTER_SANITIZE_STRING);
-        $tablename = $this->tablename;
-        $query = "SELECT * 
-                FROM $tablename
-                WHERE role_id = ?
-                AND (username = ? OR user_email = ?)";
-        $user = $db->rawQueryOne($query, [UserAccountType::backoffice, $username, $username]);
-
-        $errors = array();
-        $redirect_url = null;
-        
-        if (!empty($user)) {
-            //Verify User Password Text With DB Password Hash Value.
-            //Uses PHP password_verify() function with default options
-            $password_hash = $user['password_hash'];
-            
-            if (password_verify($password_text, $password_hash)) {
-                //check if user account has been activated by administrator
-                if ($user['user_account_status'] != AccountStatus::active) {
-                    return $this->login_fail(get_lang("account_inactive"));
-                }
-                
-                unset($user['password_hash']); //Remove user password. No need to store it in the session
-                set_session("user_data", $user); // Set active user data in a sessions
-                
-                //if Remeber Me, Set Cookie
-                if ($rememberme == true) {
-                    $sessionkey = time() . random_str(20); // Generate a session key for the user
-                    //Update user session info in database with the session key
-                    $db->where("id", $user['id']);
-                    $res = $db->update($tablename, array("login_session_key" => hash_value($sessionkey)));
-                    if (!empty($res)) {
-                        set_cookie("login_session_key", $sessionkey); // save user login_session_key in a Cookie
-                    }
-                } else {
-                    clear_cookie("login_session_key"); // Clear any previous set cookie
-                }
-                
-                $redirect_url = get_session("login_redirect_url"); // Redirect to user active page
-
-                if (!empty($$redirect_url) && $redirect_url != 'admin/login') {
-                    clear_session("login_redirect_url");
-                    $redirect_url = $redirect_url;
-                } else {
-                    $redirect_url = get_link("admin");
-                }
-                
-            } else {
-                //password is not correct
-                $errors[] = get_lang("username_password_incorrect");
-            }
-        } else {
-            //user is not registered
-            $errors[] = get_lang("user_account_doesnt_exist");
-        }
-
-        ajaxFormPostOutcome($errors, $redirect_url, "Welcome");
-        return;
-    }
-
-    /**
-     * Display login page with custom message when login fails
-     * @return BaseView
-     */
-    private function login_fail($page_error = null) {
-        $this->set_page_error($page_error);
-        $this->render_view("admin/login.php", null);
-    }
 
     /**
      * Login Action
@@ -101,10 +31,67 @@ class AdminController extends SecureController {
             $username = trim($modeldata['username']);
             $password = $modeldata['password'];
             $rememberme = (!empty($modeldata['rememberme']) ? $modeldata['rememberme'] : false);
-            $this->login_user($username, $password, $rememberme);
-        } else {
-            $this->render_view("admin/login.php", null, 'login_layout.php');
+            $db = $this->GetModel();
+            $tablename = $this->tablename;
+            
+            $query = "SELECT * 
+                    FROM $tablename
+                    WHERE (username = ? OR user_email = ?)";
+            $user = $db->rawQueryOne($query, [$username, $username]);
+
+            $errors = array();
+            $redirect_url = null;
+            
+            if (!empty($user)) {
+                if ($user['user_account_status'] != AccountStatus::active) {
+                    $errors[] = get_lang("account_inactive");
+                    ajaxFormPostOutcome($errors, $redirect_url, "Welcome");
+                    return;
+                }
+
+                $password_hash = $user['password_hash'];
+                
+                if (password_verify($password, $password_hash)) {                    
+                    unset($user['password_hash']); //Remove user password. No need to store it in the session
+                    set_session("user_data", $user); // Set active user data in a sessions
+                    
+                    //if Remeber Me, Set Cookie
+                    if ($rememberme == true) {
+                        $sessionkey = time() . random_str(20); // Generate a session key for the user
+                        //Update user session info in database with the session key
+                        $db->where("id", $user['id']);
+                        $res = $db->update($tablename, array("login_session_key" => hash_value($sessionkey)));
+                        if (!empty($res)) {
+                            set_cookie("login_session_key", $sessionkey); // save user login_session_key in a Cookie
+                        }
+                    } else {
+                        clear_cookie("login_session_key"); // Clear any previous set cookie
+                    }
+                    
+                    $redirect_url = get_session("admin_login_redirect_url"); // Redirect to user active page
+
+                    if (!empty($redirect_url) && $redirect_url != 'admin/login') {
+                        clear_session("admin_login_redirect_url");
+                        $redirect_url = $redirect_url;
+                    } else {
+                        $redirect_url = get_link("admin");
+                    }
+                    
+                } else {
+                    //password is not correct
+                    $errors[] = get_lang("username_password_incorrect");
+                }
+            } else {
+                //user is not registered
+                $errors[] = get_lang("user_account_doesnt_exist");
+            }
+
+            ajaxFormPostOutcome($errors, $redirect_url, "Welcome");
+            return;
         }
+
+        $this->view->page_title = "Admin Login";
+        $this->render_view("", null, 'login_layout.php');
     }
 
     /**

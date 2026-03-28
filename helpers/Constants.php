@@ -25,6 +25,8 @@ final class SqlTables {
     const tbl_driver = "tbl_driver";
     const tbl_driver_file = "tbl_driver_file";
     const tbl_vacancy = "tbl_vacancy";
+    const tbl_payment_security = "tbl_payment_security";
+    const tbl_quote = "tbl_quote";
 }
 
 final class InputType {
@@ -102,6 +104,12 @@ final class YesNo {
 final class PaymentStatus {
     const verified = 1;
     const unverified = 2;
+}
+
+final class PaymentSecurityStatus {
+    const active = 1;
+    const redeemed = 2;
+    const expired = 3;
 }
 
 final class UserStatus {

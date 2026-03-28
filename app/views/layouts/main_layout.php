@@ -11,86 +11,98 @@ $comp_model = new SharedController();
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title><?php echo $page_title; ?></title>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <link rel="shortcut icon" href="<?php print_link(SITE_FAVICON); ?>" />
-        <?php
-        Html::page_meta('theme-color', META_THEME_COLOR);
-        Html::page_meta('author', META_AUTHOR);
-        Html::page_meta('keyword', META_KEYWORDS);
-        Html::page_meta('description', META_DESCRIPTION);
-        Html::page_meta('viewport', META_VIEWPORT);
-        Html::page_css('font-awesome.min.css');
-        Html::page_css('animate.css');
-        Html::page_css('blueimp-gallery.css');
-        Html::page_css('flatpickr.min.css');
-        Html::page_css('lightbox.min.css');
-
-        Html::page_css('bootstrap.min.css');
-        Html::page_css('sb-admin.css');
-
-        Html::page_js('jquery-3.3.1.min.js');
-        Html :: page_js('tinymce/tinymce.min.js');
-        Html::page_css('custom-style.css');
-        Html::page_css('admin-custom-style.css?ts=' . time());
-        ?>
-    </head>
+<head>
+    <title><?php echo $page_title; ?></title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="<?php print_link(SITE_FAVICON); ?>" />
     <?php
-    $page_id = "index";
-    if (user_login_status() == true) {
-        $page_id = "main";
-    }
+    Html::page_meta('theme-color', META_THEME_COLOR);
+    Html::page_meta('author', META_AUTHOR);
+    Html::page_meta('keyword', META_KEYWORDS);
+    Html::page_meta('description', META_DESCRIPTION);
+    Html::page_meta('viewport', META_VIEWPORT);
+
+    Html::page_css('fontawesome.all.min.css');
+    Html::page_css('bootstrap.min.css');
+    Html::page_css('admin-theme.css?ts=' . time());
+    Html::page_js('jquery-3.3.1.min.js');
     ?>
+</head>
+<?php
+$page_id = "index";
+if (user_login_status() == true) {
+    $page_id = "main";
+}
+?>
 
-    <body id="page-top" <?= ($controller_name == 'ProductController' ? "ng-app='ItecmaApp'" : "") ?>>
-        <div class="se-pre-con"></div>
-        <!-- Page Wrapper -->
-        <div id="wrapper">
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
-            <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="Namwel Tours" />
+            <h4>Namwel Tours</h4>
+            <span>Admin Dashboard</span>
+        </div>
 
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= SITE_ADDR ?>admin">
-                    <div class="sm-screen-logo">
-                        <img src="<?= SITE_ADDR . SITE_LOGO?>" alt="Logo" />
-                    </div>
-                    <div class="lg-screen-logo">
-                        <img src="<?= SITE_ADDR . SITE_LOGO?>" alt="Logo" />
-                    </div>
-                </a>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
-
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item <?= isActiveController(array("admin"), $page_name) ?>">
-                    <a class="nav-link" href="<?= SITE_ADDR ?>admin">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
+        <nav class="sidebar-menu">
+            <div class="menu-section">Main</div>
+            <ul class="nav flex-column">
                 <?php
                 $menu = [
                     [
-                        'path' => 'admin/contacts',
-                        'label' => 'Contacts',
-                        'icon' => 'users'
+                        'path' => 'admin',
+                        'label' => 'Dashboard',
+                        'icon' => 'dashboard'
                     ],
                     [
-                        'path' => 'client',
-                        'label' => 'Clients',
-                        'icon' => 'briefcase'
+                        'path' => 'bookings',
+                        'label' => 'Bookings',
+                        'icon' => 'calendar'
                     ],
+                    [
+                        'path' => 'tours',
+                        'label' => 'Tours',
+                        'icon' => 'map'
+                    ],
+                    [
+                        'path' => 'vehicles',
+                        'label' => 'Vehicles',
+                        'icon' => 'bus'
+                    ],
+                    [
+                        'path' => 'paymentsecurity',
+                        'label' => 'Payment Security Codes',
+                        'icon' => 'barcode'
+                    ],
+                    [
+                        'path' => 'quote',
+                        'label' => 'Quote Requests',
+                        'icon' => 'file-invoice'
+                    ],
+                ];
+
+                foreach ($menu as $item) {
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link ' . isActiveController($item['path'], $page_name) . '" href="' . get_link($item['path']) . '">';
+                    echo (!empty($item['icon']) ? '<i class="fas fa-' . $item['icon'] . '"></i>' : '');
+                    echo $item['label'];
+                    echo '</a>';
+                    echo '</li>';
+                }
+                ?>
+            </ul>
+
+            <div class="menu-section">Management</div>
+            <ul class="nav flex-column">
+                <?php
+                $menu = [
                     [
                         'path' => 'testimonial',
-                        'label' => 'Testimonials',
+                        'label' => 'Reviews',
                         'icon' => 'comments'
                     ],
                     [
@@ -98,11 +110,6 @@ $comp_model = new SharedController();
                         'label' => 'News',
                         'icon' => 'newspaper'
                     ],
-//                    [
-//                        'path' => 'banner',
-//                        'label' => 'Banners',
-//                        'icon' => 'image'
-//                    ],
                     [
                         'path' => 'statistics',
                         'label' => 'Statistics',
@@ -112,173 +119,134 @@ $comp_model = new SharedController();
                         'path' => 'gallery',
                         'label' => 'Gallery',
                         'icon' => 'photo-video'
-                    ],
-//                    [
-//                        'path' => 'vacancy',
-//                        'label' => 'Vacancies',
-//                        'icon' => 'hard-hat'
-//                    ],
-                    [
-                        'path' => 'user',
-                        'label' => 'Users',
-                        'icon' => 'users'
                     ]
                 ];
-                
+
                 foreach ($menu as $item) {
-                    echo '<li class="nav-item ' . isActiveController($item['path'], $page_name) . '">';
-                    echo '<a class="nav-link" href="' . get_link($item['path']) . '">';
-                    echo (!empty($item['icon']) ? '<i class="fas fa-'. $item['icon'] . '"></i>' : '');
-                    echo '<span>' . $item['label'] . '</span>';
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link ' . isActiveController($item['path'], $page_name) . '" href="' . get_link($item['path']) . '">';
+                    echo (!empty($item['icon']) ? '<i class="fas fa-' . $item['icon'] . '"></i>' : '');
+                    echo $item['label'];
                     echo '</a>';
                     echo '</li>';
                 }
                 ?>
-                
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= SITE_ADDR ?>" target="_blank">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>Site publico</span>
-                    </a>
-                </li>
-
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
             </ul>
-            <!-- End of Sidebar -->
 
-            <!-- Content Wrapper -->
-            <div id="content-wrapper" class="d-flex flex-column">
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <div class="menu-section">Settings</div>
+            <ul class="nav flex-column">
+                <?php
+                $menu = [
+                    [
+                        'path' => 'user',
+                        'label' => 'Users',
+                        'icon' => 'users'
+                    ],
+                    [
+                        'path' => 'settings',
+                        'label' => 'Settings',
+                        'icon' => 'gear'
+                    ],
+                    [
+                        'path' => 'reports',
+                        'label' => 'Reports',
+                        'icon' => 'file-text'
+                    ]
+                ];
 
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                foreach ($menu as $item) {
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link ' . isActiveController($item['path'], $page_name) . '" href="' . get_link($item['path']) . '">';
+                    echo (!empty($item['icon']) ? '<i class="fas fa-' . $item['icon'] . '"></i>' : '');
+                    echo $item['label'];
+                    echo '</a>';
+                    echo '</li>';
+                }
+                ?>
+            </ul>
+        </nav>
 
-                    <h3 style="width: 60%;">
-                        <?php echo $page_title; ?>
-                    </h3>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"  method="get" action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small search-field" placeholder="Search for..."
-                                   aria-label="Search" aria-describedby="basic-addon2" name="search" value="<?= (!empty($_GET['search']) ? $_GET['search'] : '') ?>">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                                <button class="btn btn-secondary" type="reset" onclick="$('.search-field').val(''); $('.navbar-search').submit();"> 
-                                    <i class="fas fa-times fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                 aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search" method="get" action=""> 
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small search-field"
-                                               placeholder="Search for..." aria-label="Search"
-                                               aria-describedby="basic-addon2" name="search" value="<?= (!empty($_GET['search']) ? $_GET['search'] : '') ?>">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                            <button class="btn btn-secondary" type="reset" onclick="$('.search-field').val(''); $('.navbar-search').submit();"> 
-                                                <i class="fas fa-times fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo ucwords(USER_NAME); ?>
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="<?php print_link('account') ?>"><i class="fas fa-user-circle"></i> My Account</a>
-                                <a class="dropdown-item" href="<?php print_link('admin/logout?csrf_token=' . Csrf::$token) ?>"><i class="fas fa-sign-out"></i> <?php print_lang('logout'); ?></a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Main Content -->
-                <div id="content">
-                    <!-- Page Main Content Start -->
-                    <div id="app-body">
-                        <div class="container-fluid">
-                            <div class="flash-msg-container"><?php show_flash_msg(); ?></div>
-                        </div>
-                        <div class="m-2">
-                            <div  class="card animated fadeIn">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-xs-12 comp-grid">
-                                            <?php $this->render_body(); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- <div class="sidebar-footer">
+            <div class="admin-profile">
+                <div class="admin-avatar">AD</div>
+                <div class="admin-info">
+                    <h6>Admin User</h6>
+                    <small>Super Admin</small>
                 </div>
-
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <div class="copyright">All rights reserved. &copy; <?= date('Y') . ' ' . SITE_NAME ?></div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
             </div>
+        </div> -->
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="toggle-sidebar" onclick="toggleSidebar()">
+                    <i class="fas fa-list"></i>
+                </button>
+                <div>
+                    <h1 class="page-title"><?= $page_title ?></h1>
+                    <nav class="breadcrumb-nav">
+                        <a href="#"><?= ucfirst($page_name) ?></a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span><?= ucfirst($page_action) ?></span>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search bookings, customers...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="header-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-comments"></i>
+                        <span class="badge">5</span>
+                    </button>
+                </div>
+                <a href="#" class="user-dropdown">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=E65100&color=fff" alt="Admin">
+                    <span>Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <?php 
+                $is_landing_page = $page_name == "admin" && $page_action == "index";
+
+                if (!$is_landing_page) {
+                    echo '<div class="card">';
+                    echo '<div class="card-body">';
+                }
+
+                $this->render_body(); 
+                
+                if (!$is_landing_page) {
+                    echo '</div>';
+                    echo '</div>';
+                }
+            ?>
         </div>
+    </main>
 
-        <div id="ajax-modal" class="modal fade-scale" tabindex="-1" style="display: none;"></div>
-        <script type="text/javascript">
-            var siteAddr = '<?= SITE_ADDR ?>';
-        </script>
-        <?php
-        Html::page_js('popper.js');
-        Html::page_js('bootstrap.min.js');
-        Html::page_js('jquery.form.min.js');
-        Html::page_js('lightbox.min.js');
-        Html::page_js('plugins.js');
-        Html::page_js('plugins-init.js?ts=' . time());
-        Html::page_js('page-scripts.js');
-
-        if ($controller_name == 'ProductController') {
-            Html :: page_js('angular-app.js?ts=' . time());
-        }
-        ?>
-    </body>
+    <div id="ajax-modal" class="modal fade-scale" tabindex="-1" style="display: none;"></div>
+    <script type="text/javascript">
+        var siteAddr = '<?= SITE_ADDR ?>';
+    </script>
+    <?php
+    Html::page_js('bootstrap.min.js');
+    Html::page_js('jquery.form.min.js');
+    Html::page_js('plugins-init.js?ts=' . time());
+    ?>
+</body>
 </html>

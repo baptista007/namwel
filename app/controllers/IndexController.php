@@ -179,6 +179,29 @@ class IndexController extends BaseController {
                     : '';
 
                 if (empty($errors)) {
+                    // Persist to database
+                    $db = $this->GetModel();
+                    $db->insert(SqlTables::tbl_quote, [
+                        'first_name'     => $firstName,
+                        'last_name'      => $lastName,
+                        'email'          => $email,
+                        'phone'          => $phone,
+                        'country'        => $country,
+                        'destinations'   => $destinations,
+                        'trip_type'      => $tripType,
+                        'accommodation'  => $accommodation,
+                        'travelers'      => $travelers,
+                        'start_date'     => $startDate ?: null,
+                        'end_date'       => $endDate ?: null,
+                        'date_flexibility' => $flexibility,
+                        'budget'         => $budget,
+                        'interests'      => $interests,
+                        'message'        => $message,
+                        'referral'       => $referral,
+                        'status'         => 'new',
+                        'created_date'   => date('Y-m-d H:i:s'),
+                    ]);
+
                     $body  = "New quote request received from the Namwel website.\n\n";
                     $body .= "--- CONTACT ---\n";
                     $body .= "Name:    {$firstName} {$lastName}\n";

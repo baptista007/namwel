@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <form id="quoteForm" method="POST" action="<?= get_link('index/quote') ?>">
+            <form id="quoteForm" method="POST" action="<?= get_link('index/quote?csrf_token=' . Csrf::$token) ?>">
                 <!-- Step 1: Trip Details -->
                 <div class="form-step active" data-step="1">
                     <h3 class="form-section-title">Trip Preferences</h3>

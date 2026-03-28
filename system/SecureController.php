@@ -25,7 +25,7 @@ class SecureController extends BaseController{
                     $this->status = AUTHORIZED;
                 } else {
                     $this->status = UNAUTHORIZED;
-                    set_session("login_redirect_url", get_current_url());
+                    set_session("admin_login_redirect_url", get_current_url());
                     $this->redirect('admin/login');
                 }
             }
