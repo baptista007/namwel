@@ -13,39 +13,26 @@ $contacts = $this->view_data;
 
         <div class="row gy-4">
             <div class="col-lg-5">
-                <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
+                <div class="card border-light h-100 shadow-lg py-3 p-sm-4 p-md-5">
                     <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                     <div class="card-body position-relative zindex-2">
                         <h2 class="h4 mb-4"><?= get_lang('reach_us') ?></h2>
-                        <ul class="list-unstyled pb-2 pb-lg-0 mb-4 mb-lg-5">
-                            <li class="d-flex pb-1 mb-2">
-                                <i class="bx bx-map text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-                                <?= get_lang('contact_address_building') ?>, <?= get_lang('contact_address_building_2') ?>
-                                <br />
-                                <?= get_lang('contact_address_street') ?>
-                                <br />
-                                <?= get_lang('contact_address_neighborhood') ?>
-                            </li>
-                            <li class="d-flex pb-1 mb-2">
-                                <i class="fas fa-envelope text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-                                <a href="mailto:info@chivembe.com">info@chivembe.com</a>
-                            </li>
-                            <li class="d-flex pb-1 mb-2">
-                                <i class="fas fa-phone text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-                                <a href="tel:+26461220007"> +264 61 220 007</a>
-                            </li>
-                            <li class="d-flex pb-1 mb-2">
-                                <i class="fa fa-mobile text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-                                <a href="tel:+264811254601">+264 81 125 4601</a>
-                            </li>
-                        </ul>
-                        <div id="map"></div>
+                        <div class="footer-contact pt-1">
+                            <p class="mb-2"><strong><i class="fas fa-clock"></i> Hours:</strong> <span>Mon–Fri, 08:00–17:00</span></p>
+                            <p class="mb-0"><strong><i class="fas fa-envelope"></i> Email:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
+                            <p class="mb-0"><strong><i class="fas fa-globe"></i> Website:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
+                            <p class="mb-0"><strong><i class="fas fa-phone"></i> Phone:</strong> <span>+264 61 244 697</span></p>
+                            <p class="mb-0"><strong><i class="fas fa-mobile"></i> Mobile:</strong> <span> +264 81 762 7908</span></p>
+                            <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> WhatsApp (24/7):</strong> <span>+264 81 212 7874</span></p>
+                            <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> <span>Ara Street 7695 Dorado Valley, Windhoek, Namibia</span></p>
+                        </div>
+                        <div id="map" class="rounded-3 mt-4" style="height: 280px;"></div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-7">
-                <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
+                <div class="card border-light h-100 shadow-lg py-3 p-sm-4 p-md-5">
                     <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
                     <div class="card-body position-relative zindex-2">
                         <h2 class="h4 mb-4"><?= get_lang('leave_message') ?></h2>
@@ -66,8 +53,8 @@ $contacts = $this->view_data;
                                 <div class="invalid-feedback">Enter a time!</div>
                             </div>
                             <?php
-                            $rand1 = rand(1, 20);
-                            $rand2 = rand(1, 20);
+                            $rand1 = rand(1, 5);
+                            $rand2 = rand(1, 5);
                             ?>
                             <div class="form-group mb-3">
                                 <label><?= get_lang('contact_verification') ?><span class="text-danger">*</span></label>
@@ -95,9 +82,9 @@ $contacts = $this->view_data;
     let map;
 
     function initMap() {
-        var center = {lat: -22.61893611111111, lng: 17.095391666666664};
+        var center = {lat: -22.5588467, lng: 17.0594451};
         var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 15, center: center});
+                document.getElementById('map'), {zoom: 14, center: center});
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({position: center, map: map});
     }

@@ -8,7 +8,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <!-- Hero Section -->
 <section class="hero" id="hero">
     <video autoplay muted loop playsinline>
-        <source src="<?= SITE_ADDR ?>assets/videos/NAMIBIA.mp40001.mp4" type="video/mp4">
+        <source src="<?= SITE_ADDR ?>assets/videos/namwel-video.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -26,7 +26,11 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         </div>
         <div class="hero-trust">
             <div class="trust-item">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-sm fa-star"></i>
+                <i class="fas fa-sm fa-star"></i>
+                <i class="fas fa-sm fa-star"></i>
+                <i class="fas fa-sm fa-star"></i>
+                <i class="fas fa-sm fa-star"></i>
                 <span>4.9/5 Google Reviews</span>
             </div>
             <div class="trust-item">
@@ -35,7 +39,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             </div>
             <div class="trust-item">
                 <i class="fas fa-award"></i>
-                <span>9+ Years Experience</span>
+                <span>17+ Years Experience</span>
             </div>
         </div>
     </div>
@@ -66,12 +70,11 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <div class="col-md-3">
                 <label class="form-label small fw-bold">DESTINATION</label>
                 <select class="form-select border-0 bg-light">
-                    <option value="Angola">Angola</option>
-                    <option value="Botswana">Botswana</option>
                     <option value="Namibia">Namibia</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Zambia">Zambia</option>
+                    <option value="Botswana">Botswana</option>
                     <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Angola">Angola</option>
                 </select>
             </div>
             <div class="col-md-3">
@@ -156,12 +159,17 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
-                            <span class="price-current">$2,499</span>
-                            <span class="price-original">$2,999</span>
+                            <span class="price-current">NAD2,499</span>
+                            <span class="price-original">NAD2,999</span>
                         </div>
-                        <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
-                            View Details
-                        </a>
+                        <div>
+                            <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
+                                View Details
+                            </a>
+                            <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
+                                Get Quote
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,12 +193,17 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
-                            <span class="price-current">$3,499</span>
-                            <span class="price-original">$4,199</span>
+                            <span class="price-current">NAD3,499</span>
+                            <span class="price-original">NAD4,199</span>
                         </div>
-                        <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
-                            View Details
-                        </a>
+                        <div>
+                            <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
+                                View Details
+                            </a>
+                            <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
+                                Get Quote
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,8 +229,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
-                            <span class="price-current">$1,899</span>
-                            <span class="price-original">$2,299</span>
+                            <span class="price-current">NAD1,899</span>
+                            <span class="price-original">NAD2,299</span>
                         </div>
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
                             Get Quote
@@ -245,8 +258,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
-                            <span class="price-current">$2,799</span>
-                            <span class="price-original">$3,399</span>
+                            <span class="price-current">NAD2,799</span>
+                            <span class="price-original">NAD3,399</span>
                         </div>
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
                             Get Quote
@@ -334,7 +347,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <!-- Testimonials -->
 <section class="testimonials" id="testimonials">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header mb-2" >
             <h2>What Our Travelers Say</h2>
             <p>Real stories from guests who've experienced the magic of Africa</p>
         </div>
@@ -344,7 +357,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 $count = 0;
                 foreach ($testimonials as $testimonial) {
                     echo '<div class="testimonial-slide ' . ($count == 0 ? 'active' : '') . '">';
-                    echo '<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah M." class="testimonial-image">';
+                    // echo '<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah M." class="testimonial-image">';
                     echo '<div class="testimonial-stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -353,12 +366,11 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                                 <i class="fas fa-star"></i>
                             </div>';
                     echo '<p class="testimonial-quote">';
-                    echo '<i class="bi bi-quote quote-icon-left"></i>';
+                    echo '<i class="fas fa-quote-left quote-icon-left"></i>';
                     echo $testimonial['message'];
-                    echo '<i class="bi bi-quote quote-icon-right"></i>';
+                    echo '<i class="fas fa-quote-right quote-icon-right"></i>';
                     echo '</p>';
                     echo '<p class="testimonial-author">' . $testimonial['fullname'] . '</p>';
-                    echo '<p class="testimonial-country">' . $testimonial['country'] . '</p>';
                     echo '</div>';
                     $count++;
                 }

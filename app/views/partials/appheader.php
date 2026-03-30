@@ -19,11 +19,11 @@ $page_id = Router::$page_id;
                     </a>
                     <div class="nav-dropdown">
                         <div class="nav-dropdown-inner">
-                            <a href="<?= get_link('destinations/angola') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Angola</a>
-                            <a href="<?= get_link('destinations/botswana') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Botswana</a>
                             <a href="<?= get_link('destinations/namibia') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Namibia</a>
-                            <a href="<?= get_link('destinations/south_africa') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>South Africa</a>
+                            <a href="<?= get_link('destinations/botswana') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Botswana</a>
                             <a href="<?= get_link('destinations/zimbabwe') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Zimbabwe</a>
+                            <a href="<?= get_link('destinations/south_africa') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>South Africa</a>
+                            <a href="<?= get_link('destinations/angola') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Angola</a>
                         </div>
                     </div>
                 </div>

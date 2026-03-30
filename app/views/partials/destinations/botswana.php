@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/Botswana_Okavango.jpg" class="img-fluid rounded-4 shadow" alt="Botswana Okavango">
+                <img src="<?= SITE_ADDR ?>assets/images/mokoro.jpeg" class="img-fluid rounded-4 shadow" alt="Botswana Okavango">
             </div>
         </div>
     </div>
@@ -79,15 +79,13 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
-                    <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/Botswana_Okavango.jpg" class="card-img-top" alt="Chobe National Park" style="height:200px; object-fit:cover;">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/chobe-leopard.png" class="card-img-top" alt="Chobe National Park" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Chobe National Park</h5>
-                            <span class="badge bg-success small">From €2,815</span>
                         </div>
                         <p class="text-muted small mb-2">Home to the highest wildlife concentrations in Southern Africa — with elephant populations of 50,000 to 70,000. An unmissable park for any safari enthusiast.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -98,11 +96,9 @@
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Okavango Delta</h5>
-                            <span class="badge bg-success small">From €2,554</span>
                         </div>
                         <p class="text-muted small mb-2">The magical, world-famous Okavango Delta is one of the absolute highlights of a Botswana trip — the largest inland delta on earth, where the Okavango River meets the Kalahari.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -113,11 +109,9 @@
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Kgalagadi Transfrontier Park</h5>
-                            <span class="badge bg-success small">From €3,150</span>
                         </div>
                         <p class="text-muted small mb-2">Considered one of Africa's best parks for observing big cats. The famous black-maned Kalahari lions are frequently spotted, alongside cheetahs and leopards.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>

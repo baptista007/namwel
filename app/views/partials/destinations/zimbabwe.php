@@ -79,15 +79,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
-                    <img src="<?= SITE_ADDR ?>assets/images/travel/VictoriaFalls-Zimbabwe-Sunrise-BestSpot.jpeg" class="card-img-top" alt="Victoria Falls" style="height:200px; object-fit:cover;">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/nike159-victoria-falls-2042641_640.jpg" class="card-img-top" alt="Victoria Falls" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Victoria Falls</h5>
-                            <span class="badge bg-success small">From €3,250</span>
+                            <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">Known as Mosi-oa-Tunya — "the smoke that thunders" — on the Zambezi River at the Zambia-Zimbabwe border. One of the seven natural wonders of the world and Africa's most iconic sight.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -98,11 +97,10 @@
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Hwange National Park</h5>
-                            <span class="badge bg-success small">From €2,850</span>
+                            <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">One of Africa's largest national parks and Zimbabwe's most popular safari destination. Spanning over 14,600 km², it is home to some of the highest elephant populations on the continent.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +115,6 @@
                         </div>
                         <p class="text-muted small mb-2">A UNESCO World Heritage Site with ancient San rock paintings, dramatic granite kopjes, and white rhino tracking. A profoundly spiritual and historically significant landscape.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Good year-round</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>

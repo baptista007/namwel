@@ -85,7 +85,7 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <img src="<?= SITE_ADDR ?>assets/images/travel/Elephants.png" class="img-fluid rounded-4 shadow" alt="Why Choose Namwel">
+                <img src="<?= SITE_ADDR ?>assets/images/great-south-01.jpeg" class="img-fluid rounded-4 shadow" alt="Why Choose Namwel">
             </div>
             <div class="col-lg-7">
                 <h2 class="fw-bold mb-3">Why Choose Namwel?</h2>
@@ -219,11 +219,12 @@
             <!-- CEO -->
             <div class="col-lg-4">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
-                    <img src="<?= SITE_ADDR ?>assets/images/founder.jpeg" class="card-img-top" alt="Fernando Celestino" style="height:220px; object-fit:contain;">
+                    <img src="<?= SITE_ADDR ?>assets/images/managing_driector-1024x698-1.jpg" class="card-img-top" alt="Fernando Celestino" style="height:220px; object-fit:contain;">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-1">Fernando Celestino</h5>
+                        <p class="text-primary small mb-1">Expert in English, French, and Portuguese</p>
                         <p class="text-primary small mb-2">Founder &amp; Managing Director</p>
-                        <p class="text-muted small mb-0">Fernando brings a wealth of experience to Namwel — having worked as a professional guide, independent guide, and operations director before founding Namwel in 2017. With a deep passion for Namibia and Southern Africa, he has built a strong team of professional guides dedicated to delivering high-quality, unforgettable travel experiences.</p>
+                        <p class="text-muted small mb-0">Fernando brings a wealth of experience to Namwel — having worked as a professional guide, independent guide, and operations director for over 23 years. Founding Namwel in 2017 with a deep passion for Namibia and Southern Africa, he has built a strong team of professional guides dedicated to delivering high-quality and unforgettable travel experiences.</p>
                     </div>
                 </div>
             </div>
@@ -237,7 +238,8 @@
                         </div>
                     </div>
                     <h5 class="fw-bold mb-1">Expert Drivers</h5>
-                    <p class="text-muted small mb-0">Three professional drivers ensure safe and comfortable travel across Namibia. With years of experience on varied terrain, they guarantee smooth journeys whether for a self-drive adventure or a guided excursion. Safety, reliability, and client satisfaction are their priorities.</p>
+                    <p class="text-muted small mb-4">Our professional drivers ensure safe and comfortable travel across Namibia. With years of experience on varied terrain, they guarantee smooth journeys whether for a self-drive adventure or a guided excursion. Safety, reliability, and client satisfaction are their priorities.</p>
+                    <img src="<?= SITE_ADDR ?>assets/images/tropic-of-capricorn-02.jpeg" class="card-img-top" alt="Professional Drivers">
                 </div>
             </div>
 
@@ -250,7 +252,8 @@
                         </div>
                     </div>
                     <h5 class="fw-bold mb-1">Passionate Tour Guides</h5>
-                    <p class="text-muted small mb-0">Our four experienced tour guides bring Namibia to life! From wildlife safaris to cultural excursions, they share expert knowledge and captivating stories for an immersive and unforgettable experience. Friendly, multilingual, and knowledgeable — they make every journey extraordinary.</p>
+                    <p class="text-muted small mb-4">Our experienced tour guides bring Namibia to life! From wildlife safaris to cultural excursions, they share expert knowledge and captivating stories for an immersive and unforgettable experience. Friendly, multilingual, and knowledgeable — they make every journey extraordinary.</p>
+                    <img src="<?= SITE_ADDR ?>assets/images/Destination-Specialists.jpeg" class="card-img-top" alt="Destination Specialists">
                 </div>
             </div>
 

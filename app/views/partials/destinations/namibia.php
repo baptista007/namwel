@@ -44,7 +44,7 @@
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-users text-primary mt-1"></i>
-                            <div><strong class="d-block small">Population</strong><span class="text-muted small">2.4 million</span></div>
+                            <div><strong class="d-block small">Population</strong><span class="text-muted small">3.1 million</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -79,15 +79,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
-                    <img src="<?= SITE_ADDR ?>assets/images/travel/etosha.jpg" class="card-img-top" alt="Etosha National Park" style="height:200px; object-fit:cover;">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/chillervirus-lion-1305804_640.jpg" class="card-img-top" alt="Etosha National Park" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Etosha National Park</h5>
-                            <span class="badge bg-success small">From €2,645</span>
+                            <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">One of Africa's most important game reserves in northern Namibia. Home to lions, elephants, rhinos, and hundreds of bird species — all gathering around the famous salt pan waterholes.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -98,11 +97,10 @@
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="fw-bold mb-0">Sossusvlei &amp; Deadvlei</h5>
-                            <span class="badge bg-success small">From €3,425</span>
+                            <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">The world's tallest sand dunes. Inside the Namib-Naukluft Park, Sossusvlei and Deadvlei are two of Namibia's most iconic landscapes — especially breathtaking at sunrise.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -117,15 +115,18 @@
                         </div>
                         <p class="text-muted small mb-2">A charming coastal town with a German colonial character. Base yourself here for dune sandboarding, seal cruises, quad biking in the desert, and dolphin-watching in Walvis Bay.</p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Good year-round</p>
-                        <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary w-100">Get a Quote</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/fish-river-canyon.png" class="card-img-top" alt="Fish River Canyon" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-2"><i class="fas fa-mountain text-primary me-2"></i>Fish River Canyon</h5>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="fw-bold mb-0">Fish River Canyon</h5>
+                            <span class="badge bg-info text-dark small">Ask us</span>
+                        </div>
                         <p class="text-muted small mb-0">The second largest canyon in the world stretches over 160 km through the south of Namibia. Dramatic viewpoints, multi-day hiking trails, and a sense of utter solitude make it one of Africa's great wonders.</p>
                     </div>
                 </div>
@@ -133,8 +134,12 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/skeleton-coast.jpg" class="card-img-top" alt="Skeleton Coast" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-2"><i class="fas fa-road text-primary me-2"></i>Skeleton Coast</h5>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="fw-bold mb-0">Skeleton Coast</h5>
+                            <span class="badge bg-info text-dark small">Ask us</span>
+                        </div>
                         <p class="text-muted small mb-0">One of the most remote and wild stretches of coastline in the world — shipwrecks, seal colonies, desert-adapted lions, and the relentless Atlantic. An adventure destination unlike any other.</p>
                     </div>
                 </div>
@@ -142,9 +147,13 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/twyfelfontein-rock.png" class="card-img-top" alt="Twyfelfontein" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-2"><i class="fas fa-users text-primary me-2"></i>Damaraland &amp; Kaokoland</h5>
-                        <p class="text-muted small mb-0">Remote, dramatic highland landscapes where you can meet the Himba people and search for desert-adapted elephants and black rhinos in one of Namibia's most beautiful and wild regions.</p>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="fw-bold mb-0">Damaraland & Okaokoland</h5>
+                            <span class="badge bg-info text-dark small">Ask us</span>
+                        </div>
+                        <p class="text-muted small mb-0">Remote, dramatic highland landscapes where you can find engravings, meet the Himba people, search for desert-adapted elephants and black rhinos in one of Namibia's most beautiful and wild regions.</p>
                     </div>
                 </div>
             </div>

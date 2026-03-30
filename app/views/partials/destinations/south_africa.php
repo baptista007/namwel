@@ -87,7 +87,6 @@
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-1">
                                     <h5 class="fw-bold mb-0">Table Mountain</h5>
-                                    <span class="badge bg-success small">From €2,645</span>
                                 </div>
                                 <p class="text-muted small mb-2">Cape Town's iconic flat-topped mountain overlooks one of the world's most beautiful cities. Take the cable car for panoramic views, or hike one of several trails to the summit.</p>
                                 <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
@@ -108,7 +107,6 @@
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-1">
                                     <h5 class="fw-bold mb-0">Kruger National Park</h5>
-                                    <span class="badge bg-success small">From €2,645</span>
                                 </div>
                                 <p class="text-muted small mb-2">One of Africa's largest national parks and a world-class safari destination, home to the Big Five — elephants, lions, leopards, rhinos, and buffalo.</p>
                                 <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
@@ -129,7 +127,6 @@
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-1">
                                     <h5 class="fw-bold mb-0">The Garden Route</h5>
-                                    <span class="badge bg-success small">From €2,645</span>
                                 </div>
                                 <p class="text-muted small mb-2">This scenic coastal drive along the south coast offers spectacular Indian Ocean views, charming towns, hiking, surfing, and wildlife encounters along the way.</p>
                                 <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
@@ -150,7 +147,6 @@
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-1">
                                     <h5 class="fw-bold mb-0">Drakensberg Mountains</h5>
-                                    <span class="badge bg-success small">From €2,645</span>
                                 </div>
                                 <p class="text-muted small mb-2">A UNESCO World Heritage Site renowned for spectacular cliffs, verdant valleys, and panoramic views. Exceptional hiking, ancient San rock art, and dramatic escarpments.</p>
                                 <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>

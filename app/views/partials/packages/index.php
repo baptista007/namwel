@@ -121,7 +121,9 @@
                                         <span class="fw-bold text-primary fs-5">From $2,499</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$2,999</small>
                                     </div>
-                                    <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-primary">Get a Quote</a>
+                                    <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
+                                        View Details
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +151,9 @@
                                         <span class="fw-bold text-primary fs-5">From $3,499</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$4,199</small>
                                     </div>
-                                    <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-primary">Get a Quote</a>
+                                    <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
+                                        View Details
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +181,9 @@
                                         <span class="fw-bold text-primary fs-5">From $1,899</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$2,299</small>
                                     </div>
-                                    <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-primary">Get a Quote</a>
+                                    <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
+                                        View Details
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +211,9 @@
                                         <span class="fw-bold text-primary fs-5">From $2,799</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$3,399</small>
                                     </div>
-                                    <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-primary">Get a Quote</a>
+                                    <a class="btn btn-primary package-btn" href="<?= get_link('packages/a_stroll_around_okavango') ?>">
+                                        View Details
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/angola.jpg" class="img-fluid rounded-4 shadow" alt="Angola">
+                <img src="<?= SITE_ADDR ?>assets/images/travel/angola-509598_1280.jpg" class="img-fluid rounded-4 shadow" alt="Angola">
             </div>
         </div>
     </div>
@@ -79,15 +79,17 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/welwitschia-6468869_640.jpg" class="card-img-top" alt="Welwitschia mirabilis" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Luanda</h5>
-                        <p class="text-muted small mb-0">Angola's vibrant capital blends colonial history with modern architecture. Visitors can explore the fortified city of São Miguel, stroll the scenic Ilha do Mussulo promenade, and discover the country's rich culture across its many museums.</p>
+                        <h5 class="fw-bold mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Namibe</h5>
+                        <p class="text-muted small mb-0">Angola's coastal province of Namibe offers stunning beaches, desert landscapes, and rich cultural heritage. Visitors can explore the historic town of Namibe, relax on pristine beaches, and discover the unique biodiversity of the region.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/palanca-negra.png" class="card-img-top" alt="Palanca Negra" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-2"><i class="fas fa-paw text-primary me-2"></i>Kissama National Park</h5>
                         <p class="text-muted small mb-0">This vast park is home to elephants, lions, giraffes, and zebras. Visitors can go on safari to observe these majestic creatures in their natural habitat, or walk through lush tropical forests.</p>
@@ -97,6 +99,7 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/kalandula-falls.jpg" class="card-img-top" alt="Kalandula Falls" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-2"><i class="fas fa-water text-primary me-2"></i>Kalandula Falls</h5>
                         <p class="text-muted small mb-0">These spectacular falls — the second highest in Africa — are a true natural wonder. Admire them from afar or hike to the base for a closer view. A breathtaking spectacle not to be missed.</p>

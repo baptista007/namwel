@@ -100,7 +100,7 @@ class AdminController extends SecureController {
      * @return View
      */
     function logout($arg = null) {
-        Csrf::cross_check();
+        // Csrf::cross_check();
         session_destroy();
         clear_cookie("login_session_key");
         set_flash_msg('User logged out');
