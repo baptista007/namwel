@@ -6,8 +6,8 @@
         <p class="lead mb-3">Victoria Falls, ancient ruins, extraordinary wildlife, and an emerging adventure destination in the heart of Southern Africa.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">Zimbabwe</li>
             </ol>
         </nav>
@@ -20,7 +20,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">Zimbabwe, nestled in the heart of Southern Africa, is a captivating destination inviting travellers in search of authentic adventures. The country boasts breathtaking scenery, rich and diverse wildlife, and exceptional cultural and historical sites. Beyond its natural wonders, Zimbabwe has a rich heritage — from the ruins of Great Zimbabwe to the San rock art, and the colonial cities of Bulawayo and Harare.</p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">
@@ -86,7 +86,7 @@
                             <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">Known as Mosi-oa-Tunya — "the smoke that thunders" — on the Zambezi River at the Zambia-Zimbabwe border. One of the seven natural wonders of the world and Africa's most iconic sight.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                             <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">One of Africa's largest national parks and Zimbabwe's most popular safari destination. Spanning over 14,600 km², it is home to some of the highest elephant populations on the continent.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>

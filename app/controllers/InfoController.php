@@ -27,4 +27,14 @@ class InfoController extends BaseController
 		$this->view->page_title = "Terms and Conditions";
 		$this->render_view("info/terms.php", null, "index_layout.php");
 	}
+
+	function change_language($lang = null)
+	{
+		if (!empty($lang)) {
+			set_cookie('lang', $lang);
+			redirect_to_page(DEFAULT_PAGE);
+		} else {
+			$this->render_view("info/change_language.php", null, "info_layout.php");
+		}
+	}
 }

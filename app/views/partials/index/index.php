@@ -12,34 +12,34 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>Namibia & Southern Africa, the way you imagined it</h1>
-        <p class="hero-subtitle">Guided tours, Car rental, Camping circuits, Honeymoon, and more.</p>
+        <h1><?= get_lang('hero_title') ?></h1>
+        <p class="hero-subtitle"><?= get_lang('hero_subtitle') ?></p>
         <div class="hero-buttons">
             <a href="#lead-form" class="btn btn-primary pulse">
                 <i class="fas fa-compass"></i>
-                Start Your Journey
+                <?= get_lang('hero_btn_start') ?>
             </a>
             <a href="#packages" class="btn btn-outline">
                 <i class="fas fa-download"></i>
-                Our Packages
+                <?= get_lang('hero_btn_packages') ?>
             </a>
         </div>
-        <div class="hero-trust">
+        <div class="hero-trust notranslate">
             <div class="trust-item">
                 <i class="fas fa-sm fa-star"></i>
                 <i class="fas fa-sm fa-star"></i>
                 <i class="fas fa-sm fa-star"></i>
                 <i class="fas fa-sm fa-star"></i>
                 <i class="fas fa-sm fa-star"></i>
-                <span>4.9/5 Google Reviews</span>
+                <span><?= get_lang('hero_google_reviews') ?></span>
             </div>
             <div class="trust-item">
                 <i class="fas fa-users"></i>
-                <span>5000+ Happy Travelers</span>
+                <span><?= get_lang('hero_happy_travelers') ?></span>
             </div>
             <div class="trust-item">
                 <i class="fas fa-award"></i>
-                <span>17+ Years Experience</span>
+                <span><?= get_lang('hero_years_exp') ?></span>
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         </div> -->
         <form action="" class="trust-bar-inner">
             <div class="col-md-3">
-                <label class="form-label small fw-bold">DESTINATION</label>
+                <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_destination') ?></label>
                 <select class="form-select border-0 bg-light">
                     <option value="Namibia">Namibia</option>
                     <option value="Botswana">Botswana</option>
@@ -78,14 +78,14 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 </select>
             </div>
             <div class="col-md-3">
-                <label class="form-label small fw-bold">MONTH</label>
+                <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_month') ?></label>
                 <select class="form-select border-0 bg-light">
                     <option>June - August (Dry)</option>
                     <option>Dec - Feb (Green)</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <label class="form-label small fw-bold">STYLE</label>
+                <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_style') ?></label>
                 <select class="form-select border-0 bg-light">
                     <option>5* Hotel - Lodge</option>
                     <option>Lodge - Rest Camp</option>
@@ -95,7 +95,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 </select>
             </div>
             <div class="col-md-3 d-grid">
-                <button type="submit" class="btn btn-primary mt-auto py-2">Find My Tour</button>
+                <button type="submit" class="btn btn-primary mt-auto py-2"><?= get_lang('search_btn') ?></button>
             </div>
         </form>
     </div>
@@ -105,30 +105,30 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <section class="value-props" id="value-props">
     <div class="container">
         <div class="section-header">
-            <h2>Why Travel With Namwel</h2>
-            <p>We offer you a memorable experience with tailor-made tours. Guided tour, Car rental, Camping circuits, Honeymoon, and more.</p>
+            <h2><?= get_lang('home_why_title') ?></h2>
+            <p><?= get_lang('home_why_desc') ?></p>
         </div>
         <div class="value-grid">
             <div class="value-card fade-in">
                 <div class="value-icon">
                     <i class="fas fa-user-tie"></i>
                 </div>
-                <h3>Expert Local Guides</h3>
-                <p>Our guides average 5+ years of experience. They're passionate storytellers who make every sighting unforgettable.</p>
+                <h3><?= get_lang('home_guide_title') ?></h3>
+                <p><?= get_lang('home_guide_desc') ?></p>
             </div>
             <div class="value-card fade-in">
                 <div class="value-icon">
                     <i class="fas fa-gem"></i>
                 </div>
-                <h3>Self‑drive & guided options</h3>
-                <p>Choose between self‑drive and guided options to suit your preferences and budget.</p>
+                <h3><?= get_lang('home_selfdrive_title') ?></h3>
+                <p><?= get_lang('home_selfdrive_desc') ?></p>
             </div>
             <div class="value-card fade-in">
                 <div class="value-icon">
                     <i class="fas fa-heart"></i>
                 </div>
-                <h3>Private & Personal</h3>
-                <p>Customized itineraries tailored to your interests and pace.</p>
+                <h3><?= get_lang('home_private_title') ?></h3>
+                <p><?= get_lang('home_private_desc') ?></p>
             </div>
         </div>
     </div>
@@ -138,16 +138,16 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <section class="packages" id="packages">
     <div class="container">
         <div class="section-header">
-            <h2>Featured Safari Packages</h2>
-            <p>Our most popular adventures, handcrafted for unforgettable experiences</p>
+            <h2><?= get_lang('home_pkgs_title') ?></h2>
+            <p><?= get_lang('home_pkgs_desc') ?></p>
         </div>
         <div class="packages-grid">
             <!-- Package 1 -->
             <div class="package-card fade-in">
                 <div class="package-image">
                     <img src="<?= SITE_ADDR ?>assets/images/travel/VictoriaFalls-Zimbabwe-Sunrise-BestSpot.jpeg" alt="Kruger Safari">
-                    <span class="package-badge">Best Seller</span>
-                    <span class="package-availability"><i class="fas fa-fire"></i> Only 3 spots left</span>
+                    <span class="package-badge notranslate"><?= get_lang('pkg_best_seller') ?></span>
+                    <span class="package-availability notranslate"><i class="fas fa-fire"></i> <?= get_lang('pkg_spots_left') ?></span>
                 </div>
                 <div class="package-content">
                     <div class="package-location">Botswana / Namibia / Zambia</div>
@@ -164,10 +164,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         </div>
                         <div>
                             <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
-                                View Details
+                                <?= get_lang('pkg_view_details') ?>
                             </a>
                             <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
-                                Get Quote
+                                <?= get_lang('pkg_get_quote') ?>
                             </a>
                         </div>
                     </div>
@@ -178,8 +178,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <div class="package-card fade-in">
                 <div class="package-image">
                     <img src="<?= SITE_ADDR ?>assets/images/travel/Elephants.png" alt="Okavango Delta">
-                    <span class="package-badge">Premium</span>
-                    <span class="package-availability"><i class="fas fa-clock"></i> Limited availability</span>
+                    <span class="package-badge notranslate"><?= get_lang('pkg_premium') ?></span>
+                    <span class="package-availability notranslate"><i class="fas fa-clock"></i> <?= get_lang('pkg_limited') ?></span>
                 </div>
                 <div class="package-content">
                     <div class="package-location">Botswana / Namibia / Zimbabwe</div>
@@ -198,10 +198,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         </div>
                         <div>
                             <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
-                                View Details
+                                <?= get_lang('pkg_view_details') ?>
                             </a>
                             <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
-                                Get Quote
+                                <?= get_lang('pkg_get_quote') ?>
                             </a>
                         </div>
                     </div>
@@ -212,8 +212,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <div class="package-card fade-in">
                 <div class="package-image">
                     <img src="<?= SITE_ADDR ?>assets/images/travel/namibia-south.jpg" alt="Namibia">
-                    <span class="package-badge">Popular</span>
-                    <span class="package-availability"><i class="fas fa-star"></i> Top Rated</span>
+                    <span class="package-badge notranslate"><?= get_lang('pkg_popular') ?></span>
+                    <span class="package-availability notranslate"><i class="fas fa-star"></i> <?= get_lang('pkg_top_rated') ?></span>
                 </div>
                 <div class="package-content">
                     <div class="package-location">Namibia</div>
@@ -233,7 +233,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-original">NAD2,299</span>
                         </div>
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
-                            Get Quote
+                            <?= get_lang('pkg_get_quote') ?>
                         </a>
                     </div>
                 </div>
@@ -244,7 +244,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 <div class="package-image">
                     <img src="<?= SITE_ADDR ?>assets/images/travel/aerial-view-of-the-okavango-delta-channels-and-landscape.jpg" alt="Okavango Delta">
                     <span class="package-badge">Botswana / Namibia / Zambia</span>
-                    <span class="package-availability"><i class="fas fa-gem"></i> Unique Experience</span>
+                    <span class="package-availability notranslate"><i class="fas fa-gem"></i> <?= get_lang('pkg_unique') ?></span>
                 </div>
                 <div class="package-content">
                     <div class="package-location">Namibia</div>
@@ -262,7 +262,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <span class="price-original">NAD3,399</span>
                         </div>
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
-                            Get Quote
+                            <?= get_lang('pkg_get_quote') ?>
                         </a>
                     </div>
                 </div>
@@ -276,27 +276,27 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     <div class="container">
         <div class="urgency-inner">
             <div class="urgency-content">
-                <h2>Limited Time Offer</h2>
-                <p>Book any 2026 tour before March 31st and receive a complimentary sunset dinner experience. Don't miss out on these exclusive dates!</p>
+                <h2><?= get_lang('home_urgency_title') ?></h2>
+                <p><?= get_lang('home_urgency_desc') ?></p>
             </div>
             <div class="countdown-wrapper">
-                <div class="countdown-label">Offer Ends In</div>
+                <div class="countdown-label notranslate"><?= get_lang('home_offer_ends') ?></div>
                 <div class="countdown" id="countdown">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">00</div>
-                        <div class="countdown-text">Days</div>
+                        <div class="countdown-text notranslate"><?= get_lang('countdown_days') ?></div>
                     </div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="hours">00</div>
-                        <div class="countdown-text">Hours</div>
+                        <div class="countdown-text notranslate"><?= get_lang('countdown_hours') ?></div>
                     </div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="minutes">00</div>
-                        <div class="countdown-text">Minutes</div>
+                        <div class="countdown-text notranslate"><?= get_lang('countdown_minutes') ?></div>
                     </div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="seconds">00</div>
-                        <div class="countdown-text">Seconds</div>
+                        <div class="countdown-text notranslate"><?= get_lang('countdown_seconds') ?></div>
                     </div>
                 </div>
             </div>
@@ -308,37 +308,37 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <section class="experience" id="experience">
     <div class="container">
         <div class="section-header">
-            <h2>The Namwel Experience</h2>
-            <p>Every detail is crafted to create moments you'll treasure forever</p>
+            <h2><?= get_lang('home_exp_title') ?></h2>
+            <p><?= get_lang('home_exp_desc') ?></p>
         </div>
         <div class="experience-grid">
             <div class="experience-card fade-in">
                 <div class="experience-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
-                <h3>Local expertise</h3>
-                <p>Routes designed by people who live and travel here</p>
+                <h3><?= get_lang('exp_local_title') ?></h3>
+                <p><?= get_lang('exp_local_desc') ?></p>
             </div>
             <div class="experience-card fade-in">
                 <div class="experience-icon">
                     <i class="fas fa-truck"></i>
                 </div>
-                <h3>Luxury Vehicles</h3>
-                <p>Private 4x4 safaris with guaranteed window seats</p>
+                <h3><?= get_lang('exp_vehicles_title') ?></h3>
+                <p><?= get_lang('exp_vehicles_desc') ?></p>
             </div>
             <div class="experience-card fade-in">
                 <div class="experience-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3>24/7 Support</h3>
-                <p>Round-the-clock assistance throughout your journey</p>
+                <h3><?= get_lang('exp_support_title') ?></h3>
+                <p><?= get_lang('exp_support_desc') ?></p>
             </div>
             <div class="experience-card fade-in">
                 <div class="experience-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Self‑drive & guided options</h3>
-                <p>Self‑drive & guided options</p>
+                <h3><?= get_lang('exp_options_title') ?></h3>
+                <p><?= get_lang('exp_options_desc') ?></p>
             </div>
         </div>
     </div>
@@ -348,8 +348,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <section class="testimonials" id="testimonials">
     <div class="container">
         <div class="section-header mb-2" >
-            <h2>What Our Travelers Say</h2>
-            <p>Real stories from guests who've experienced the magic of Africa</p>
+            <h2><?= get_lang('home_testimonials_title') ?></h2>
+            <p><?= get_lang('home_testimonials_desc') ?></p>
         </div>
         <div class="testimonial-slider">
             <div class="testimonial-track">
@@ -392,8 +392,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     <div class="container">
         <div class="lead-form-container">
             <div class="form-header">
-                <h2>Plan Your Dream Safari</h2>
-                <p>Get your free personalized itinerary within 24 hours</p>
+                <h2><?= get_lang('home_form_title') ?></h2>
+                <p><?= get_lang('home_form_desc') ?></p>
             </div>
 
             <div class="form-progress-bar">
@@ -414,7 +414,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 <!-- Step 1: Destination -->
                 <div class="form-step active" data-step="1">
                     <div class="form-group">
-                        <label>Where would you like to go?</label>
+                        <label><?= get_lang('form_where') ?></label>
                         <div class="radio-group">
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="south-africa" required>
@@ -441,7 +441,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     <div class="form-nav">
                         <div></div>
                         <button type="button" class="btn btn-primary" onclick="nextStep()">
-                            Next <i class="fas fa-arrow-right"></i>
+                            <?= get_lang('btn_next') ?> <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -449,13 +449,13 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 <!-- Step 2: Dates -->
                 <div class="form-step" data-step="2">
                     <div class="form-group">
-                        <label>When do you want to travel?</label>
+                        <label><?= get_lang('form_when') ?></label>
                         <input type="text" name="dates" placeholder="e.g., June 2025 - July 2025" required>
                     </div>
                     <div class="form-group">
-                        <label>Number of Travelers</label>
+                        <label><?= get_lang('form_num_travelers') ?></label>
                         <select name="travelers" required>
-                            <option value="">Select travelers</option>
+                            <option value=""><?= get_lang('form_select_travelers') ?></option>
                             <option value="1">1 Guest</option>
                             <option value="2">2 Guests</option>
                             <option value="3">3 Guests</option>
@@ -466,10 +466,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     </div>
                     <div class="form-nav">
                         <button type="button" class="btn btn-secondary" onclick="prevStep()">
-                            <i class="fas fa-arrow-left"></i> Back
+                            <i class="fas fa-arrow-left"></i> <?= get_lang('btn_back') ?>
                         </button>
                         <button type="button" class="btn btn-primary" onclick="nextStep()">
-                            Next <i class="fas fa-arrow-right"></i>
+                            <?= get_lang('btn_next') ?> <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -477,23 +477,23 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 <!-- Step 3: Contact -->
                 <div class="form-step" data-step="3">
                     <div class="form-group">
-                        <label>Full Name</label>
+                        <label><?= get_lang('form_full_name') ?></label>
                         <input type="text" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <label>Email Address</label>
+                        <label><?= get_lang('form_email_address') ?></label>
                         <input type="email" name="email" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone Number</label>
+                        <label><?= get_lang('form_phone_number') ?></label>
                         <input type="tel" name="phone" placeholder="+1 234 567 8900">
                     </div>
                     <div class="form-nav">
                         <button type="button" class="btn btn-secondary" onclick="prevStep()">
-                            <i class="fas fa-arrow-left"></i> Back
+                            <i class="fas fa-arrow-left"></i> <?= get_lang('btn_back') ?>
                         </button>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Submit Request
+                            <i class="fas fa-paper-plane"></i> <?= get_lang('btn_submit') ?>
                         </button>
                     </div>
                 </div>
@@ -606,12 +606,12 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 
     function handleSubmit(event) {
         event.preventDefault();
-        document.querySelector('.form-header h2').textContent = 'Thank You!';
-        document.querySelector('.form-header p').textContent = 'We\'ll be in touch within 24 hours with your personalized itinerary.';
+        document.querySelector('.form-header h2').textContent = "<?= get_lang('form_thankyou_title') ?>";
+        document.querySelector('.form-header p').textContent = "<?= get_lang('form_thankyou_desc') ?>";
         document.getElementById('leadForm').innerHTML = `
                     <div style="text-align: center; padding: 40px 0;">
                         <i class="fas fa-check-circle" style="font-size: 60px; color: var(--bush-green);"></i>
-                        <p style="margin-top: 20px; font-size: 18px;">Check your inbox for next steps!</p>
+                        <p style="margin-top: 20px; font-size: 18px;"><?= get_lang('form_check_inbox') ?></p>
                     </div>
                 `;
     }

@@ -6,8 +6,8 @@
         <p class="lead mb-3">Vast wild spaces, intimate safari camps, and wildlife encounters that rank among Africa's finest.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">Botswana</li>
             </ol>
         </nav>
@@ -20,7 +20,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">Discover Botswana, a jewel of Southern Africa. Explore the Okavango Delta, home to incredible wildlife from lions to crocodiles. Experience the mystical atmosphere of the Moremi marshes and embark on a traditional mokoro safari. Don't miss Chobe National Park, renowned for its extraordinary elephant concentrations and magnificent landscapes. Botswana's holidays centre on safaris, often in remote and luxurious camps far from the crowds.</p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">
@@ -85,7 +85,7 @@
                             <h5 class="fw-bold mb-0">Chobe National Park</h5>
                         </div>
                         <p class="text-muted small mb-2">Home to the highest wildlife concentrations in Southern Africa — with elephant populations of 50,000 to 70,000. An unmissable park for any safari enthusiast.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                             <h5 class="fw-bold mb-0">Okavango Delta</h5>
                         </div>
                         <p class="text-muted small mb-2">The magical, world-famous Okavango Delta is one of the absolute highlights of a Botswana trip — the largest inland delta on earth, where the Okavango River meets the Kalahari.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                             <h5 class="fw-bold mb-0">Kgalagadi Transfrontier Park</h5>
                         </div>
                         <p class="text-muted small mb-2">Considered one of Africa's best parks for observing big cats. The famous black-maned Kalahari lions are frequently spotted, alongside cheetahs and leopards.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>

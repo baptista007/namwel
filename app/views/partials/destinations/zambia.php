@@ -6,8 +6,8 @@
         <p class="lead mb-3">Wild, authentic, and unhurried — Zambia is Southern Africa's great untouched safari frontier.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">Zambia</li>
             </ol>
         </nav>
@@ -19,7 +19,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">Zambia is Southern Africa's best-kept secret — a land of wild, remote national parks, legendary walking safaris, and the thundering Victoria Falls shared with Zimbabwe. From the pristine South Luangwa Valley to the vast Kafue National Park, Zambia offers an intimate, uncrowded safari experience second to none.</p>
                 <ul class="list-unstyled mt-3 text-muted">
                     <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Victoria Falls (Mosi-oa-Tunya) — shared with Zimbabwe</li>

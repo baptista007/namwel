@@ -6,29 +6,29 @@
                 <a href="#" class="logo">
                     <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="<?= SITE_NAME ?>" class="img-fluid" alt="Namwel Tours & Car Rentals">
                 </a>
-                <div class="footer-contact pt-1">
-                    <p class="mb-2"><strong>Hours:</strong> <span>Mon–Fri, 08:00–17:00</span></p>
-                    <p class="mb-0"><strong><i class="fas fa-envelope"></i> Email:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
-                    <p class="mb-0"><strong><i class="fas fa-globe"></i> Website:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
-                    <p class="mb-0"><strong><i class="fas fa-phone"></i> Phone:</strong> <span>+264 61 244 697</span></p>
-                    <p class="mb-0"><strong><i class="fas fa-mobile"></i> Mobile:</strong> <span>+264 81 762 7908</span></p>
-                    <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> WhatsApp (24/7):</strong> <span>+264 81 212 7874</span></p>
-                    <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> <span>Ara Street 7695 Dorado Valley, Windhoek, Namibia</span></p>
+                <div class="footer-contact pt-1 notranslate">
+                    <p class="mb-2"><strong><?= get_lang('footer_hours') ?>:</strong> <span>Mon–Fri, 08:00–17:00</span></p>
+                    <p class="mb-0"><strong><i class="fas fa-envelope"></i> <?= get_lang('footer_email') ?>:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
+                    <p class="mb-0"><strong><i class="fas fa-globe"></i> <?= get_lang('footer_website') ?>:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
+                    <p class="mb-0"><strong><i class="fas fa-phone"></i> <?= get_lang('footer_phone') ?>:</strong> <span>+264 61 244 697</span></p>
+                    <p class="mb-0"><strong><i class="fas fa-mobile"></i> <?= get_lang('footer_mobile') ?>:</strong> <span>+264 81 762 7908</span></p>
+                    <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> <?= get_lang('footer_whatsapp') ?>:</strong> <span>+264 81 212 7874</span></p>
+                    <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> <?= get_lang('footer_address') ?>:</strong> <span>Ara Street 7695 Dorado Valley, Windhoek, Namibia</span></p>
                 </div>
             </div>
             <div class="footer-col">
-                <h4 class="pt-4">Affiliations</h4>
+                <h4 class="pt-4 notranslate"><?= get_lang('footer_affiliations') ?></h4>
                 <img src="<?= SITE_ADDR . IMG_DIR . "affiliations.png" ?>" alt="Affiliations" class="img-fluid">
             </div>
             <div class="footer-col">
-                <h4 class="pt-4">Company</h4>
+                <h4 class="pt-4 notranslate"><?= get_lang('footer_company') ?></h4>
                 <ul style="list-style: none; padding: 0;">
-                    <li><a href="<?= get_link('index/about') ?>">About Us</a></li>
-                    <li><a href="<?= get_link('index/contact') ?>">Contact</a></li>
+                    <li><a href="<?= get_link('index/about') ?>" class="notranslate"><?= get_lang('footer_about_us') ?></a></li>
+                    <li><a href="<?= get_link('index/contact') ?>" class="notranslate"><?= get_lang('nav_contact') ?></a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="pt-4">Connect</h4>
+                <h4 class="pt-4 notranslate"><?= get_lang('footer_connect') ?></h4>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -40,8 +40,8 @@
                 </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?> Namwel Tours & Car Rentals. All rights reserved. | <a href="<?= get_link('info/privacy') ?>">Privacy Policy</a> | <a href="<?= get_link('info/terms') ?>">Terms & Conditions</a></p>
+        <div class="footer-bottom notranslate">
+            <p>&copy; <?= date('Y') ?> Namwel Tours & Car Rentals. <?= get_lang('footer_rights') ?> | <a href="<?= get_link('info/privacy') ?>"><?= get_lang('footer_privacy') ?></a> | <a href="<?= get_link('info/terms') ?>"><?= get_lang('footer_terms') ?></a></p>
         </div>
     </div>
 </footer>

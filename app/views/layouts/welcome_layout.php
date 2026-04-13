@@ -98,72 +98,17 @@ $contacts = json_decode($data['contacts'], true);
         link.addEventListener('click', closeMobileNav);
     });
 </script>
-<!-- Google Translate API -->
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 <script>
-    // Init Google Translate (hidden, we drive it ourselves)
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,fr,pt,zh-CN,es',
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-
-    // Trigger translation by setting the cookie Google Translate uses
-    function setGoogleTranslateLang(lang) {
-        var expired = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        // Clear all variants to avoid duplicate/conflicting cookies
-        document.cookie = 'googtrans=; ' + expired;
-        document.cookie = 'googtrans=; ' + expired + ' domain=' + location.hostname;
-        document.cookie = 'googtrans=; ' + expired + ' domain=.' + location.hostname;
-        document.cookie = 'lang=; ' + expired;
-        if (lang === 'en') {
-            location.reload();
-            return;
-        }
-        var expires = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString();
-        document.cookie = 'googtrans=/en/' + lang + '; expires=' + expires + '; path=/';
-        document.cookie = 'googtrans=/en/' + lang + '; expires=' + expires + '; path=/; domain=.' + location.hostname;
-        // Set lang cookie so PHP INI system serves correct UI translations
-        var langFileMap = {'fr': 'french', 'pt': 'portuguese'};
-        if (langFileMap[lang]) {
-            document.cookie = 'lang=' + langFileMap[lang] + '; expires=' + expires + '; path=/';
-        }
-        location.reload();
-    }
-
     // Language switcher UI
     (function() {
         var toggle = document.getElementById('langToggle');
         var dropdown = document.getElementById('langDropdown');
         var current = document.getElementById('langCurrent');
 
-        // Detect active language from cookie
-        var match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
-        if (match) {
-            var code = match[1];
-            var map = {
-                'fr': 'FR',
-                'pt': 'PT',
-                'zh-CN': '中文',
-                'es': 'ES',
-                'en': 'EN'
-            };
-            if (map[code]) current.textContent = map[code];
-        }
 
         toggle.addEventListener('click', function(e) {
             e.stopPropagation();
             dropdown.classList.toggle('open');
-        });
-
-        document.querySelectorAll('.lang-option').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                current.textContent = this.dataset.label;
-                dropdown.classList.remove('open');
-                setGoogleTranslateLang(this.dataset.lang);
-            });
         });
 
         document.addEventListener('click', function() {

@@ -6,8 +6,8 @@
         <p class="lead mb-3">The rainbow nation — breathtaking landscapes, iconic wildlife, world-class wine, and vibrant culture.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">South Africa</li>
             </ol>
         </nav>
@@ -20,7 +20,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">South Africa, the rainbow nation nestled at the southern tip of the African continent, is a captivating kaleidoscope of wonders. From breathtaking landscapes and authentic cultural encounters to extraordinary wildlife and flora, South Africa promises an unforgettable journey for adventurous souls seeking unique experiences off the ordinary path.</p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">
@@ -89,7 +89,7 @@
                                     <h5 class="fw-bold mb-0">Table Mountain</h5>
                                 </div>
                                 <p class="text-muted small mb-2">Cape Town's iconic flat-topped mountain overlooks one of the world's most beautiful cities. Take the cable car for panoramic views, or hike one of several trails to the summit.</p>
-                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                                 <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                     <h5 class="fw-bold mb-0">Kruger National Park</h5>
                                 </div>
                                 <p class="text-muted small mb-2">One of Africa's largest national parks and a world-class safari destination, home to the Big Five — elephants, lions, leopards, rhinos, and buffalo.</p>
-                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                                 <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                     <h5 class="fw-bold mb-0">The Garden Route</h5>
                                 </div>
                                 <p class="text-muted small mb-2">This scenic coastal drive along the south coast offers spectacular Indian Ocean views, charming towns, hiking, surfing, and wildlife encounters along the way.</p>
-                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                                 <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                                     <h5 class="fw-bold mb-0">Drakensberg Mountains</h5>
                                 </div>
                                 <p class="text-muted small mb-2">A UNESCO World Heritage Site renowned for spectacular cliffs, verdant valleys, and panoramic views. Exceptional hiking, ancient San rock art, and dramatic escarpments.</p>
-                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                                <p class="text-muted small"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                                 <a href="<?= get_link('index/quote') ?>" class="btn btn-sm btn-outline-primary mt-2">Get a Quote</a>
                             </div>
                         </div>

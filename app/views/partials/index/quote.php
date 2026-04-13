@@ -5,29 +5,29 @@
 <section class="how-it-works">
     <div class="container">
         <div class="section-header">
-            <h2>How It Works</h2>
-            <p>Getting your custom quote is simple</p>
+            <h2><?= get_lang('quote_how_works') ?></h2>
+            <p><?= get_lang('quote_how_desc') ?></p>
         </div>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
-                <h3>Share Your Vision</h3>
-                <p>Tell us about your dream Safari, preferred dates, and travel style.</p>
+                <h3><?= get_lang('quote_step1') ?></h3>
+                <p><?= get_lang('quote_step1_desc') ?></p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
-                <h3>We Customize</h3>
-                <p>Our experts craft a personalized itinerary tailored just for you.</p>
+                <h3><?= get_lang('quote_step2') ?></h3>
+                <p><?= get_lang('quote_step2_desc') ?></p>
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
-                <h3>Receive Quote</h3>
-                <p>Get your detailed quote with pricing and all inclusions within 24 hours.</p>
+                <h3><?= get_lang('quote_step3') ?></h3>
+                <p><?= get_lang('quote_step3_desc') ?></p>
             </div>
             <div class="step-card">
                 <div class="step-number">4</div>
-                <h3>Book & Enjoy</h3>
-                <p>Confirm your booking and look forward to an unforgettable adventure!</p>
+                <h3><?= get_lang('quote_step4') ?></h3>
+                <p><?= get_lang('quote_step4_desc') ?></p>
             </div>
         </div>
     </div>
@@ -38,8 +38,8 @@
     <div class="container">
         <div class="quote-container">
             <div class="form-header">
-                <h2>Start Your Journey</h2>
-                <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                <h2><?= get_lang('quote_form_title') ?></h2>
+                <p><?= get_lang('quote_form_desc') ?></p>
             </div>
 
             <!-- Progress Bar -->
@@ -60,11 +60,11 @@
             <form id="quoteForm" method="POST" action="<?= get_link('index/quote?csrf_token=' . Csrf::$token) ?>">
                 <!-- Step 1: Trip Details -->
                 <div class="form-step active" data-step="1">
-                    <h3 class="form-section-title">Trip Preferences</h3>
+                    <h3 class="form-section-title"><?= get_lang('quote_trip_prefs') ?></h3>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Destination(s) <span class="required">*</span></label>
+                            <label><?= get_lang('quote_destinations_label') ?> <span class="required">*</span></label>
                             <div class="checkbox-group">
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="sossusvlei">
@@ -102,27 +102,27 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Trip Type <span class="required">*</span></label>
+                            <label><?= get_lang('quote_trip_type') ?> <span class="required">*</span></label>
                             <div class="radio-group">
                                 <label class="radio-option" onclick="selectRadio(this)">
                                     <input type="radio" name="tripType" value="guided-tour" checked>
                                     <i class="fas fa-user-tie"></i>
-                                    <span>Guided Tour</span>
+                                    <span><?= get_lang('quote_guided_tour') ?></span>
                                 </label>
                                 <label class="radio-option" onclick="selectRadio(this)">
                                     <input type="radio" name="tripType" value="self-drive">
                                     <i class="fas fa-car"></i>
-                                    <span>Self-Drive</span>
+                                    <span><?= get_lang('quote_self_drive') ?></span>
                                 </label>
                                 <label class="radio-option" onclick="selectRadio(this)">
                                     <input type="radio" name="tripType" value="car-rental">
                                     <i class="fas fa-key"></i>
-                                    <span>Car Rental Only</span>
+                                    <span><?= get_lang('quote_car_rental') ?></span>
                                 </label>
                                 <label class="radio-option" onclick="selectRadio(this)">
                                     <input type="radio" name="tripType" value="custom">
                                     <i class="fas fa-magic"></i>
-                                    <span>Custom Package</span>
+                                    <span><?= get_lang('quote_custom') ?></span>
                                 </label>
                             </div>
                         </div>
@@ -130,17 +130,17 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Preferred Accommodation Level</label>
+                            <label><?= get_lang('quote_accommodation') ?></label>
                             <select name="accommodation">
-                                <option value="">Select preference</option>
-                                <option value="budget">Budget / Camping</option>
-                                <option value="mid-range">Mid-Range Lodges</option>
-                                <option value="luxury">Luxury Lodges</option>
-                                <option value="ultra-luxury">Ultra-Luxury</option>
+                                <option value=""><?= get_lang('quote_accommodation') ?></option>
+                                <option value="budget"><?= get_lang('quote_budget_camping') ?></option>
+                                <option value="mid-range"><?= get_lang('quote_mid_range') ?></option>
+                                <option value="luxury"><?= get_lang('quote_luxury') ?></option>
+                                <option value="ultra-luxury"><?= get_lang('quote_ultra') ?></option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Number of Travelers <span class="required">*</span></label>
+                            <label><?= get_lang('quote_travelers') ?> <span class="required">*</span></label>
                             <select name="travelers" required>
                                 <option value="">Select travelers</option>
                                 <option value="1">1 Guest</option>
@@ -157,40 +157,40 @@
                     <div class="form-nav">
                         <div></div>
                         <button type="button" class="btn btn-primary" onclick="nextStep()">
-                            Next Step <i class="fas fa-arrow-right"></i>
+                            <?= get_lang('quote_btn_next') ?> <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Step 2: Dates & Budget -->
                 <div class="form-step" data-step="2">
-                    <h3 class="form-section-title">Travel Dates & Budget</h3>
+                    <h3 class="form-section-title"><?= get_lang('quote_dates_title') ?></h3>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Preferred Start Date</label>
+                            <label><?= get_lang('quote_start_date') ?></label>
                             <input type="date" name="startDate">
                         </div>
                         <div class="form-group">
-                            <label>Preferred End Date</label>
+                            <label><?= get_lang('quote_end_date') ?></label>
                             <input type="date" name="endDate">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Flexible with Dates?</label>
+                            <label><?= get_lang('quote_flexibility') ?></label>
                             <select name="dateFlexibility">
-                                <option value="">Select option</option>
-                                <option value="strict">Strict Dates</option>
-                                <option value="flexible">Flexible (+/- 3 days)</option>
-                                <option value="very-flexible">Very Flexible</option>
+                                <option value=""><?= get_lang('quote_flexibility') ?></option>
+                                <option value="strict"><?= get_lang('quote_strict') ?></option>
+                                <option value="flexible"><?= get_lang('quote_flexible') ?></option>
+                                <option value="very-flexible"><?= get_lang('quote_very_flexible') ?></option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Estimated Budget (per person)</label>
+                            <label><?= get_lang('quote_budget') ?></label>
                             <select name="budget">
-                                <option value="">Select budget range</option>
+                                <option value=""><?= get_lang('quote_budget') ?></option>
                                 <option value="under-1000">Under $1,000</option>
                                 <option value="1000-2000">$1,000 - $2,000</option>
                                 <option value="2000-3500">$2,000 - $3,500</option>
@@ -201,84 +201,84 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Special Interests</label>
+                        <label><?= get_lang('quote_interests') ?></label>
                         <div class="checkbox-group">
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="wildlife">
                                 <i class="fas fa-check"></i>
-                                <span>Wildlife Safari</span>
+                                <span><?= get_lang('quote_wildlife') ?></span>
                             </label>
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="photography">
                                 <i class="fas fa-check"></i>
-                                <span>Photography</span>
+                                <span><?= get_lang('quote_photography') ?></span>
                             </label>
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="adventure">
                                 <i class="fas fa-check"></i>
-                                <span>Adventure Sports</span>
+                                <span><?= get_lang('quote_adventure') ?></span>
                             </label>
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="culture">
                                 <i class="fas fa-check"></i>
-                                <span>Cultural Tours</span>
+                                <span><?= get_lang('quote_culture') ?></span>
                             </label>
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="honeymoon">
                                 <i class="fas fa-check"></i>
-                                <span>Honeymoon</span>
+                                <span><?= get_lang('quote_honeymoon_interest') ?></span>
                             </label>
                             <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <input type="checkbox" name="interest" value="family">
                                 <i class="fas fa-check"></i>
-                                <span>Family Friendly</span>
+                                <span><?= get_lang('quote_family') ?></span>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Additional Requests or Questions</label>
+                        <label><?= get_lang('quote_additional') ?></label>
                         <textarea name="message" placeholder="Tell us more about your dream trip, any specific places you want to visit, dietary requirements, or any questions you have..."></textarea>
                     </div>
 
                     <div class="form-nav">
                         <button type="button" class="btn btn-secondary" onclick="prevStep()">
-                            <i class="fas fa-arrow-left"></i> Back
+                            <i class="fas fa-arrow-left"></i> <?= get_lang('btn_back') ?>
                         </button>
                         <button type="button" class="btn btn-primary" onclick="nextStep()">
-                            Next Step <i class="fas fa-arrow-right"></i>
+                            <?= get_lang('quote_btn_next') ?> <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Step 3: Contact Info -->
                 <div class="form-step" data-step="3">
-                    <h3 class="form-section-title">Your Details</h3>
+                    <h3 class="form-section-title"><?= get_lang('quote_details_title') ?></h3>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>First Name <span class="required">*</span></label>
+                            <label><?= get_lang('quote_first_name') ?> <span class="required">*</span></label>
                             <input type="text" name="firstName" placeholder="John" required>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="required">*</span></label>
+                            <label><?= get_lang('quote_last_name') ?> <span class="required">*</span></label>
                             <input type="text" name="lastName" placeholder="Doe" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Email Address <span class="required">*</span></label>
+                            <label><?= get_lang('quote_email') ?> <span class="required">*</span></label>
                             <input type="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label>Phone Number</label>
+                            <label><?= get_lang('quote_phone') ?></label>
                             <input type="tel" name="phone" placeholder="+1 234 567 8900">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Country of Residence</label>
+                        <label><?= get_lang('quote_country') ?></label>
                         <select name="country">
                             <option value="">Select country</option>
                             <option value="US">United States</option>
@@ -293,7 +293,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>How did you hear about us?</label>
+                        <label><?= get_lang('quote_referral') ?></label>
                         <select name="referral">
                             <option value="">Select option</option>
                             <option value="google">Google Search</option>
@@ -307,10 +307,10 @@
 
                     <div class="form-nav">
                         <button type="button" class="btn btn-secondary" onclick="prevStep()">
-                            <i class="fas fa-arrow-left"></i> Back
+                            <i class="fas fa-arrow-left"></i> <?= get_lang('btn_back') ?>
                         </button>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Submit Request
+                            <i class="fas fa-paper-plane"></i> <?= get_lang('quote_btn_submit') ?>
                         </button>
                     </div>
                 </div>
@@ -321,11 +321,11 @@
                 <div class="success-icon">
                     <i class="fas fa-check"></i>
                 </div>
-                <h3>Quote Request Received!</h3>
-                <p>Thank you for your interest in Namibia! Our team will review your request and send a personalized quote to your email within 24 hours.</p>
-                <p>In the meantime, feel free to explore our tours or contact us directly on WhatsApp.</p>
+                <h3><?= get_lang('quote_success_title') ?></h3>
+                <p><?= get_lang('quote_success_desc') ?></p>
+                <p><?= get_lang('quote_success_explore') ?></p>
                 <a href="<?= get_link('index/index') ?>" class="btn btn-primary">
-                    <i class="fas fa-home"></i> Back to Home
+                    <i class="fas fa-home"></i> <?= get_lang('quote_back_home') ?>
                 </a>
             </div>
         </div>
@@ -338,23 +338,23 @@
         <div class="trust-grid">
             <div class="trust-item">
                 <i class="fas fa-clock"></i>
-                <h4>24-Hour Response</h4>
-                <p>Get your quote within one business day</p>
+                <h4><?= get_lang('quote_24hr') ?></h4>
+                <p><?= get_lang('quote_24hr_desc') ?></p>
             </div>
             <div class="trust-item">
                 <i class="fas fa-shield-alt"></i>
-                <h4>Secure Booking</h4>
-                <p>Safe payment options available</p>
+                <h4><?= get_lang('quote_secure') ?></h4>
+                <p><?= get_lang('quote_secure_desc') ?></p>
             </div>
             <div class="trust-item">
                 <i class="fas fa-undo"></i>
-                <h4>Free Cancellation</h4>
-                <p>Flexible cancellation policy</p>
+                <h4><?= get_lang('quote_cancel') ?></h4>
+                <p><?= get_lang('quote_cancel_desc') ?></p>
             </div>
             <div class="trust-item">
                 <i class="fas fa-headset"></i>
-                <h4>24/7 Support</h4>
-                <p>Always here to help you</p>
+                <h4><?= get_lang('quote_support') ?></h4>
+                <p><?= get_lang('quote_support_desc') ?></p>
             </div>
         </div>
     </div>
@@ -364,7 +364,7 @@
 <section class="faq-section">
     <div class="container">
         <div class="section-header">
-            <h2>Frequently Asked Questions</h2>
+            <h2><?= get_lang('quote_faq_title') ?></h2>
         </div>
         <div class="faq-grid">
             <div class="faq-item">

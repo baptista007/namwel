@@ -6,8 +6,8 @@
         <p class="lead mb-3">A captivating destination off the beaten track — breathtaking landscapes, rich culture, and unique wildlife.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">Angola</li>
             </ol>
         </nav>
@@ -20,7 +20,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">Set off on an adventure in Angola and discover stunning landscapes — from the spectacular Kalandula Falls to the beautiful coasts of Benguela. Enjoy a family safari in Quiçama National Park, observe wildlife in its natural habitat, and explore hidden gems such as the Tundavala Fissure and the ancient rock paintings of Tchitundu-Hulu. Relax on the serene beaches of Luanda and Namibe, or cruise the Kwanza River to admire diverse birdlife and picturesque scenery.</p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">

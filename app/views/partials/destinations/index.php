@@ -3,12 +3,12 @@
 <!-- Page Hero -->
 <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('<?= SITE_ADDR ?>assets/images/travel/Elephants.png')center/cover no-repeat;">
     <div class="container text-center text-white">
-        <h1 class="display-5 fw-bold mb-2">Destinations</h1>
-        <p class="lead mb-3">Explore Southern Africa's most remarkable countries — or combine them into a seamless multi-country adventure.</p>
+        <h1 class="display-5 fw-bold mb-2"><?= get_lang('dest_page_title') ?></h1>
+        <p class="lead mb-3"><?= get_lang('dest_page_desc') ?></p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item active text-white">Destinations</li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item active text-white notranslate"><?= get_lang('dest_page_title') ?></li>
             </ol>
         </nav>
     </div>
@@ -18,8 +18,8 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Where Do You Want to Go?</h2>
-            <p class="text-muted">Each destination has its own character — from Namibia's red dunes to Botswana's waterways and Zimbabwe's thundering falls. We know them all intimately.</p>
+            <h2 class="fw-bold"><?= get_lang('dest_choose') ?></h2>
+            <p class="text-muted"><?= get_lang('dest_choose_desc') ?></p>
         </div>
         <div class="row g-4">
 
@@ -39,10 +39,10 @@
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Sossusvlei &amp; Etosha National Park</li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Skeleton Coast &amp; Damaraland</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best season: May – October</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/namibia') ?>" class="btn btn-primary w-100">
-                            Explore Namibia <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> Namibia <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -64,10 +64,10 @@
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Okavango Delta &amp; Chobe NP</li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Kgalagadi Transfrontier Park</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best season: May – October</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/botswana') ?>" class="btn btn-primary w-100">
-                            Explore Botswana <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> Botswana <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -89,10 +89,10 @@
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Victoria Falls &amp; Hwange NP</li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Matobo Hills &amp; Mana Pools</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best season: May – October</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/zimbabwe') ?>" class="btn btn-primary w-100">
-                            Explore Zimbabwe <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> Zimbabwe <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -114,10 +114,10 @@
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Kruger NP &amp; Table Mountain</li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Garden Route &amp; Drakensberg</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best season: May – October</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/south_africa') ?>" class="btn btn-primary w-100">
-                            Explore South Africa <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> South Africa <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Good year-round</li>
                         </ul>
                         <a href="<?= get_link('destinations/angola') ?>" class="btn btn-primary w-100">
-                            Explore Angola <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> Angola <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -165,10 +165,10 @@
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>South Luangwa &amp; Lower Zambezi</li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Victoria Falls &amp; Kafue NP</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best season: May – October</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/zambia') ?>" class="btn btn-primary w-100">
-                            Explore Zambia <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> Zambia <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
         <div class="row g-4 align-items-stretch">
             <div class="col-lg-8">
                 <div class="p-4 p-lg-5 border rounded-4 h-100 bg-white">
-                    <h3 class="fw-bold mb-2">Prefer a multi-country route?</h3>
+                    <h3 class="fw-bold mb-2"><?= get_lang('dest_plan_trip') ?></h3>
                     <p class="text-muted mb-3">The best Southern Africa itineraries combine two or three countries in one seamless journey. Namibia + Botswana + Zimbabwe is our most-loved combination — but the possibilities are endless. Tell us your interests and we'll design a route around you.</p>
                     <ul class="list-inline mb-0 small text-muted">
                         <li class="list-inline-item me-3"><i class="fas fa-check text-success me-1"></i>Free, no-obligation quote</li>
@@ -196,11 +196,11 @@
             <div class="col-lg-4">
                 <div class="p-4 p-lg-5 border rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between bg-white">
                     <div>
-                        <h4 class="fw-bold mb-2">Request a Free Quote</h4>
+                        <h4 class="fw-bold mb-2"><?= get_lang('dest_get_quote') ?></h4>
                         <p class="text-muted mb-0">We'll reply within 24 hours on business days.</p>
                     </div>
                     <a href="<?= get_link('index/quote') ?>" class="btn btn-primary mt-4 w-100">
-                        <i class="fas fa-paper-plane me-2"></i>Request a Quote
+                        <i class="fas fa-paper-plane me-2"></i><?= get_lang('nav_request_quote') ?>
                     </a>
                 </div>
             </div>

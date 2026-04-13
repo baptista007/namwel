@@ -6,8 +6,8 @@
         <p class="lead mb-3">Deserts, dunes, and starry skies — an escape like no other on Earth.</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50">Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50">Destinations</a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
+                <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
                 <li class="breadcrumb-item active text-white">Namibia</li>
             </ol>
         </nav>
@@ -20,7 +20,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
                 <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
-                <h2 class="fw-bold mb-3">Travel Overview</h2>
+                <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
                 <p class="text-muted">Set off on an adventure in Namibia to discover stunning landscapes — from the red dunes of the Namib Desert to the granite massifs of the Spitzkoppe and Brandberg. Enjoy a family safari in Etosha Park, watching wildlife gather at floodlit waterholes. Explore lesser-known places like Kaokoland and the Epupa Falls, or relax on a cruise discovering seals and dolphins in Swakopmund and Walvis Bay. Meet local cultures such as the Himba and the Bushmen for a truly unique travel experience.</p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">
@@ -86,7 +86,7 @@
                             <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">One of Africa's most important game reserves in northern Namibia. Home to lions, elephants, rhinos, and hundreds of bird species — all gathering around the famous salt pan waterholes.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                             <span class="badge bg-info text-dark small">Ask us</span>
                         </div>
                         <p class="text-muted small mb-2">The world's tallest sand dunes. Inside the Namib-Naukluft Park, Sossusvlei and Deadvlei are two of Namibia's most iconic landscapes — especially breathtaking at sunrise.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Best season: May – October</p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
             </div>
