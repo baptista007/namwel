@@ -112,16 +112,24 @@ $contacts = json_decode($data['contacts'], true);
 
     // Trigger translation by setting the cookie Google Translate uses
     function setGoogleTranslateLang(lang) {
+        var expired = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        // Clear all variants to avoid duplicate/conflicting cookies
+        document.cookie = 'googtrans=; ' + expired;
+        document.cookie = 'googtrans=; ' + expired + ' domain=' + location.hostname;
+        document.cookie = 'googtrans=; ' + expired + ' domain=.' + location.hostname;
+        document.cookie = 'lang=; ' + expired;
         if (lang === 'en') {
-            // Reset to original — delete the cookie and reload
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
             location.reload();
             return;
         }
         var expires = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString();
         document.cookie = 'googtrans=/en/' + lang + '; expires=' + expires + '; path=/';
-        document.cookie = 'googtrans=/en/' + lang + '; expires=' + expires + '; path=/; domain=' + location.hostname;
+        document.cookie = 'googtrans=/en/' + lang + '; expires=' + expires + '; path=/; domain=.' + location.hostname;
+        // Set lang cookie so PHP INI system serves correct UI translations
+        var langFileMap = {'fr': 'french', 'pt': 'portuguese'};
+        if (langFileMap[lang]) {
+            document.cookie = 'lang=' + langFileMap[lang] + '; expires=' + expires + '; path=/';
+        }
         location.reload();
     }
 
