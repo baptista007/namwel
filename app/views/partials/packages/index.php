@@ -35,7 +35,7 @@
                         <h4 class="position-absolute bottom-0 start-0 p-3 mb-0 text-white fw-bold notranslate"><?= get_lang('nav_special_offers') ?></h4>
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <p class="text-muted flex-grow-1">Seasonal specials, short breaks, and value-packed itineraries — perfect for spontaneous travel or tight schedules.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('pkgs_special_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_special_feature_1') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_special_feature_2') ?></li>
@@ -140,15 +140,15 @@
                         <div class="col-md-7">
                             <div class="card-body d-flex flex-column h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-primary">Premium</span>
-                                    <small class="text-muted"><i class="fas fa-clock me-1"></i>17 Days</small>
+                                    <span class="badge bg-primary"><?= get_lang('pkgs_badge_premium') ?></span>
+                                    <small class="text-muted"><i class="fas fa-clock me-1"></i><?= get_lang('pkgs_days_17') ?></small>
                                 </div>
                                 <h5 class="fw-bold mb-1"><?= get_lang('pkgs_fascinating_title') ?></h5>
                                 <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i><?= get_lang('pkgs_okavango_route') ?></p>
-                                <p class="text-muted small flex-grow-1">A comprehensive 17-day adventure linking three iconic countries with wildlife, river cruises, and adventure activities.</p>
+                                <p class="text-muted small flex-grow-1"><?= get_lang('pkgs_fascinating_short_desc') ?></p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                                     <div>
-                                        <span class="fw-bold text-primary fs-5">From $3,499</span>
+                                        <span class="fw-bold text-primary fs-5"><?= get_lang('pkgs_from') ?> $3,499</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$4,199</small>
                                     </div>
                                     <a class="btn btn-primary package-btn notranslate" href="<?= get_link('packages/fascinating_southern_africa') ?>">
@@ -171,14 +171,14 @@
                             <div class="card-body d-flex flex-column h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <span class="badge bg-success"><?= get_lang('pkgs_badge_popular') ?></span>
-                                    <small class="text-muted"><i class="fas fa-clock me-1"></i>14 Days</small>
+                                    <small class="text-muted"><i class="fas fa-clock me-1"></i><?= get_lang('pkgs_days_14') ?></small>
                                 </div>
-                                <h5 class="fw-bold mb-1">Namibian Great Outdoors</h5>
-                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i>Namibia</p>
-                                <p class="text-muted small flex-grow-1">Etosha, Damaraland, Skeleton Coast, Sossusvlei dunes, and the Kalahari — ideal for small groups.</p>
+                                <h5 class="fw-bold mb-1"><?= get_lang('pkgs_great_outdoors_title') ?></h5>
+                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i><?= get_lang('pkgs_great_spaces_route') ?></p>
+                                <p class="text-muted small flex-grow-1"><?= get_lang('pkgs_great_outdoors_desc') ?></p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                                     <div>
-                                        <span class="fw-bold text-primary fs-5">From $1,899</span>
+                                        <span class="fw-bold text-primary fs-5"><?= get_lang('pkgs_from') ?> $1,899</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$2,299</small>
                                     </div>
                                     <a class="btn btn-primary package-btn notranslate" href="<?= get_link('packages/fascinating_southern_africa') ?>">

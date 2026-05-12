@@ -69,32 +69,32 @@
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="sossusvlei">
                                     <i class="fas fa-check"></i>
-                                    <span>Sossusvlei Dunes</span>
+                                    <span><?= get_lang('quote_dest_sossusvlei') ?></span>
                                 </label>
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="etosha">
                                     <i class="fas fa-check"></i>
-                                    <span>Etosha National Park</span>
+                                    <span><?= get_lang('quote_dest_etosha') ?></span>
                                 </label>
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="swakopmund">
                                     <i class="fas fa-check"></i>
-                                    <span>Swakopmund</span>
+                                    <span><?= get_lang('quote_dest_swakopmund') ?></span>
                                 </label>
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="fish-river">
                                     <i class="fas fa-check"></i>
-                                    <span>Fish River Canyon</span>
+                                    <span><?= get_lang('quote_dest_fish_river') ?></span>
                                 </label>
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="skeleton-coast">
                                     <i class="fas fa-check"></i>
-                                    <span>Skeleton Coast</span>
+                                    <span><?= get_lang('quote_dest_skeleton_coast') ?></span>
                                 </label>
                                 <label class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <input type="checkbox" name="destination" value="windhoek">
                                     <i class="fas fa-check"></i>
-                                    <span>Windhoek</span>
+                                    <span><?= get_lang('quote_dest_windhoek') ?></span>
                                 </label>
                             </div>
                         </div>
@@ -143,13 +143,13 @@
                             <label><?= get_lang('quote_travelers') ?> <span class="required">*</span></label>
                             <select name="travelers" required>
                                 <option value=""><?= get_lang('form_select_travelers') ?></option>
-                                <option value="1">1 <?=  get_lang('form_guest') ?></option>
-                                <option value="2">2 <?=  get_lang('form_guests') ?></option>
-                                <option value="3">3 <?=  get_lang('form_guests') ?></option>
-                                <option value="4">4 <?=  get_lang('form_guests') ?></option>
-                                <option value="5">5 <?=  get_lang('form_guests') ?></option>
-                                <option value="6">6 <?=  get_lang('form_guests') ?></option>
-                                <option value="7+">7+ <?=  get_lang('form_guests') ?></option>
+                                <option value="1">1 <?= get_lang('form_guest') ?></option>
+                                <option value="2">2 <?= get_lang('form_guests') ?></option>
+                                <option value="3">3 <?= get_lang('form_guests') ?></option>
+                                <option value="4">4 <?= get_lang('form_guests') ?></option>
+                                <option value="5">5 <?= get_lang('form_guests') ?></option>
+                                <option value="6">6 <?= get_lang('form_guests') ?></option>
+                                <option value="7+">7+ <?= get_lang('form_guests') ?></option>
                             </select>
                         </div>
                     </div>
@@ -191,11 +191,11 @@
                             <label><?= get_lang('quote_budget') ?></label>
                             <select name="budget">
                                 <option value=""><?= get_lang('quote_budget') ?></option>
-                                <option value="under-1000">Under $1,000</option>
-                                <option value="1000-2000">$1,000 - $2,000</option>
-                                <option value="2000-3500">$2,000 - $3,500</option>
-                                <option value="3500-5000">$3,500 - $5,000</option>
-                                <option value="over-5000">Over $5,000</option>
+                                <option value="under-1000"><?= get_lang('quote_budget_under1000') ?></option>
+                                <option value="1000-2000"><?= get_lang('quote_budget_1000_2000') ?></option>
+                                <option value="2000-3500"><?= get_lang('quote_budget_2000_3500') ?></option>
+                                <option value="3500-5000"><?= get_lang('quote_budget_3500_5000') ?></option>
+                                <option value="over-5000"><?= get_lang('quote_budget_over5000') ?></option>
                             </select>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
 
                     <div class="form-group">
                         <label><?= get_lang('quote_additional') ?></label>
-                        <textarea name="message" placeholder="Tell us more about your dream trip, any specific places you want to visit, dietary requirements, or any questions you have..."></textarea>
+                        <textarea name="message" placeholder="<?= get_lang('quote_additional_placeholder') ?>"></textarea>
                     </div>
 
                     <div class="form-nav">
@@ -280,28 +280,28 @@
                     <div class="form-group">
                         <label><?= get_lang('quote_country') ?></label>
                         <select name="country">
-                            <option value="">Select country</option>
-                            <option value="US">United States</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="DE">Germany</option>
-                            <option value="FR">France</option>
-                            <option value="AU">Australia</option>
-                            <option value="CA">Canada</option>
-                            <option value="ZA">South Africa</option>
-                            <option value="other">Other</option>
+                            <option value=""><?= get_lang('quote_select_country') ?></option>
+                            <option value="US"><?= get_lang('quote_country_us') ?></option>
+                            <option value="UK"><?= get_lang('quote_country_uk') ?></option>
+                            <option value="DE"><?= get_lang('quote_country_de') ?></option>
+                            <option value="FR"><?= get_lang('quote_country_fr') ?></option>
+                            <option value="AU"><?= get_lang('quote_country_au') ?></option>
+                            <option value="CA"><?= get_lang('quote_country_ca') ?></option>
+                            <option value="ZA"><?= get_lang('quote_country_za') ?></option>
+                            <option value="other"><?= get_lang('quote_country_other') ?></option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label><?= get_lang('quote_referral') ?></label>
                         <select name="referral">
-                            <option value="">Select option</option>
-                            <option value="google">Google Search</option>
-                            <option value="tripadvisor">TripAdvisor</option>
-                            <option value="social">Social Media</option>
-                            <option value="friend">Friend/Family Recommendation</option>
-                            <option value="return">I've traveled with you before</option>
-                            <option value="other">Other</option>
+                            <option value=""><?= get_lang('quote_select_option') ?></option>
+                            <option value="google"><?= get_lang('quote_referral_google') ?></option>
+                            <option value="tripadvisor"><?= get_lang('quote_referral_tripadvisor') ?></option>
+                            <option value="social"><?= get_lang('quote_referral_social') ?></option>
+                            <option value="friend"><?= get_lang('quote_referral_friend') ?></option>
+                            <option value="return"><?= get_lang('quote_referral_return') ?></option>
+                            <option value="other"><?= get_lang('quote_referral_other') ?></option>
                         </select>
                     </div>
 
@@ -369,38 +369,38 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How long does it take to receive a quote?</span>
+                    <span><?= get_lang('quote_faq1_q') ?></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>We strive to provide all quotes within 24 hours. During peak seasons, it may take up to 48 hours. For complex multi-destination itineraries, we may need slightly longer to ensure we provide the best options.</p>
+                    <p><?= get_lang('quote_faq1_a') ?></p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>What is included in the quote?</span>
+                    <span><?= get_lang('quote_faq2_q') ?></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Each quote includes detailed day-by-day itinerary, accommodation options with photos, all activities and transfers, meals as specified, expert guide services, and total pricing with breakdown. We pride ourselves on transparent pricing with no hidden fees.</p>
+                    <p><?= get_lang('quote_faq2_a') ?></p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Can I modify my quote after receiving it?</span>
+                    <span><?= get_lang('quote_faq3_q') ?></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely! We understand plans can change. You can request modifications to your itinerary, accommodation choices, or travel dates at any time. We'll work with you to find the perfect fit.</p>
+                    <p><?= get_lang('quote_faq3_a') ?></p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>What is the best time to visit Namibia?</span>
+                    <span><?= get_lang('quote_faq4_q') ?></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Namibia is a year-round destination. The best time for wildlife viewing is May to October when animals congregate around waterholes. For the famous Sossusvlei dunes, any time offers spectacular views. Our team can advise on the best timing based on your specific interests.</p>
+                    <p><?= get_lang('quote_faq4_a') ?></p>
                 </div>
             </div>
         </div>
@@ -408,7 +408,6 @@
 </section>
 
 <script>
-    // Multi-step Form Logic
     let currentStep = 1;
     const totalSteps = 3;
 
@@ -458,14 +457,12 @@
         }
     }
 
-    // Checkbox Toggle
     function toggleCheckbox(element) {
         element.classList.toggle('selected');
         const checkbox = element.querySelector('input');
         checkbox.checked = !checkbox.checked;
     }
 
-    // Radio Select
     function selectRadio(element) {
         const group = element.parentElement;
         group.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
@@ -473,49 +470,51 @@
         element.querySelector('input').checked = true;
     }
 
-    // Form Submit — AJAX POST
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const form = this;
         const submitBtn = form.querySelector('[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending…';
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span><?= get_lang('quote_sending') ?>';
 
         const data = new FormData(form);
 
         fetch(form.action, {
-            method: 'POST',
-            headers: { 'X-Requested-With': 'XMLHttpRequest' },
-            body: data
-        })
-        .then(r => r.json())
-        .then(res => {
-            if (res.success) {
-                form.style.display = 'none';
-                document.querySelector('.form-progress-bar').style.display = 'none';
-                document.getElementById('successMessage').classList.add('active');
-                window.scrollTo({ top: 300, behavior: 'smooth' });
-            } else {
-                // Show error inline above the nav buttons
-                let alert = form.querySelector('.quote-error-alert');
-                if (!alert) {
-                    alert = document.createElement('div');
-                    alert.className = 'alert alert-danger quote-error-alert mt-3';
-                    form.querySelector('.form-step.active .form-nav').before(alert);
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: data
+            })
+            .then(r => r.json())
+            .then(res => {
+                if (res.success) {
+                    form.style.display = 'none';
+                    document.querySelector('.form-progress-bar').style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                    window.scrollTo({
+                        top: 300,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    let alert = form.querySelector('.quote-error-alert');
+                    if (!alert) {
+                        alert = document.createElement('div');
+                        alert.className = 'alert alert-danger quote-error-alert mt-3';
+                        form.querySelector('.form-step.active .form-nav').before(alert);
+                    }
+                    alert.textContent = res.message || '<?= get_lang('quote_error_generic') ?>';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
                 }
-                alert.textContent = res.message || 'Something went wrong. Please try again.';
+            })
+            .catch(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
-            }
-        })
-        .catch(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        });
+            });
     });
 
-    // FAQ Toggle
     function toggleFaq(element) {
         element.parentElement.classList.toggle('active');
     }

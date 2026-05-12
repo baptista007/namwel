@@ -30,19 +30,19 @@
                         <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/pt-namibia.jpg" class="w-100 h-100" alt="Namibia" style="object-fit:cover; transition: transform 0.4s ease;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                            <h4 class="fw-bold mb-0">Namibia</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <h4 class="fw-bold mb-0"><?= get_lang('country_namibia') ?></h4>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">Desert dunes, open skies, abundant wildlife, and dramatic coastlines. Namibia is one of the world's last great wildernesses — ideal for self-drive and guided safaris alike.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_namibia_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Sossusvlei &amp; Etosha National Park</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Skeleton Coast &amp; Damaraland</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_namibia_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_namibia_highlight2') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/namibia') ?>" class="btn btn-primary w-100">
-                            <?= get_lang('dest_explore') ?> Namibia <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> <?= get_lang('country_namibia') ?> <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -55,19 +55,19 @@
                         <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/Botswana_Okavango.jpg" class="w-100 h-100" alt="Botswana" style="object-fit:cover; transition: transform 0.4s ease;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                            <h4 class="fw-bold mb-0">Botswana</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <h4 class="fw-bold mb-0"><?= get_lang('country_botswana') ?></h4>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">Africa's finest safari destination — remote, pristine, and teeming with wildlife. The Okavango Delta and Chobe National Park rank among the world's greatest natural wonders.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_botswana_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Okavango Delta &amp; Chobe NP</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Kgalagadi Transfrontier Park</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_botswana_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_botswana_highlight2') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/botswana') ?>" class="btn btn-primary w-100">
-                            <?= get_lang('dest_explore') ?> Botswana <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> <?= get_lang('country_botswana') ?> <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -80,19 +80,19 @@
                         <img src="<?= SITE_ADDR ?>assets/images/travel/VictoriaFalls-Zimbabwe-Sunrise-BestSpot.jpeg" class="w-100 h-100" alt="Zimbabwe" style="object-fit:cover; transition: transform 0.4s ease;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                            <h4 class="fw-bold mb-0">Zimbabwe</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <h4 class="fw-bold mb-0"><?= get_lang('country_zimbabwe') ?></h4>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">Victoria Falls, ancient ruins, extraordinary wildlife, and a warm-hearted culture. Zimbabwe is a rising destination offering world-class experiences without the crowds.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_zimbabwe_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Victoria Falls &amp; Hwange NP</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Matobo Hills &amp; Mana Pools</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_zimbabwe_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_zimbabwe_highlight2') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/zimbabwe') ?>" class="btn btn-primary w-100">
-                            <?= get_lang('dest_explore') ?> Zimbabwe <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> <?= get_lang('country_zimbabwe') ?> <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -105,19 +105,19 @@
                         <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/south-africa.jpeg" class="w-100 h-100" alt="South Africa" style="object-fit:cover; transition: transform 0.4s ease;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                            <h4 class="fw-bold mb-0">South Africa</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <h4 class="fw-bold mb-0"><?= get_lang('country_south_africa') ?></h4>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">A country of extraordinary contrasts — iconic wildlife, world-class winelands, dramatic coastlines, and the cosmopolitan energy of Cape Town and Johannesburg.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_south_africa_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Kruger NP &amp; Table Mountain</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Garden Route &amp; Drakensberg</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_south_africa_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_south_africa_highlight2') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/south_africa') ?>" class="btn btn-primary w-100">
-                            <?= get_lang('dest_explore') ?> South Africa <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> <?= get_lang('country_south_africa') ?> <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -129,21 +129,21 @@
                     <div class="position-relative overflow-hidden" style="height:220px;">
                         <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/angola.jpg" class="w-100 h-100" alt="Angola" style="object-fit:cover; transition: transform 0.4s ease;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
-                        <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark">Hidden Gem</span>
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark"><?= get_lang('dest_angola_hidden_gem') ?></span>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                            <h4 class="fw-bold mb-0">Angola</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <h4 class="fw-bold mb-0"><?= get_lang('country_angola') ?></h4>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">A captivating destination off the beaten track — breathtaking landscapes, Atlantic beaches, spectacular waterfalls, and a rich culture waiting to be discovered.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_angola_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Kalandula Falls &amp; Kissama NP</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Luanda, Benguela &amp; Lobito coast</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Good year-round</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_angola_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_angola_highlight2') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_good_year_round') ?></li>
                         </ul>
                         <a href="<?= get_link('destinations/angola') ?>" class="btn btn-primary w-100">
-                            <?= get_lang('dest_explore') ?> Angola <i class="fas fa-arrow-right ms-1"></i>
+                            <?= get_lang('dest_explore') ?> <?= get_lang('country_angola') ?> <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -157,14 +157,14 @@
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.7));"></div>
                         <div class="position-absolute bottom-0 start-0 p-3 text-white">
                             <h4 class="fw-bold mb-0">Zambia</h4>
-                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i>Southern Africa</small>
+                            <small class="opacity-75"><i class="fas fa-map-marker-alt me-1"></i><?= get_lang('dest_southern_africa') ?></small>
                         </div>
                     </div>
                     <div class="card-body d-flex flex-column p-4">
-                        <p class="text-muted flex-grow-1">Southern Africa's best-kept secret — wild, authentic, and uncrowded. Famous for legendary walking safaris in South Luangwa and the Zambian side of Victoria Falls.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('dest_zambia_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>South Luangwa &amp; Lower Zambezi</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Victoria Falls &amp; Kafue NP</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_zambia_highlight1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_zambia_highlight2') ?></li>
                             <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('dest_best_season') ?> May – October</li>
                         </ul>
                         <a href="<?= get_link('destinations/zambia') ?>" class="btn btn-primary w-100">
@@ -185,11 +185,11 @@
             <div class="col-lg-8">
                 <div class="p-4 p-lg-5 border rounded-4 h-100 bg-white">
                     <h3 class="fw-bold mb-2"><?= get_lang('dest_plan_trip') ?></h3>
-                    <p class="text-muted mb-3">The best Southern Africa itineraries combine two or three countries in one seamless journey. Namibia + Botswana + Zimbabwe is our most-loved combination — but the possibilities are endless. Tell us your interests and we'll design a route around you.</p>
+                    <p class="text-muted mb-3"><?= get_lang('dest_plan_trip_desc') ?></p>
                     <ul class="list-inline mb-0 small text-muted">
-                        <li class="list-inline-item me-3"><i class="fas fa-check text-success me-1"></i>Free, no-obligation quote</li>
-                        <li class="list-inline-item me-3"><i class="fas fa-check text-success me-1"></i>Reply within 24 hours</li>
-                        <li class="list-inline-item"><i class="fas fa-check text-success me-1"></i>Fully tailor-made</li>
+                        <li class="list-inline-item me-3"><i class="fas fa-check text-success me-1"></i><?= get_lang('dest_tailor_free') ?></li>
+                        <li class="list-inline-item me-3"><i class="fas fa-check text-success me-1"></i><?= get_lang('dest_tailor_reply') ?></li>
+                        <li class="list-inline-item"><i class="fas fa-check text-success me-1"></i><?= get_lang('dest_tailor_made') ?></li>
                     </ul>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                 <div class="p-4 p-lg-5 border rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between bg-white">
                     <div>
                         <h4 class="fw-bold mb-2"><?= get_lang('dest_get_quote') ?></h4>
-                        <p class="text-muted mb-0">We'll reply within 24 hours on business days.</p>
+                        <p class="text-muted mb-0"><?= get_lang('dest_get_quote_sub') ?></p>
                     </div>
                     <a href="<?= get_link('index/quote') ?>" class="btn btn-primary mt-4 w-100">
                         <i class="fas fa-paper-plane me-2"></i><?= get_lang('nav_request_quote') ?>

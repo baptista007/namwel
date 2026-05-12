@@ -8,6 +8,7 @@ class RentalController extends BaseController {
 
     function __construct() {
         parent::__construct();
+        $this->view->show_page_tile = false;
     }
 
     /**

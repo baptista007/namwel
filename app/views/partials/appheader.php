@@ -70,9 +70,8 @@ $page_id = Router::$page_id;
                 <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a class="btn btn-primary notranslate" href="<?= get_link('index/quote') ?>">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <?= get_lang('nav_plan_my_trip') ?>
+                <a class="btn btn-primary notranslate" href="<?= get_link('rental') ?>">
+                    <?= get_lang('nav_car_rental') ?>
                 </a>
                 <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
                     <span></span><span></span><span></span>
@@ -115,8 +114,8 @@ $page_id = Router::$page_id;
                 <a href="<?= get_link('index/contact') ?>" class="nav-mobile-top notranslate"><?= get_lang('nav_contact') ?></a>
 
                 <div class="nav-mobile-cta">
-                    <a href="<?= get_link('index/quote') ?>" class="btn btn-primary w-100 notranslate">
-                        <i class="fas fa-paper-plane"></i> <?= get_lang('nav_plan_my_trip') ?>
+                    <a href="<?= get_link('rental') ?>" class="btn btn-primary w-100 notranslate">
+                        <?= get_lang('nav_car_rental') ?>
                     </a>
                 </div>
                 <div class="nav-mobile-lang">

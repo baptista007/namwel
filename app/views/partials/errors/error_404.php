@@ -8,7 +8,7 @@
 <div class="container">
     <div class="info-404 text-center">
         <h1 class="my-3">404</h1>
-        <h2 class="text-muted">Page Not Found</h2>
+        <h2 class="text-muted"><?= get_lang('error_404_title') ?></h2>
         <?php
         if (DEVELOPMENT_MODE) {
             ?>

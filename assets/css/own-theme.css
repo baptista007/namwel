@@ -2202,3 +2202,7 @@ body { top: 0 !important; }
 .nav-mobile-lang button.active {
     background: rgba(255,255,255,0.25);
 }
+
+.bg-vibrant-green {
+    background-color: var(--vibrant-green);
+}

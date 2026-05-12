@@ -19,7 +19,7 @@ $body_type_icons = [
 <!-- Page Hero -->
 <section class="page-hero packages-hero notranslate"
          style="background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-                url('<?= SITE_ADDR ?>assets/images/travel/Grand-Spaces-of-Namibia-scaled.jpeg') center/cover no-repeat;">
+                url('<?= SITE_ADDR ?>assets/images/car-rental-banner-2.png') center/cover no-repeat;">
     <div class="container">
         <div class="text-center text-white">
             <h1 class="display-5 fw-bold mb-2"><?= get_lang('rental_page_title') ?></h1>
@@ -37,7 +37,7 @@ $body_type_icons = [
 </section>
 
 <!-- Value Props Strip -->
-<div class="bg-primary text-white py-3">
+<div class="bg-vibrant-green text-white py-3">
     <div class="container">
         <div class="row text-center g-2">
             <div class="col-6 col-md-3 notranslate">

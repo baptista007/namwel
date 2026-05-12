@@ -2,13 +2,13 @@
 
 <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('<?= SITE_ADDR ?>assets/images/travel/Grand-Spaces-of-Namibia-scaled.jpeg')center/cover no-repeat;">
     <div class="container text-center text-white">
-        <h1 class="display-5 fw-bold mb-2">Namibia</h1>
-        <p class="lead mb-3">Deserts, dunes, and starry skies — an escape like no other on Earth.</p>
+        <h1 class="display-5 fw-bold mb-2"><?= get_lang('country_namibia') ?></h1>
+        <p class="lead mb-3"><?= get_lang('dest_namibia_subtitle') ?></p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="<?= get_link('index/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_home') ?></a></li>
                 <li class="breadcrumb-item"><a href="<?= get_link('destinations/index') ?>" class="text-white-50 notranslate"><?= get_lang('breadcrumb_destinations') ?></a></li>
-                <li class="breadcrumb-item active text-white">Namibia</li>
+                <li class="breadcrumb-item active text-white notranslate"><?= get_lang('country_namibia') ?></li>
             </ol>
         </nav>
     </div>
@@ -19,44 +19,44 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-7">
-                <span class="badge text-bg-secondary mb-2 px-3 py-2">Southern Africa</span>
+                <span class="badge text-bg-secondary mb-2 px-3 py-2"><?= get_lang('dest_southern_africa') ?></span>
                 <h2 class="fw-bold mb-3"><?= get_lang('dest_travel_overview') ?></h2>
-                <p class="text-muted">Set off on an adventure in Namibia to discover stunning landscapes — from the red dunes of the Namib Desert to the granite massifs of the Spitzkoppe and Brandberg. Enjoy a family safari in Etosha Park, watching wildlife gather at floodlit waterholes. Explore lesser-known places like Kaokoland and the Epupa Falls, or relax on a cruise discovering seals and dolphins in Swakopmund and Walvis Bay. Meet local cultures such as the Himba and the Bushmen for a truly unique travel experience.</p>
+                <p class="text-muted"><?= get_lang('dest_namibia_overview') ?></p>
                 <div class="row g-3 mt-2">
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-city text-primary mt-1"></i>
-                            <div><strong class="d-block small">Capital</strong><span class="text-muted small">Windhoek</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_capital') ?></strong><span class="text-muted small">Windhoek</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-ruler-combined text-primary mt-1"></i>
-                            <div><strong class="d-block small">Area</strong><span class="text-muted small">824 292 km²</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_area') ?></strong><span class="text-muted small">824 292 km²</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-language text-primary mt-1"></i>
-                            <div><strong class="d-block small">Language</strong><span class="text-muted small">English</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_language') ?></strong><span class="text-muted small">English</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-users text-primary mt-1"></i>
-                            <div><strong class="d-block small">Population</strong><span class="text-muted small">3.1 million</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_population') ?></strong><span class="text-muted small">3.1 million</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-coins text-primary mt-1"></i>
-                            <div><strong class="d-block small">Currency</strong><span class="text-muted small">Namibian Dollar (NAD)</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_currency') ?></strong><span class="text-muted small">Namibian Dollar (NAD)</span></div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="d-flex align-items-start gap-2">
                             <i class="fas fa-map text-primary mt-1"></i>
-                            <div><strong class="d-block small">Regions</strong><span class="text-muted small">14</span></div>
+                            <div><strong class="d-block small"><?= get_lang('dest_regions') ?></strong><span class="text-muted small">14</span></div>
                         </div>
                     </div>
                 </div>
@@ -72,8 +72,8 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Must-See Places in Namibia</h2>
-            <p class="text-muted">Spectacular landscapes, remarkable wildlife, and unforgettable outdoor adventures.</p>
+            <h2 class="fw-bold"><?= get_lang('dest_namibia_mustsee_title') ?></h2>
+            <p class="text-muted"><?= get_lang('dest_namibia_mustsee_desc') ?></p>
         </div>
         <div class="row g-4">
 
@@ -82,10 +82,10 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/chillervirus-lion-1305804_640.jpg" class="card-img-top" alt="Etosha National Park" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Etosha National Park</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place1_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-2">One of Africa's most important game reserves in northern Namibia. Home to lions, elephants, rhinos, and hundreds of bird species — all gathering around the famous salt pan waterholes.</p>
+                        <p class="text-muted small mb-2"><?= get_lang('dest_namibia_place1_desc') ?></p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
@@ -96,10 +96,10 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/deadvlei.jpg" class="card-img-top" alt="Sossusvlei" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Sossusvlei &amp; Deadvlei</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place2_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-2">The world's tallest sand dunes. Inside the Namib-Naukluft Park, Sossusvlei and Deadvlei are two of Namibia's most iconic landscapes — especially breathtaking at sunrise.</p>
+                        <p class="text-muted small mb-2"><?= get_lang('dest_namibia_place2_desc') ?></p>
                         <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_best_season') ?> May – October</p>
                     </div>
                 </div>
@@ -110,11 +110,11 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/swakopmund.jpg" class="card-img-top" alt="Damaraland" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Swakopmund &amp; the Coast</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place3_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-2">A charming coastal town with a German colonial character. Base yourself here for dune sandboarding, seal cruises, quad biking in the desert, and dolphin-watching in Walvis Bay.</p>
-                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i>Good year-round</p>
+                        <p class="text-muted small mb-2"><?= get_lang('dest_namibia_place3_desc') ?></p>
+                        <p class="text-muted small mb-3"><i class="fas fa-calendar text-primary me-1"></i><?= get_lang('dest_good_year_round') ?></p>
                     </div>
                 </div>
             </div>
@@ -124,10 +124,10 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/fish-river-canyon.png" class="card-img-top" alt="Fish River Canyon" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Fish River Canyon</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place4_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-0">The second largest canyon in the world stretches over 160 km through the south of Namibia. Dramatic viewpoints, multi-day hiking trails, and a sense of utter solitude make it one of Africa's great wonders.</p>
+                        <p class="text-muted small mb-0"><?= get_lang('dest_namibia_place4_desc') ?></p>
                     </div>
                 </div>
             </div>
@@ -137,10 +137,10 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/skeleton-coast.jpg" class="card-img-top" alt="Skeleton Coast" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Skeleton Coast</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place5_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-0">One of the most remote and wild stretches of coastline in the world — shipwrecks, seal colonies, desert-adapted lions, and the relentless Atlantic. An adventure destination unlike any other.</p>
+                        <p class="text-muted small mb-0"><?= get_lang('dest_namibia_place5_desc') ?></p>
                     </div>
                 </div>
             </div>
@@ -150,10 +150,10 @@
                     <img src="<?= SITE_ADDR ?>assets/images/travel/twyfelfontein-rock.png" class="card-img-top" alt="Twyfelfontein" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5 class="fw-bold mb-0">Damaraland & Okaokoland</h5>
-                            <span class="badge bg-info text-dark small">Ask us</span>
+                            <h5 class="fw-bold mb-0"><?= get_lang('dest_namibia_place6_title') ?></h5>
+                            <span class="badge bg-info text-dark small"><?= get_lang('dest_ask_us') ?></span>
                         </div>
-                        <p class="text-muted small mb-0">Remote, dramatic highland landscapes where you can find engravings, meet the Himba people, search for desert-adapted elephants and black rhinos in one of Namibia's most beautiful and wild regions.</p>
+                        <p class="text-muted small mb-0"><?= get_lang('dest_namibia_place6_desc') ?></p>
                     </div>
                 </div>
             </div>
@@ -165,10 +165,10 @@
 <!-- CTA -->
 <section class="py-5 bg-light">
     <div class="container text-center">
-        <h3 class="fw-bold mb-3">Plan Your Namibia Adventure</h3>
-        <p class="text-muted mb-4">From self-drive camping to luxury lodges, we know Namibia inside out. Get your personalised itinerary within 24 hours.</p>
+        <h3 class="fw-bold mb-3"><?= get_lang('dest_namibia_cta_title') ?></h3>
+        <p class="text-muted mb-4"><?= get_lang('dest_namibia_cta_desc') ?></p>
         <a href="<?= get_link('index/quote') ?>" class="btn btn-primary px-4">
-            <i class="fas fa-paper-plane me-2"></i>Request a Free Quote
+            <i class="fas fa-paper-plane me-2"></i><?= get_lang('dest_request_free_quote') ?>
         </a>
     </div>
 </section>

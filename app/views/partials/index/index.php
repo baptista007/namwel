@@ -46,26 +46,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 </section>
 
 <!-- Trust Bar -->
-<section class="trust-bar">
+<!-- <section class="trust-bar">
     <div class="">
-        <!-- <div class="trust-bar-inner">
-            <div class="trust-stat">
-                <div class="trust-stat-number">5000+</div>
-                <div class="trust-stat-label">Happy Travelers</div>
-            </div>
-            <div class="trust-stat">
-                <div class="trust-stat-number">15+</div>
-                <div class="trust-stat-label">Years Experience</div>
-            </div>
-            <div class="trust-stat">
-                <div class="trust-stat-number">50+</div>
-                <div class="trust-stat-label">Expert Guides</div>
-            </div>
-            <div class="trust-stat">
-                <div class="trust-stat-number">98%</div>
-                <div class="trust-stat-label">Return Guests</div>
-            </div>
-        </div> -->
         <form action="" class="trust-bar-inner">
             <div class="col-md-3">
                 <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_destination') ?></label>
@@ -99,7 +81,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             </div>
         </form>
     </div>
-</section>
+</section> -->
 
 <!-- Value Propositions -->
 <section class="value-props" id="value-props">
@@ -221,9 +203,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     <div class="package-highlights">
                         <p><?= get_lang('home_pkg3_desc') ?></p>
                         <div class="package-highlights">
-                            <span class="highlight-tag"><i class="fas fa-mountain"></i> Sossusvlei Dunes</span>
-                            <span class="highlight-tag"><i class="fas fa-paw"></i> Desert Wildlife</span>
-                            <span class="highlight-tag"><i class="fas fa-star"></i> Stargazing</span>
+                            <span class="highlight-tag"><i class="fas fa-mountain"></i> <?= get_lang('home_pkg3_highlights_1') ?></span>
+                            <span class="highlight-tag"><i class="fas fa-paw"></i> <?= get_lang('home_pkg3_highlights_2') ?></span>
+                            <span class="highlight-tag"><i class="fas fa-star"></i> <?= get_lang('home_pkg3_highlights_3') ?></span>
                         </div>
                     </div>
                     <div class="package-footer">
@@ -346,7 +328,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 <!-- Testimonials -->
 <section class="testimonials" id="testimonials">
     <div class="container">
-        <div class="section-header mb-2" >
+        <div class="section-header mb-2">
             <h2><?= get_lang('home_testimonials_title') ?></h2>
             <p><?= get_lang('home_testimonials_desc') ?></p>
         </div>
@@ -356,7 +338,6 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 $count = 0;
                 foreach ($testimonials as $testimonial) {
                     echo '<div class="testimonial-slide ' . ($count == 0 ? 'active' : '') . '">';
-                    // echo '<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah M." class="testimonial-image">';
                     echo '<div class="testimonial-stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -428,7 +409,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="zambia-zimbabwe">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Zambia / Zimbabwe</span>
+                                <span><?= get_lang('home_dest_zambia_zimbabwe') ?></span>
                             </label>
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="namibia">
@@ -455,7 +436,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <label><?= get_lang('form_num_travelers') ?></label>
                         <select name="travelers" required>
                             <option value=""><?= get_lang('form_select_travelers') ?></option>
-                            <option value="1">1 <?=  get_lang('form_guest') ?></option>
+                            <option value="1">1 <?= get_lang('form_guest') ?></option>
                             <option value="2">2 <?= get_lang('form_guests') ?></option>
                             <option value="3">3 <?= get_lang('form_guests') ?></option>
                             <option value="4">4 <?= get_lang('form_guests') ?></option>
@@ -502,9 +483,8 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
 </section>
 
 <script>
-    // Countdown Timer
     function updateCountdown() {
-        const endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime(); // 7 days from now
+        const endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime();
         const now = new Date().getTime();
         const diff = endDate - now;
 
@@ -524,7 +504,6 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Testimonial Slider
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.testimonial-dot');
     let currentSlide = 0;
@@ -532,7 +511,6 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
-
         slides[index].classList.add('active');
         dots[index].classList.add('active');
         currentSlide = index;
@@ -547,7 +525,6 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         showSlide(currentSlide);
     }, 5000);
 
-    // Multi-step Form
     let currentStep = 1;
     const totalSteps = 3;
 
@@ -608,14 +585,13 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         document.querySelector('.form-header h2').textContent = "<?= get_lang('form_thankyou_title') ?>";
         document.querySelector('.form-header p').textContent = "<?= get_lang('form_thankyou_desc') ?>";
         document.getElementById('leadForm').innerHTML = `
-                    <div style="text-align: center; padding: 40px 0;">
-                        <i class="fas fa-check-circle" style="font-size: 60px; color: var(--bush-green);"></i>
-                        <p style="margin-top: 20px; font-size: 18px;"><?= get_lang('form_check_inbox') ?></p>
-                    </div>
-                `;
+            <div style="text-align: center; padding: 40px 0;">
+                <i class="fas fa-check-circle" style="font-size: 60px; color: var(--bush-green);"></i>
+                <p style="margin-top: 20px; font-size: 18px;"><?= get_lang('form_check_inbox') ?></p>
+            </div>
+        `;
     }
 
-    // Modal Functions
     function openModal(modalId) {
         const modal = new bootstrap.Modal(document.getElementById(modalId));
         modal.show();
@@ -632,18 +608,6 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         openModal('success-modal');
     }
 
-    // Exit Intent
-    // let exitIntentTriggered = false;
-    // document.addEventListener('mouseleave', (e) => {
-    //     if (e.clientY <= 0 && !exitIntentTriggered) {
-    //         exitIntentTriggered = true;
-    //         setTimeout(() => {
-    //             openModal('exit-modal');
-    //         }, 500);
-    //     }
-    // });
-
-    // Scroll Animations
     const fadeElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -651,13 +615,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                 entry.target.classList.add('visible');
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     fadeElements.forEach(el => observer.observe(el));
 
-    // Close modal on outside click
     document.querySelectorAll('.modal-overlay').forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
