@@ -54,15 +54,14 @@ $page_id = Router::$page_id;
                 <div class="lang-switcher" id="langSwitcher">
                     <button class="lang-btn" id="langToggle" aria-label="Select language">
                         <i class="fas fa-globe"></i>
-                        <span id="langCurrent">EN</span>
+                        <span id="langCurrent"><?= strtoupper(Lang::get_user_language()) ?></span>
                         <i class="fas fa-chevron-down lang-chevron"></i>
                     </button>
                     <div class="lang-dropdown" id="langDropdown">
-                        <a href="<?=  get_link('info/change_language/english') ?>" class="lang-option" data-lang="en" data-label="EN">🇬🇧 English</a>
-                        <a href="<?=  get_link('info/change_language/french') ?>" class="lang-option" data-lang="fr" data-label="FR">🇫🇷 Français</a>
-                        <a href="<?=  get_link('info/change_language/portuguese') ?>" class="lang-option" data-lang="pt" data-label="PT">🇵🇹 Português</a>
-                        <a href="<?=  get_link('info/change_language/chinese') ?>" class="lang-option" data-lang="zh-CN" data-label="中文">🇨🇳 中文</a>
-                        <a href="<?=  get_link('info/change_language/spanish') ?>" class="lang-option" data-lang="es" data-label="ES">🇪🇸 Español</a>
+                        <a href="<?=  get_link('info/change_language/en') ?>" class="lang-option" data-lang="en" data-label="EN">🇬🇧 English</a>
+                        <a href="<?=  get_link('info/change_language/fr') ?>" class="lang-option" data-lang="fr" data-label="FR">🇫🇷 Français</a>
+                        <a href="<?=  get_link('info/change_language/pt') ?>" class="lang-option" data-lang="pt" data-label="PT">🇵🇹 Português</a>
+                        <a href="<?=  get_link('info/change_language/es') ?>" class="lang-option" data-lang="es" data-label="ES">🇪🇸 Español</a>
                     </div>
                 </div>
                 <div id="google_translate_element" style="display:none;"></div>
@@ -119,11 +118,10 @@ $page_id = Router::$page_id;
                     </a>
                 </div>
                 <div class="nav-mobile-lang">
-                    <a href="<?= get_link('info/change_language/english') ?>" data-label="EN">🇬🇧 EN</a>
-                    <a href="<?= get_link('info/change_language/french') ?>" data-label="FR">🇫🇷 FR</a>
-                    <a href="<?= get_link('info/change_language/portuguese') ?>" data-label="PT">🇵🇹 PT</a>
-                    <a href="<?= get_link('info/change_language/chinese') ?>" data-label="中文">🇨🇳 中文</a>
-                    <a href="<?= get_link('info/change_language/spanish') ?>" data-label="ES">🇪🇸 ES</a>
+                    <a href="<?= get_link('info/change_language/en') ?>" data-label="EN">🇬🇧 EN</a>
+                    <a href="<?= get_link('info/change_language/fr') ?>" data-label="FR">🇫🇷 FR</a>
+                    <a href="<?= get_link('info/change_language/pt') ?>" data-label="PT">🇵🇹 PT</a>
+                    <a href="<?= get_link('info/change_language/es') ?>" data-label="ES">🇪🇸 ES</a>
                 </div>
             </div>
         </div>
