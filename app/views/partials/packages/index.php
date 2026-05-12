@@ -29,17 +29,17 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
                     <div class="position-relative overflow-hidden" style="height:220px;">
-                        <img src="<?= SITE_ADDR ?>assets/images/travel/VictoriaFalls-Zimbabwe-Sunrise-BestSpot.jpeg" class="w-100 h-100" alt="Special Offers" style="object-fit:cover;">
+                        <img src="<?= SITE_ADDR ?>assets/images/travel/VictoriaFalls-Zimbabwe-Sunrise-BestSpot.jpeg" class="w-100 h-100" alt="<?= get_lang('nav_special_offers') ?>" style="object-fit:cover;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.65));"></div>
-                        <span class="position-absolute top-0 end-0 m-3 badge bg-danger">Deals</span>
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-danger"><?= get_lang('pkgs_badge_deals') ?></span>
                         <h4 class="position-absolute bottom-0 start-0 p-3 mb-0 text-white fw-bold notranslate"><?= get_lang('nav_special_offers') ?></h4>
                     </div>
                     <div class="card-body d-flex flex-column">
                         <p class="text-muted flex-grow-1">Seasonal specials, short breaks, and value-packed itineraries — perfect for spontaneous travel or tight schedules.</p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>3–5 day express tours</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Limited-time pricing</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Best for first-timers</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_special_feature_1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_special_feature_2') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_special_feature_3') ?></li>
                         </ul>
                         <a href="<?= get_link('packages/special_offers') ?>" class="btn btn-primary w-100 notranslate"><?= get_lang('pkgs_view_offers') ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
@@ -50,17 +50,17 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
                     <div class="position-relative overflow-hidden" style="height:220px;">
-                        <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/pt-namibia.jpg" class="w-100 h-100" alt="Honeymoon" style="object-fit:cover;">
+                        <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/pt-namibia.jpg" class="w-100 h-100" alt="<?= get_lang('nav_honeymoon') ?>" style="object-fit:cover;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.65));"></div>
-                        <span class="position-absolute top-0 end-0 m-3 badge bg-danger"><i class="fas fa-heart me-1"></i>Romance</span>
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-danger"><i class="fas fa-heart me-1"></i><?= get_lang('pkgs_badge_romance') ?></span>
                         <h4 class="position-absolute bottom-0 start-0 p-3 mb-0 text-white fw-bold notranslate"><?= get_lang('nav_honeymoon') ?></h4>
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <p class="text-muted flex-grow-1">Romantic, private, and effortless. Designed around comfort, scenery, and memorable moments for two.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('pkgs_honeymoon_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Private lodge experiences</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Candle-lit dinners &amp; spa options</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Personalised surprise touches</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_honeymoon_feature_1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_honeymoon_feature_2') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_honeymoon_feature_3') ?></li>
                         </ul>
                         <a href="<?= get_link('packages/honeymoon') ?>" class="btn btn-primary w-100 notranslate"><?= get_lang('pkgs_view_honeymoon') ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
@@ -71,17 +71,17 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
                     <div class="position-relative overflow-hidden" style="height:220px;">
-                        <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/Botswana_Okavango.jpg" class="w-100 h-100" alt="Camping and Overland" style="object-fit:cover;">
+                        <img src="<?= SITE_ADDR ?>assets/images/travel/destinations/Botswana_Okavango.jpg" class="w-100 h-100" alt="<?= get_lang('nav_camping') ?>" style="object-fit:cover;">
                         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.65));"></div>
-                        <span class="position-absolute top-0 end-0 m-3 badge bg-success"><i class="fas fa-campground me-1"></i>Adventure</span>
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-success"><i class="fas fa-campground me-1"></i><?= get_lang('pkgs_badge_adventure') ?></span>
                         <h4 class="position-absolute bottom-0 start-0 p-3 mb-0 text-white fw-bold notranslate"><?= get_lang('nav_camping') ?></h4>
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <p class="text-muted flex-grow-1">Open skies, 4x4 tracks, and national parks. For travellers who love the road and the raw beauty of Southern Africa.</p>
+                        <p class="text-muted flex-grow-1"><?= get_lang('pkgs_camping_desc') ?></p>
                         <ul class="list-unstyled small mb-3">
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Self-drive &amp; guided routes</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Multi-country loops available</li>
-                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Gear rental &amp; route planning</li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_camping_feature_1') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_camping_feature_2') ?></li>
+                            <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i><?= get_lang('pkgs_camping_feature_3') ?></li>
                         </ul>
                         <a href="<?= get_link('packages/camping') ?>" class="btn btn-primary w-100 notranslate"><?= get_lang('pkgs_view_camping') ?> <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
@@ -110,15 +110,15 @@
                         <div class="col-md-7">
                             <div class="card-body d-flex flex-column h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-warning text-dark">Best Seller</span>
-                                    <small class="text-muted"><i class="fas fa-clock me-1"></i>15 Days</small>
+                                    <span class="badge bg-warning text-dark"><?= get_lang('pkgs_badge_best_seller') ?></span>
+                                    <small class="text-muted"><i class="fas fa-clock me-1"></i><?= get_lang('pkgs_days_15') ?></small>
                                 </div>
-                                <h5 class="fw-bold mb-1">The Treasure of Southern Africa</h5>
-                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i>Namibia · Botswana · Zambia</p>
-                                <p class="text-muted small flex-grow-1">Dunes of Namibia, Chobe wildlife, and the majestic Victoria Falls — all in one unforgettable journey.</p>
+                                <h5 class="fw-bold mb-1"><?= get_lang('pkgs_treasure_title') ?></h5>
+                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i><?= get_lang('pkgs_treasure_route') ?></p>
+                                <p class="text-muted small flex-grow-1"><?= get_lang('pkgs_treasure_desc') ?></p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                                     <div>
-                                        <span class="fw-bold text-primary fs-5">From $2,499</span>
+                                        <span class="fw-bold text-primary fs-5"><?= get_lang('pkgs_from') ?> $2,499</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$2,999</small>
                                     </div>
                                     <a class="btn btn-primary package-btn notranslate" href="<?= get_link('packages/treasure_southern_africa') ?>">
@@ -143,8 +143,8 @@
                                     <span class="badge bg-primary">Premium</span>
                                     <small class="text-muted"><i class="fas fa-clock me-1"></i>17 Days</small>
                                 </div>
-                                <h5 class="fw-bold mb-1">Fascinating Southern Africa</h5>
-                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i>Namibia · Botswana · Zimbabwe</p>
+                                <h5 class="fw-bold mb-1"><?= get_lang('pkgs_fascinating_title') ?></h5>
+                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i><?= get_lang('pkgs_okavango_route') ?></p>
                                 <p class="text-muted small flex-grow-1">A comprehensive 17-day adventure linking three iconic countries with wildlife, river cruises, and adventure activities.</p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                                     <div>
@@ -170,7 +170,7 @@
                         <div class="col-md-7">
                             <div class="card-body d-flex flex-column h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-success">Popular</span>
+                                    <span class="badge bg-success"><?= get_lang('pkgs_badge_popular') ?></span>
                                     <small class="text-muted"><i class="fas fa-clock me-1"></i>14 Days</small>
                                 </div>
                                 <h5 class="fw-bold mb-1">Namibian Great Outdoors</h5>
@@ -200,15 +200,15 @@
                         <div class="col-md-7">
                             <div class="card-body d-flex flex-column h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <span class="badge bg-info text-dark">Unique</span>
-                                    <small class="text-muted"><i class="fas fa-clock me-1"></i>7 Days</small>
+                                    <span class="badge bg-info text-dark"><?= get_lang('pkgs_badge_unique') ?></span>
+                                    <small class="text-muted"><i class="fas fa-clock me-1"></i><?= get_lang('pkgs_days_7') ?></small>
                                 </div>
-                                <h5 class="fw-bold mb-1">A Stroll Around the Okavango</h5>
-                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i>Namibia · Botswana · Zimbabwe</p>
-                                <p class="text-muted small flex-grow-1">An immersive safari through the Okavango Delta with wildlife, river landscapes, and iconic natural wonders.</p>
+                                <h5 class="fw-bold mb-1"><?= get_lang('pkgs_okavango_title') ?></h5>
+                                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1 text-primary"></i><?= get_lang('pkgs_okavango_route') ?></p>
+                                <p class="text-muted small flex-grow-1"><?= get_lang('pkgs_okavango_desc') ?></p>
                                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                                     <div>
-                                        <span class="fw-bold text-primary fs-5">From $2,799</span>
+                                        <span class="fw-bold text-primary fs-5"><?= get_lang('pkgs_from') ?> $2,799</span>
                                         <small class="text-muted text-decoration-line-through ms-1">$3,399</small>
                                     </div>
                                     <a class="btn btn-primary package-btn notranslate" href="<?= get_link('packages/a_stroll_around_okavango') ?>">

@@ -33,19 +33,19 @@ $page_title = $this->get_page_title();
                 <div class="login-logo">
                     <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="<?= SITE_NAME ?>" class="img-fluid" alt="Namwel Tours & Car Rentals">
                 </div>
-                <h1 class="login-title">Admin Portal</h1>
-                <p class="login-subtitle">Sign in to manage your dashboard</p>
+                <h1 class="login-title"><?= get_lang('login_admin_portal') ?></h1>
+                <p class="login-subtitle"><?= get_lang('login_subtitle') ?></p>
             </div>
 
             <div class="login-body">
                 <div class="error-message" id="errorMessage">
                     <i class="bi bi-exclamation-circle-fill"></i>
-                    <span id="errorText">Invalid credentials. Please try again.</span>
+                    <span id="errorText"><?= get_lang('login_invalid_credentials') ?></span>
                 </div>
 
                 <form name="loginForm" id="loginForm" action="<?php print_link('admin/login/?csrf_token=' . Csrf::$token); ?>" class="needs-validation form page-form" method="post">
                     <div class="mb-4">
-                        <label for="email" class="form-label">Email Address</label>
+                        <label for="email" class="form-label"><?= get_lang('form_email_address') ?></label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             <input type="text" class="form-control" name="username" id="username" placeholder="admin@namweltours.com" required>
@@ -53,11 +53,11 @@ $page_title = $this->get_page_title();
                     </div>
 
                     <div class="mb-4">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label"><?= get_lang('login_password') ?></label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
-                            <button class="btn btn-outline-secondary toggle-password" type="button" onclick="togglePassword()">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="<?= get_lang('login_password_placeholder') ?>" required>
+                            <button class="btn btn-outline-secondary toggle-password" type="button" onclick="toggle<?= get_lang('login_password') ?>()">
                                 <i class="fas fa-eye" id="toggleIcon"></i>
                             </button>
                         </div>
@@ -66,16 +66,16 @@ $page_title = $this->get_page_title();
                     <div class="remember-forgot">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="remember">
-                            <label class="form-check-label" for="remember">Remember me</label>
+                            <label class="form-check-label" for="remember"><?= get_lang('login_remember_me') ?></label>
                         </div>
-                        <a href="#" class="forgot-link">Forgot password?</a>
+                        <a href="#" class="forgot-link"><?= get_lang('login_forgot_password') ?></a>
                     </div>
 
                     <button type="submit" class="btn btn-login">
-                        <span class="btn-text">Sign In</span>
+                        <span class="btn-text"><?= get_lang('login_sign_in') ?></span>
                         <span class="loading">
                             <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                            Signing in...
+                            <?= get_lang('login_signing_in') ?>
                         </span>
                     </button>
                 </form>
@@ -84,13 +84,13 @@ $page_title = $this->get_page_title();
             <div class="login-footer">
                 <a href="index.html" class="back-link">
                     <i class="bi bi-arrow-left"></i>
-                    Back to Website
+                    <?= get_lang('login_back_to_website') ?>
                 </a>
             </div>
         </div>
     </div>
     <script>
-        function togglePassword() {
+        function toggle<?= get_lang('login_password') ?>() {
             const passwordInput = document.getElementById('password');
             const toggleIcon = document.getElementById('toggleIcon');
 
@@ -117,7 +117,7 @@ $page_title = $this->get_page_title();
             // Simple validation demo
             if (!username || !password) {
                 errorMessage.classList.add('show');
-                document.getElementById('errorText').textContent = 'Please enter both username and password.';
+                document.getElementById('errorText').textContent = '<?= get_lang('login_enter_both') ?>';
                 return;
             }
 

@@ -142,14 +142,14 @@
                         <div class="form-group">
                             <label><?= get_lang('quote_travelers') ?> <span class="required">*</span></label>
                             <select name="travelers" required>
-                                <option value="">Select travelers</option>
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5 Guests</option>
-                                <option value="6">6 Guests</option>
-                                <option value="7+">7+ Guests</option>
+                                <option value=""><?= get_lang('form_select_travelers') ?></option>
+                                <option value="1">1 <?=  get_lang('form_guest') ?></option>
+                                <option value="2">2 <?=  get_lang('form_guests') ?></option>
+                                <option value="3">3 <?=  get_lang('form_guests') ?></option>
+                                <option value="4">4 <?=  get_lang('form_guests') ?></option>
+                                <option value="5">5 <?=  get_lang('form_guests') ?></option>
+                                <option value="6">6 <?=  get_lang('form_guests') ?></option>
+                                <option value="7+">7+ <?=  get_lang('form_guests') ?></option>
                             </select>
                         </div>
                     </div>

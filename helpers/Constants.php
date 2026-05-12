@@ -27,6 +27,7 @@ final class SqlTables {
     const tbl_vacancy = "tbl_vacancy";
     const tbl_payment_security = "tbl_payment_security";
     const tbl_quote = "tbl_quote";
+    const tbl_vehicle = "tbl_vehicle";
 }
 
 final class InputType {

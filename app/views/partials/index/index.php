@@ -70,28 +70,28 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <div class="col-md-3">
                 <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_destination') ?></label>
                 <select class="form-select border-0 bg-light">
-                    <option value="Namibia">Namibia</option>
-                    <option value="Botswana">Botswana</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Angola">Angola</option>
+                    <option value="Namibia"><?= get_lang('country_namibia') ?></option>
+                    <option value="Botswana"><?= get_lang('country_botswana') ?></option>
+                    <option value="Zimbabwe"><?= get_lang('country_zimbabwe') ?></option>
+                    <option value="South Africa"><?= get_lang('country_south_africa') ?></option>
+                    <option value="Angola"><?= get_lang('country_angola') ?></option>
                 </select>
             </div>
             <div class="col-md-3">
                 <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_month') ?></label>
                 <select class="form-select border-0 bg-light">
-                    <option>June - August (Dry)</option>
-                    <option>Dec - Feb (Green)</option>
+                    <option><?= get_lang('search_month_dry') ?></option>
+                    <option><?= get_lang('search_month_green') ?></option>
                 </select>
             </div>
             <div class="col-md-3">
                 <label class="form-label small fw-bold notranslate"><?= get_lang('search_label_style') ?></label>
                 <select class="form-select border-0 bg-light">
-                    <option>5* Hotel - Lodge</option>
-                    <option>Lodge - Rest Camp</option>
-                    <option>Guest Farm</option>
-                    <option>Guest House</option>
-                    <option>Camping - Self Catering</option>
+                    <option><?= get_lang('search_style_luxury_lodge') ?></option>
+                    <option><?= get_lang('search_style_lodge_restcamp') ?></option>
+                    <option><?= get_lang('search_style_guest_farm') ?></option>
+                    <option><?= get_lang('search_style_guest_house') ?></option>
+                    <option><?= get_lang('search_style_camping_selfcatering') ?></option>
                 </select>
             </div>
             <div class="col-md-3 d-grid">
@@ -150,12 +150,11 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     <span class="package-availability notranslate"><i class="fas fa-fire"></i> <?= get_lang('pkg_spots_left') ?></span>
                 </div>
                 <div class="package-content">
-                    <div class="package-location">Botswana / Namibia / Zambia</div>
-                    <h3 class="package-title">The treasure of southern Africa</h3>
-                    <div class="package-duration">15 Days / 14 Nights</div>
+                    <div class="package-location"><?= get_lang('home_pkg1_location') ?></div>
+                    <h3 class="package-title"><?= get_lang('home_pkg1_title') ?></h3>
+                    <div class="package-duration"><?= get_lang('home_pkg1_duration') ?></div>
                     <div class="package-highlights">
-                        <p>This 14-day tour takes you to the heart of Southern Africa, a region of exceptional natural and cultural richness. From Namibia, with its spectacular dunes and abundant wildlife, to Botswana and its famous national parks, and finally to the majestic Victoria Falls in Zimbabwe, each stop offers an immersion in unique landscapes and authentic traditions.</p>
-
+                        <p><?= get_lang('home_pkg1_desc') ?></p>
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
@@ -182,14 +181,14 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     <span class="package-availability notranslate"><i class="fas fa-clock"></i> <?= get_lang('pkg_limited') ?></span>
                 </div>
                 <div class="package-content">
-                    <div class="package-location">Botswana / Namibia / Zimbabwe</div>
-                    <h3 class="package-title">Fascinating Southern Africa</h3>
-                    <div class="package-duration">17 Days / 16 Nights</div>
+                    <div class="package-location"><?= get_lang('home_pkg2_location') ?></div>
+                    <h3 class="package-title"><?= get_lang('home_pkg2_title') ?></h3>
+                    <div class="package-duration"><?= get_lang('home_pkg2_duration') ?></div>
                     <div class="package-highlights">
-                        <p>Embark on an exceptional journey through Southern Africa with our Fascinating Southern Africa tour , a comprehensive 17-day adventure linking three iconic countries: Namibia, Botswana, and Zimbabwe.</p>
-                        <span class="highlight-tag"><i class="fas fa-tint"></i> Falls Viewing</span>
-                        <span class="highlight-tag"><i class="fas fa-ship"></i> Sunset Cruise</span>
-                        <span class="highlight-tag"><i class="fas fa-mountain"></i> Adventure Activities</span>
+                        <p><?= get_lang('home_pkg2_desc') ?></p>
+                        <span class="highlight-tag"><i class="fas fa-tint"></i> <?= get_lang('home_tag_falls_viewing') ?></span>
+                        <span class="highlight-tag"><i class="fas fa-ship"></i> <?= get_lang('home_tag_sunset_cruise') ?></span>
+                        <span class="highlight-tag"><i class="fas fa-mountain"></i> <?= get_lang('home_tag_adventure_activities') ?></span>
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
@@ -216,11 +215,11 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                     <span class="package-availability notranslate"><i class="fas fa-star"></i> <?= get_lang('pkg_top_rated') ?></span>
                 </div>
                 <div class="package-content">
-                    <div class="package-location">Namibia</div>
-                    <h3 class="package-title">Namibian Great Outdoors</h3>
-                    <div class="package-duration">4 Days / 3 Nights</div>
+                    <div class="package-location"><?= get_lang('home_pkg3_location') ?></div>
+                    <h3 class="package-title"><?= get_lang('home_pkg3_title') ?></h3>
+                    <div class="package-duration"><?= get_lang('home_pkg3_duration') ?></div>
                     <div class="package-highlights">
-                        <p>Embark on a 14-day adventure exploring Namibia's vast landscapes: Etosha National Park, Damaraland, the Skeleton Coast, the Namib Desert, and the Kalahari. Enjoy safaris, breathtaking scenery, and cultural immersion in the heart of Namibian nature. This guided tour is ideal for small groups seeking adventure and comfort.</p>
+                        <p><?= get_lang('home_pkg3_desc') ?></p>
                         <div class="package-highlights">
                             <span class="highlight-tag"><i class="fas fa-mountain"></i> Sossusvlei Dunes</span>
                             <span class="highlight-tag"><i class="fas fa-paw"></i> Desert Wildlife</span>
@@ -243,18 +242,18 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
             <div class="package-card fade-in">
                 <div class="package-image">
                     <img src="<?= SITE_ADDR ?>assets/images/travel/aerial-view-of-the-okavango-delta-channels-and-landscape.jpg" alt="Okavango Delta">
-                    <span class="package-badge">Botswana / Namibia / Zambia</span>
+                    <span class="package-badge"><?= get_lang('home_pkg1_location') ?></span>
                     <span class="package-availability notranslate"><i class="fas fa-gem"></i> <?= get_lang('pkg_unique') ?></span>
                 </div>
                 <div class="package-content">
-                    <div class="package-location">Namibia</div>
-                    <h3 class="package-title">A stroll around the Okavango</h3>
-                    <div class="package-duration">7 Days / 6 Nights</div>
-                    <p>The journey to the heart of the Okavango Delta is an immersive safari experience through Namibia, Botswana, and Zimbabwe, offering a perfect balance of wildlife, river landscapes, and iconic natural wonders.</p>
+                    <div class="package-location"><?= get_lang('home_pkg4_location') ?></div>
+                    <h3 class="package-title"><?= get_lang('home_pkg4_title') ?></h3>
+                    <div class="package-duration"><?= get_lang('home_pkg4_duration') ?></div>
+                    <p><?= get_lang('home_pkg4_desc') ?></p>
                     <div class="package-highlights">
-                        <span class="highlight-tag"><i class="fas fa-mountain"></i> Sossusvlei Dunes</span>
-                        <span class="highlight-tag"><i class="fas fa-paw"></i> Desert Wildlife</span>
-                        <span class="highlight-tag"><i class="fas fa-star"></i> Stargazing</span>
+                        <span class="highlight-tag"><i class="fas fa-mountain"></i> <?= get_lang('home_pkg4_highlights_1') ?></span>
+                        <span class="highlight-tag"><i class="fas fa-paw"></i> <?= get_lang('home_pkg4_highlights_2') ?></span>
+                        <span class="highlight-tag"><i class="fas fa-star"></i> <?= get_lang('home_pkg4_highlights_3') ?></span>
                     </div>
                     <div class="package-footer">
                         <div class="package-price">
@@ -419,12 +418,12 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="south-africa" required>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>South Africa</span>
+                                <span><?= get_lang('country_south_africa') ?></span>
                             </label>
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="botswana">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Botswana</span>
+                                <span><?= get_lang('country_botswana') ?></span>
                             </label>
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="zambia-zimbabwe">
@@ -434,7 +433,7 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="namibia">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Namibia</span>
+                                <span><?= get_lang('country_namibia') ?></span>
                             </label>
                         </div>
                     </div>
@@ -456,12 +455,12 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <label><?= get_lang('form_num_travelers') ?></label>
                         <select name="travelers" required>
                             <option value=""><?= get_lang('form_select_travelers') ?></option>
-                            <option value="1">1 Guest</option>
-                            <option value="2">2 Guests</option>
-                            <option value="3">3 Guests</option>
-                            <option value="4">4 Guests</option>
-                            <option value="5">5 Guests</option>
-                            <option value="6+">6+ Guests</option>
+                            <option value="1">1 <?=  get_lang('form_guest') ?></option>
+                            <option value="2">2 <?= get_lang('form_guests') ?></option>
+                            <option value="3">3 <?= get_lang('form_guests') ?></option>
+                            <option value="4">4 <?= get_lang('form_guests') ?></option>
+                            <option value="5">5 <?= get_lang('form_guests') ?></option>
+                            <option value="6+">6+ <?= get_lang('form_guests') ?></option>
                         </select>
                     </div>
                     <div class="form-nav">

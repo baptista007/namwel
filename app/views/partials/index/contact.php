@@ -18,13 +18,13 @@ $contacts = $this->view_data;
                     <div class="card-body position-relative zindex-2">
                         <h2 class="h4 mb-4"><?= get_lang('reach_us') ?></h2>
                         <div class="footer-contact pt-1">
-                            <p class="mb-2"><strong><i class="fas fa-clock"></i> Hours:</strong> <span>Mon–Fri, 08:00–17:00</span></p>
-                            <p class="mb-0"><strong><i class="fas fa-envelope"></i> Email:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
-                            <p class="mb-0"><strong><i class="fas fa-globe"></i> Website:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
-                            <p class="mb-0"><strong><i class="fas fa-phone"></i> Phone:</strong> <span>+264 61 244 697</span></p>
-                            <p class="mb-0"><strong><i class="fas fa-mobile"></i> Mobile:</strong> <span> +264 81 762 7908</span></p>
-                            <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> WhatsApp (24/7):</strong> <span>+264 81 212 7874</span></p>
-                            <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> <span>Ara Street 7695 Dorado Valley, Windhoek, Namibia</span></p>
+                            <p class="mb-2"><strong><i class="fas fa-clock"></i> <?= get_lang('footer_hours') ?>:</strong> <span><?= get_lang('footer_hours_value') ?></span></p>
+                            <p class="mb-0"><strong><i class="fas fa-envelope"></i> <?= get_lang('footer_email') ?>:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
+                            <p class="mb-0"><strong><i class="fas fa-globe"></i> <?= get_lang('footer_website') ?>:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
+                            <p class="mb-0"><strong><i class="fas fa-phone"></i> <?= get_lang('footer_phone') ?>:</strong> <span>+264 61 244 697</span></p>
+                            <p class="mb-0"><strong><i class="fas fa-mobile"></i> <?= get_lang('footer_mobile') ?>:</strong> <span> +264 81 762 7908</span></p>
+                            <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> <?= get_lang('footer_whatsapp') ?>:</strong> <span>+264 81 212 7874</span></p>
+                            <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> <?= get_lang('footer_address') ?>:</strong> <span><?= get_lang('footer_address_value') ?></span></p>
                         </div>
                         <div id="map" class="rounded-3 mt-4" style="height: 280px;"></div>
                     </div>
@@ -40,17 +40,14 @@ $contacts = $this->view_data;
                             <div class="col-12">
                                 <label for="fn" class="form-label fs-base"><?= get_lang('contact_name') ?></label>
                                 <input type="text" class="form-control form-control-lg" id="fn" name="name" required="">
-                                <div class="invalid-feedback">Please enter your full name!</div>
                             </div>
                             <div class="col-12">
                                 <label for="email" class="form-label fs-base"><?= get_lang('contact_email') ?></label>
                                 <input type="email" class="form-control form-control-lg" id="email" name="email" required="">
-                                <div class="invalid-feedback">Please provide a valid email address!</div>
                             </div>
                             <div class="col-12">
                                 <label for="time" class="form-label fs-base"><?= get_lang('contact_message') ?></label>
                                 <textarea class="form-control form-control-lg" name="message" rows="5" placeholder="<?= get_lang('contact_message') ?>..." required></textarea>
-                                <div class="invalid-feedback">Enter a time!</div>
                             </div>
                             <?php
                             $rand1 = rand(1, 5);

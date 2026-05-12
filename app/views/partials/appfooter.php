@@ -7,13 +7,13 @@
                     <img src="<?= SITE_ADDR . SITE_LOGO ?>" alt="<?= SITE_NAME ?>" class="img-fluid" alt="Namwel Tours & Car Rentals">
                 </a>
                 <div class="footer-contact pt-1 notranslate">
-                    <p class="mb-2"><strong><?= get_lang('footer_hours') ?>:</strong> <span>Mon–Fri, 08:00–17:00</span></p>
+                    <p class="mb-2"><strong><?= get_lang('footer_hours') ?>:</strong> <span><?= get_lang('footer_hours_value') ?></span></p>
                     <p class="mb-0"><strong><i class="fas fa-envelope"></i> <?= get_lang('footer_email') ?>:</strong> <span><a href="mailto:info@namwel.com.na">info@namwel.com.na</a></span></p>
                     <p class="mb-0"><strong><i class="fas fa-globe"></i> <?= get_lang('footer_website') ?>:</strong> <span><a href="https://www.namwel.com.na">www.namwel.com.na</a></span></p>
                     <p class="mb-0"><strong><i class="fas fa-phone"></i> <?= get_lang('footer_phone') ?>:</strong> <span>+264 61 244 697</span></p>
                     <p class="mb-0"><strong><i class="fas fa-mobile"></i> <?= get_lang('footer_mobile') ?>:</strong> <span>+264 81 762 7908</span></p>
                     <p class="mb-0"><strong><i class="fab fa-whatsapp"></i> <?= get_lang('footer_whatsapp') ?>:</strong> <span>+264 81 212 7874</span></p>
-                    <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> <?= get_lang('footer_address') ?>:</strong> <span>Ara Street 7695 Dorado Valley, Windhoek, Namibia</span></p>
+                    <p class="mb-0"><strong><i class="fas fa-map-marker-alt"></i> <?= get_lang('footer_address') ?>:</strong> <span><?= get_lang('footer_address_value') ?></span></p>
                 </div>
             </div>
             <div class="footer-col">
@@ -47,7 +47,7 @@
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/1234567890?text=Hi! I'm interested in booking a safari. Can you help me plan my trip?" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/1234567890?text=Hi! I'm interested in booking a safari. Can you help me plan my trip?" class="whatsapp-float" target="_blank" aria-label="<?= get_lang('footer_whatsapp_chat') ?>">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -62,14 +62,14 @@
                 <div class="modal-icon mb-3">
                     <i class="fas fa-envelope"></i>
                 </div>
-                <h3 id="leadModalLabel">Get Your Free Safari Guide</h3>
-                <p>Enter your email to receive our comprehensive 2025 Safari Planning Guide with insider tips, best times to visit, and exclusive offers.</p>
+                <h3 id="leadModalLabel"><?= get_lang('modal_guide_title') ?></h3>
+                <p><?= get_lang('modal_guide_desc') ?></p>
                 <form onsubmit="handleModalSubmit(event)">
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <input type="email" class="form-control" placeholder="<?= get_lang('modal_email_placeholder') ?>" required>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">
-                        Send Me the Guide
+                        <?= get_lang('modal_guide_btn') ?>
                     </button>
                 </form>
             </div>
@@ -86,12 +86,12 @@
             </div>
             <div class="modal-body text-center px-4 pb-4">
                 <div class="exit-offer">
-                    <h4 id="exitModalLabel">Wait! Don't Miss Out!</h4>
-                    <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+                    <h4 id="exitModalLabel"><?= get_lang('modal_exit_title') ?></h4>
+                    <p><?= get_lang('modal_discount_desc') ?></p>
                 </div>
                 <button class="btn btn-primary w-100" data-bs-dismiss="modal"
                     onclick="document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'})">
-                    Claim My 5% Discount
+                    <?= get_lang('modal_discount_btn') ?>
                 </button>
             </div>
         </div>
@@ -107,12 +107,12 @@
             </div>
             <div class="modal-body text-center px-4 pb-4">
                 <div class="exit-offer">
-                    <h4 id="welcomeModalLabel">Hello there! We have a welcome offer for you.</h4>
-                    <p>Get <strong>5% OFF</strong> your first safari booking when you request a quote today.</p>
+                    <h4 id="welcomeModalLabel"><?= get_lang('modal_welcome_title') ?></h4>
+                    <p><?= get_lang('modal_discount_desc') ?></p>
                 </div>
                 <button class="btn btn-primary w-100" data-bs-dismiss="modal"
                     onclick="document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'})">
-                    Claim My 5% Discount
+                    <?= get_lang('modal_discount_btn') ?>
                 </button>
             </div>
         </div>

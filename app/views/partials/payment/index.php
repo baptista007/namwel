@@ -10,8 +10,8 @@ $errors = $this->page_error ?? [];
 
                 <div class="text-center mb-4">
                     <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--primary-color, #E65100);"></i>
-                    <h2 class="h4">Enter Payment Code</h2>
-                    <p class="text-muted">Your payment security code was provided by our team along with your booking confirmation.</p>
+                    <h2 class="h4"><?= get_lang('payment_enter_code_title') ?></h2>
+                    <p class="text-muted"><?= get_lang('payment_enter_code_desc') ?></p>
                 </div>
 
                 <?php if (!empty($errors)): ?>
@@ -27,13 +27,13 @@ $errors = $this->page_error ?? [];
                               method="post" novalidate>
                             <div class="mb-3">
                                 <label class="form-label fw-semibold" for="payment_code">
-                                    Payment Security Code <span class="text-danger">*</span>
+                                    <?= get_lang('payment_security_code') ?> <span class="text-danger">*</span>
                                 </label>
                                 <input type="text"
                                        id="payment_code"
                                        name="payment_code"
                                        class="form-control form-control-lg <?= !empty($errors) ? 'is-invalid' : '' ?>"
-                                       placeholder="e.g. NWTS@2610001"
+                                       placeholder="<?= get_lang('payment_security_code_example') ?>"
                                        value="<?= htmlspecialchars($_POST['payment_code'] ?? '') ?>"
                                        autocomplete="off"
                                        required>
@@ -41,7 +41,7 @@ $errors = $this->page_error ?? [];
 
                             <div class="d-grid mt-4">
                                 <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-lock me-2"></i> Proceed to Payment
+                                    <i class="fas fa-lock me-2"></i> <?= get_lang('payment_proceed') ?>
                                 </button>
                             </div>
                         </form>
@@ -50,13 +50,13 @@ $errors = $this->page_error ?? [];
 
                 <p class="text-center text-muted small mt-3">
                     <i class="fas fa-lock me-1"></i>
-                    You will be redirected to our secure payment gateway after validation.
+                    <?= get_lang('payment_redirect_notice') ?>
                 </p>
 
                 <div class="text-center mt-2">
                     <small class="text-muted">
-                        Don't have a code?
-                        <a href="<?= get_link('index/contact') ?>">Contact us</a>
+                        <?= get_lang('payment_no_code') ?>
+                        <a href="<?= get_link('index/contact') ?>"><?= get_lang('payment_contact_us') ?></a>
                     </small>
                 </div>
 

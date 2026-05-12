@@ -19,11 +19,11 @@ $page_id = Router::$page_id;
                     </a>
                     <div class="nav-dropdown">
                         <div class="nav-dropdown-inner">
-                            <a href="<?= get_link('destinations/namibia') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Namibia</a>
-                            <a href="<?= get_link('destinations/botswana') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Botswana</a>
-                            <a href="<?= get_link('destinations/zimbabwe') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Zimbabwe</a>
-                            <a href="<?= get_link('destinations/south_africa') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>South Africa</a>
-                            <a href="<?= get_link('destinations/angola') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i>Angola</a>
+                            <a href="<?= get_link('destinations/namibia') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i><?= get_lang('country_namibia') ?></a>
+                            <a href="<?= get_link('destinations/botswana') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i><?= get_lang('country_botswana') ?></a>
+                            <a href="<?= get_link('destinations/zimbabwe') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i><?= get_lang('country_zimbabwe') ?></a>
+                            <a href="<?= get_link('destinations/south_africa') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i><?= get_lang('country_south_africa') ?></a>
+                            <a href="<?= get_link('destinations/angola') ?>"><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i><?= get_lang('country_angola') ?></a>
                         </div>
                     </div>
                 </div>
@@ -90,11 +90,11 @@ $page_id = Router::$page_id;
                         <?= get_lang('nav_destinations') ?> <i class="fas fa-chevron-down nav-chevron"></i>
                     </div>
                     <div class="nav-mobile-sub">
-                        <a href="<?= get_link('destinations/angola') ?>">Angola</a>
-                        <a href="<?= get_link('destinations/botswana') ?>">Botswana</a>
-                        <a href="<?= get_link('destinations/namibia') ?>">Namibia</a>
-                        <a href="<?= get_link('destinations/south_africa') ?>">South Africa</a>
-                        <a href="<?= get_link('destinations/zimbabwe') ?>">Zimbabwe</a>
+                        <a href="<?= get_link('destinations/angola') ?>"><?= get_lang('country_angola') ?></a>
+                        <a href="<?= get_link('destinations/botswana') ?>"><?= get_lang('country_botswana') ?></a>
+                        <a href="<?= get_link('destinations/namibia') ?>"><?= get_lang('country_namibia') ?></a>
+                        <a href="<?= get_link('destinations/south_africa') ?>"><?= get_lang('country_south_africa') ?></a>
+                        <a href="<?= get_link('destinations/zimbabwe') ?>"><?= get_lang('country_zimbabwe') ?></a>
                     </div>
                 </div>
 
