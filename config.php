@@ -70,7 +70,7 @@ define("DEFAULT_PAGE_ACTION", "index"); //Default Controller Action
 
 define('DEFAULT_LAYOUT', LAYOUTS_DIR . 'main_layout.php');
 define('HOME_PAGE', 'home');
-define("DEFAULT_LANGUAGE", "english"); //Default Language
+define("DEFAULT_LANGUAGE", "en"); //Default Language
 // Page Meta Information
 define('META_AUTHOR', '');
 define('META_DESCRIPTION', '');

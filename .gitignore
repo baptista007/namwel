@@ -6,3 +6,4 @@ vendor
 *.sqlite
 nbproject
 .claude
+uploads

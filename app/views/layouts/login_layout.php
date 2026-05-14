@@ -43,12 +43,14 @@ $page_title = $this->get_page_title();
                     <span id="errorText"><?= get_lang('login_invalid_credentials') ?></span>
                 </div>
 
+                <div class="alert alert-success d-none" id="successMessage"></div>
+
                 <form name="loginForm" id="loginForm" action="<?php print_link('admin/login/?csrf_token=' . Csrf::$token); ?>" class="needs-validation form page-form" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label"><?= get_lang('form_email_address') ?></label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="admin@namweltours.com" required>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="<?= get_lang('form_email_address') ?>" required>
                         </div>
                     </div>
 
@@ -112,12 +114,13 @@ $page_title = $this->get_page_title();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
             const btn = document.querySelector('.btn-login');
 
             // Simple validation demo
             if (!username || !password) {
                 errorMessage.classList.add('show');
-                document.getElementById('errorText').textContent = '<?= get_lang('login_enter_both') ?>';
+                errorMessage.textContent = '<?= get_lang('login_enter_both') ?>';
                 return;
             }
 
@@ -134,13 +137,12 @@ $page_title = $this->get_page_title();
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    errorMessage.classList.add('show');
-                    document.getElementById('errorText').textContent = 'Login successful.';
-
+                    successMessage.classList.remove('d-none');
+                    successMessage.textContent = 'Login successful.';
                     window.location.href = data.redirectUrl;
                 } else {
                     errorMessage.classList.add('show');
-                    document.getElementById('errorText').textContent = data.message;
+                    errorMessage.textContent = data.message;
                     btn.classList.remove('loading');
                 }
             })

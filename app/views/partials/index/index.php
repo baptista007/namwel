@@ -116,6 +116,29 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
     </div>
 </section>
 
+<!-- Region Showcase -->
+<section class="region-showcase" id="region">
+    <div class="region-bg active" style="background-image: url('<?= SITE_ADDR ?>assets/images/travel/elephant.png')"></div>
+    <div class="region-bg" style="background-image: url('<?= SITE_ADDR ?>assets/images/travel/hippo.png')"></div>
+    <div class="region-bg" style="background-image: url('<?= SITE_ADDR ?>assets/images/travel/landscape.png')"></div>
+    <div class="region-overlay"></div>
+    <div class="container region-content">
+        <div class="region-text">
+            <span class="region-eyebrow"><?= get_lang('home_region_label') ?></span>
+            <h2><?= get_lang('home_region_title') ?></h2>
+            <p class="region-desc"><?= get_lang('home_region_desc') ?></p>
+            <div class="region-countries">
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_namibia') ?></span>
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_botswana') ?></span>
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_zimbabwe') ?></span>
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_south_africa') ?></span>
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_angola') ?></span>
+                <span class="region-country-tag"><span class="dot"></span><?= get_lang('country_zambia') ?></span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Packages Section -->
 <section class="packages" id="packages">
     <div class="container">
@@ -139,10 +162,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <p><?= get_lang('home_pkg1_desc') ?></p>
                     </div>
                     <div class="package-footer">
-                        <div class="package-price">
+                        <!-- <div class="package-price">
                             <span class="price-current">NAD2,499</span>
                             <span class="price-original">NAD2,999</span>
-                        </div>
+                        </div> -->
                         <div>
                             <a class="btn btn-primary package-btn" href="<?= get_link('packages/treasure_southern_africa') ?>">
                                 <?= get_lang('pkg_view_details') ?>
@@ -173,10 +196,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <span class="highlight-tag"><i class="fas fa-mountain"></i> <?= get_lang('home_tag_adventure_activities') ?></span>
                     </div>
                     <div class="package-footer">
-                        <div class="package-price">
+                        <!-- <div class="package-price">
                             <span class="price-current">NAD3,499</span>
                             <span class="price-original">NAD4,199</span>
-                        </div>
+                        </div> -->
                         <div>
                             <a class="btn btn-primary package-btn" href="<?= get_link('packages/fascinating_southern_africa') ?>">
                                 <?= get_lang('pkg_view_details') ?>
@@ -209,10 +232,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         </div>
                     </div>
                     <div class="package-footer">
-                        <div class="package-price">
+                        <!-- <div class="package-price">
                             <span class="price-current">NAD1,899</span>
                             <span class="price-original">NAD2,299</span>
-                        </div>
+                        </div> -->
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
                             <?= get_lang('pkg_get_quote') ?>
                         </a>
@@ -238,10 +261,10 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <span class="highlight-tag"><i class="fas fa-star"></i> <?= get_lang('home_pkg4_highlights_3') ?></span>
                     </div>
                     <div class="package-footer">
-                        <div class="package-price">
+                        <!-- <div class="package-price">
                             <span class="price-current">NAD2,799</span>
                             <span class="price-original">NAD3,399</span>
-                        </div>
+                        </div> -->
                         <a class="btn btn-primary package-btn" href="<?= get_link('index/quote') ?>">
                             <?= get_lang('pkg_get_quote') ?>
                         </a>
@@ -397,9 +420,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                         <label><?= get_lang('form_where') ?></label>
                         <div class="radio-group">
                             <label class="radio-option" onclick="selectRadio(this)">
-                                <input type="radio" name="destination" value="south-africa" required>
+                                <input type="radio" name="destination" value="namibia">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span><?= get_lang('country_south_africa') ?></span>
+                                <span><?= get_lang('country_namibia') ?></span>
                             </label>
                             <label class="radio-option" onclick="selectRadio(this)">
                                 <input type="radio" name="destination" value="botswana">
@@ -412,9 +435,9 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
                                 <span><?= get_lang('home_dest_zambia_zimbabwe') ?></span>
                             </label>
                             <label class="radio-option" onclick="selectRadio(this)">
-                                <input type="radio" name="destination" value="namibia">
+                                <input type="radio" name="destination" value="south-africa" required>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span><?= get_lang('country_namibia') ?></span>
+                                <span><?= get_lang('country_south_africa') ?></span>
                             </label>
                         </div>
                     </div>
@@ -606,6 +629,17 @@ $testimonials = $db->rawQuery("SELECT * FROM testimonials WHERE is_approved = 1"
         event.preventDefault();
         closeModal('lead-modal');
         openModal('success-modal');
+    }
+
+    // Region showcase background rotation
+    const regionBgs = document.querySelectorAll('.region-bg');
+    if (regionBgs.length > 1) {
+        let currentRegionBg = 0;
+        setInterval(() => {
+            regionBgs[currentRegionBg].classList.remove('active');
+            currentRegionBg = (currentRegionBg + 1) % regionBgs.length;
+            regionBgs[currentRegionBg].classList.add('active');
+        }, 5000);
     }
 
     const fadeElements = document.querySelectorAll('.fade-in');

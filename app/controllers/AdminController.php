@@ -15,8 +15,35 @@ class AdminController extends SecureController {
      * @return null
      */
     function index() {
+        $db = $this->GetModel();
+
+        $db->where("1");
+        $quote_count = $db->getValue(SqlTables::tbl_quote, "count(*)");
+
+        $db->where("1");
+        $gallery_count = $db->getValue(SqlTables::tbl_gallery_item, "count(*)");
+
+        $db->where("1");
+        $vehicle_count = $db->getValue(SqlTables::tbl_vehicle, "count(*)");
+
+        $db->where("1");
+        $testimonial_count = $db->getValue(SqlTables::tbl_testimonial, "count(*)");
+
+        $db->orderBy("id", "DESC");
+        $recent_quotes = $db->get(SqlTables::tbl_quote, [0, 6], [
+            'id', 'first_name', 'last_name', 'email', 'destinations',
+            'travelers', 'start_date', 'budget', 'status', 'created_date'
+        ]);
+
+        $data = new stdClass;
+        $data->quote_count       = intval($quote_count);
+        $data->gallery_count     = intval($gallery_count);
+        $data->vehicle_count     = intval($vehicle_count);
+        $data->testimonial_count = intval($testimonial_count);
+        $data->recent_quotes     = $recent_quotes ?? [];
+
         $this->view->page_title = "Admin Dashboard";
-        $this->render_view("admin/index.php", null, "main_layout.php");
+        $this->render_view("admin/index.php", $data, "main_layout.php");
     }
 
 

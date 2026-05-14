@@ -166,15 +166,19 @@ if (user_login_status() == true) {
             </ul>
         </nav>
 
-        <!-- <div class="sidebar-footer">
+        <div class="sidebar-footer">
+            <?php $sf_user = get_session('user_data'); ?>
             <div class="admin-profile">
-                <div class="admin-avatar">AD</div>
+                <div class="admin-avatar"><?= strtoupper(substr($sf_user['username'] ?? 'A', 0, 2)) ?></div>
                 <div class="admin-info">
-                    <h6>Admin User</h6>
-                    <small>Super Admin</small>
+                    <h6><?= htmlspecialchars($sf_user['username'] ?? 'Admin') ?></h6>
+                    <small><?= htmlspecialchars($sf_user['user_email'] ?? '') ?></small>
                 </div>
             </div>
-        </div> -->
+            <a href="<?= get_link('admin/logout') ?>" class="sidebar-logout" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
     </aside>
 
     <!-- Main Content -->
@@ -211,11 +215,39 @@ if (user_login_status() == true) {
                         <span class="badge">5</span>
                     </button>
                 </div>
-                <a href="#" class="user-dropdown">
-                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=E65100&color=fff" alt="Admin">
-                    <span>Admin</span>
-                    <i class="fas fa-chevron-down"></i>
-                </a>
+                <?php
+                    $auth_user  = get_session('user_data');
+                    $auth_name  = htmlspecialchars($auth_user['username'] ?? 'Admin');
+                    $avatar_url = 'https://ui-avatars.com/api/?name=' . urlencode($auth_name) . '&background=E65100&color=fff';
+                ?>
+                <div class="user-dropdown-wrap" style="position:relative;">
+                    <button class="user-dropdown" onclick="this.parentElement.classList.toggle('open')" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:0;">
+                        <img src="<?= $avatar_url ?>" alt="<?= $auth_name ?>">
+                        <span><?= $auth_name ?></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-dropdown-menu" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #e0e0e0;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.12);min-width:160px;z-index:9999;overflow:hidden;">
+                        <a href="<?= get_link('admin/logout') ?>" style="display:flex;align-items:center;gap:8px;padding:12px 16px;color:#c62828;text-decoration:none;font-size:.9rem;" onmouseover="this.style.background='#fef2f2'" onmouseout="this.style.background=''">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+                <script>
+                (function(){
+                    const wrap = document.currentScript.previousElementSibling;
+                    const menu = wrap.querySelector('.user-dropdown-menu');
+                    wrap.querySelector('.user-dropdown').addEventListener('click', function(){
+                        const open = wrap.classList.contains('open');
+                        menu.style.display = open ? 'block' : 'none';
+                    });
+                    document.addEventListener('click', function(e){
+                        if (!wrap.contains(e.target)) {
+                            wrap.classList.remove('open');
+                            menu.style.display = 'none';
+                        }
+                    });
+                })();
+                </script>
             </div>
         </header>
 

@@ -23,11 +23,11 @@ $show_pagination = $this->show_pagination;
             <div class="">
                 <div class="row ">
                     <div class="col-sm-3 ">
-                        <button  class="btn btn btn-primary my-1" data-toggle="modal" data-target="#new-gallery-modal">
+                        <button  class="btn btn btn-primary my-1" data-bs-toggle="modal" data-bs-target="#new-gallery-modal">
                             <i class="fa fa-plus"></i>                              
                             <?= get_lang('new_gallery_item') ?>
                         </button>
-                        <button  class="btn btn btn-primary my-1" data-toggle="modal" data-target="#new-video-link-modal">
+                        <button  class="btn btn btn-primary my-1" data-bs-toggle="modal" data-bs-target="#new-video-link-modal">
                             <i class="fa fa-plus"></i>                              
                             <?= get_lang('new_video') ?>
                         </button>
@@ -131,12 +131,7 @@ $show_pagination = $this->show_pagination;
                             <?= get_lang('image') ?> <span class="text-danger">*</span>
                         </label>
                         <div class="col-sm-8">
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="image" id="image">
-                                    <label class="custom-file-label" for="image"><?= get_lang('choose_file') ?></label>
-                                </div>
-                            </div>
+                            <input type="file" class="form-control" name="image" id="image">
                         </div>
                     </div>
                     <?php

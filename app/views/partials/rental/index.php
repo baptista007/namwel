@@ -168,7 +168,7 @@ $body_type_icons = [
                     <div class="card-body d-flex flex-column">
                         <!-- Title -->
                         <h5 class="fw-bold mb-1 notranslate">
-                            <?= htmlspecialchars($v['year'] . ' ' . $v['make'] . ' ' . $v['model']) ?>
+                            <?= htmlspecialchars($v['make'] . ' ' . $v['model']) ?>
                         </h5>
 
                         <!-- Specs row -->
@@ -205,7 +205,7 @@ $body_type_icons = [
 
                         <!-- CTA Buttons -->
                         <div class="d-grid gap-2 mt-auto">
-                            <a href="<?= get_link('index/quote') ?>?vehicle=<?= urlencode($v['make'] . ' ' . $v['model'] . ' ' . $v['year']) ?>"
+                            <a href="<?= get_link('index/quote') ?>?vehicle=<?= urlencode($v['make'] . ' ' . $v['model']) ?>"
                                class="btn btn-primary notranslate">
                                 <i class="fas fa-calendar-check me-2"></i><?= get_lang('rental_book_now') ?>
                             </a>

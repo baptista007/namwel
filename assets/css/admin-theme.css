@@ -70,7 +70,7 @@ body {
 }
 
 .sidebar-menu {
-    padding: 20px 0;
+    padding: 20px 0 90px;
 }
 
 .menu-section {
@@ -121,9 +121,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
+    padding: 16px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .admin-profile {
@@ -131,6 +134,22 @@ body {
     align-items: center;
     gap: 12px;
     color: #fff;
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-logout {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    padding: 6px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    flex-shrink: 0;
+}
+
+.sidebar-logout:hover {
+    color: #ff6b6b;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .admin-avatar {
@@ -153,6 +172,11 @@ body {
 .admin-info small {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 140px;
 }
 
 /* Main Content */
