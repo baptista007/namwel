@@ -99,7 +99,7 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-0 shadow-sm h-100">
-                    <img src="<?= SITE_ADDR ?>assets/images/travel/kalandula-falls.jpg" class="card-img-top" alt="Kalandula Falls" style="height:200px; object-fit:cover;">
+                    <img src="<?= SITE_ADDR ?>assets/images/travel/kalandula-falls.png" class="card-img-top" alt="Kalandula Falls" style="height:200px; object-fit:cover;">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-2"><i class="fas fa-water text-primary me-2"></i><?= get_lang('dest_angola_place3_title') ?></h5>
                         <p class="text-muted small mb-0"><?= get_lang('dest_angola_place3_desc') ?></p>
