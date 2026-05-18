@@ -299,9 +299,14 @@ $_gtrips = $_gdb->get(SqlTables::tbl_guaranteed_trip, [0, 3], [
                         <i class="fas fa-star me-1"></i><?= get_lang('gtrip_modal_view_all') ?>
                     </a>
 
-                    <button type="button" class="btn btn-link text-decoration-none gtrip-dismiss-link" data-bs-dismiss="modal">
-                        <?= get_lang('gtrip_modal_dismiss') ?>
-                    </button>
+                    <div class="d-flex align-items-center gap-3">
+                        <button type="button" class="btn btn-link text-decoration-none gtrip-dismiss-link" data-bs-dismiss="modal">
+                            <?= get_lang('gtrip_modal_dismiss') ?>
+                        </button>
+                        <button type="button" class="btn btn-link text-decoration-none gtrip-dismiss-link text-danger" id="gtripNoShow">
+                            <?= get_lang('gtrip_modal_no_show') ?>
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -310,15 +315,20 @@ $_gtrips = $_gdb->get(SqlTables::tbl_guaranteed_trip, [0, 3], [
 
     <script>
     (function () {
-        if (sessionStorage.getItem('gtripSeen')) return;
+        var STORAGE_KEY = 'gtripHideUntil';
+        var hideUntil = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
+        if (Date.now() < hideUntil) return;
+
         document.addEventListener('DOMContentLoaded', function () {
             var el = document.getElementById('gtripModal');
             if (!el) return;
             var modal = new bootstrap.Modal(el);
-            setTimeout(function () {
-                modal.show();
-                sessionStorage.setItem('gtripSeen', '1');
-            }, 1800);
+            setTimeout(function () { modal.show(); }, 1800);
+
+            document.getElementById('gtripNoShow').addEventListener('click', function () {
+                localStorage.setItem(STORAGE_KEY, Date.now() + 30 * 24 * 60 * 60 * 1000);
+                modal.hide();
+            });
         });
     })();
     </script>
