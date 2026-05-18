@@ -69,16 +69,6 @@ if (user_login_status() == true) {
                         'icon' => 'barcode'
                     ],
                     [
-                        'path' => 'bookings',
-                        'label' => 'Bookings',
-                        'icon' => 'calendar'
-                    ],
-                    [
-                        'path' => 'tours',
-                        'label' => 'Tours',
-                        'icon' => 'map'
-                    ],
-                    [
                         'path' => 'vehicles',
                         'label' => 'Vehicles',
                         'icon' => 'bus'
@@ -100,6 +90,11 @@ if (user_login_status() == true) {
             <ul class="nav flex-column">
                 <?php
                 $menu = [
+                    [
+                        'path' => 'guaranteedtrip',
+                        'label' => 'Guaranteed Trips',
+                        'icon' => 'star'
+                    ],
                     [
                         'path' => 'testimonial',
                         'label' => 'Reviews',
@@ -205,16 +200,6 @@ if (user_login_status() == true) {
             </div>
 
             <div class="header-right">
-                <div class="header-actions">
-                    <button class="header-btn">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge">3</span>
-                    </button>
-                    <button class="header-btn">
-                        <i class="fas fa-comments"></i>
-                        <span class="badge">5</span>
-                    </button>
-                </div>
                 <?php
                     $auth_user  = get_session('user_data');
                     $auth_name  = htmlspecialchars($auth_user['username'] ?? 'Admin');
@@ -253,6 +238,7 @@ if (user_login_status() == true) {
 
         <!-- Dashboard Content -->
         <div class="dashboard-content">
+            <div class="flash-msg-container"></div>
             <?php 
                 $is_landing_page = $page_name == "admin" && $page_action == "index";
 

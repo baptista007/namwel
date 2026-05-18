@@ -47,7 +47,7 @@
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/1234567890?text=Hi! I'm interested in booking a safari. Can you help me plan my trip?" class="whatsapp-float" target="_blank" aria-label="<?= get_lang('footer_whatsapp_chat') ?>">
+<a href="https://wa.me/264812127874?text=Hi! I'm interested in booking a safari. Can you help me plan my trip?" class="whatsapp-float" target="_blank" aria-label="<?= get_lang('footer_whatsapp_chat') ?>">
     <i class="fab fa-whatsapp"></i>
 </a>
 

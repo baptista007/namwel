@@ -42,10 +42,12 @@ $page_id = Router::$page_id;
                         </div>
                     </div>
                 </div>
-
                 <a href="<?= get_link('index/gallery') ?>"><?= get_lang('nav_gallery') ?></a>
                 <a href="<?= get_link('index/about') ?>"><?= get_lang('nav_about') ?></a>
                 <a href="<?= get_link('index/contact') ?>"><?= get_lang('nav_contact') ?></a>
+                <a href="<?= get_link('trips') ?>" class="nav-guaranteed notranslate" aria-label="<?= get_lang('gtrip_nav_label') ?>">
+                    <i class="fas fa-star me-1"></i><?= get_lang('gtrip_nav_label') ?><span class="nav-hot-badge">2026</span>
+                </a>
             </nav>
 
             <div class="header-right">
@@ -66,9 +68,6 @@ $page_id = Router::$page_id;
                 </div>
                 <div id="google_translate_element" style="display:none;"></div>
 
-                <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
                 <a class="btn btn-primary notranslate" href="<?= get_link('rental') ?>">
                     <?= get_lang('nav_car_rental') ?>
                 </a>
@@ -88,11 +87,11 @@ $page_id = Router::$page_id;
                         <?= get_lang('nav_destinations') ?> <i class="fas fa-chevron-down nav-chevron"></i>
                     </div>
                     <div class="nav-mobile-sub">
-                        <a href="<?= get_link('destinations/angola') ?>"><?= get_lang('country_angola') ?></a>
-                        <a href="<?= get_link('destinations/botswana') ?>"><?= get_lang('country_botswana') ?></a>
                         <a href="<?= get_link('destinations/namibia') ?>"><?= get_lang('country_namibia') ?></a>
-                        <a href="<?= get_link('destinations/south_africa') ?>"><?= get_lang('country_south_africa') ?></a>
+                        <a href="<?= get_link('destinations/botswana') ?>"><?= get_lang('country_botswana') ?></a>
                         <a href="<?= get_link('destinations/zimbabwe') ?>"><?= get_lang('country_zimbabwe') ?></a>
+                        <a href="<?= get_link('destinations/south_africa') ?>"><?= get_lang('country_south_africa') ?></a>
+                        <a href="<?= get_link('destinations/angola') ?>"><?= get_lang('country_angola') ?></a>
                     </div>
                 </div>
 
@@ -108,6 +107,9 @@ $page_id = Router::$page_id;
                     </div>
                 </div>
 
+                <a href="<?= get_link('trips') ?>" class="nav-mobile-top nav-mobile-guaranteed notranslate">
+                    <i class="fas fa-star me-2"></i><?= get_lang('gtrip_nav_label') ?> <span class="nav-hot-badge ms-1">2026</span>
+                </a>
                 <a href="<?= get_link('index/gallery') ?>" class="nav-mobile-top notranslate"><?= get_lang('nav_gallery') ?></a>
                 <a href="<?= get_link('index/about') ?>" class="nav-mobile-top notranslate"><?= get_lang('nav_about') ?></a>
                 <a href="<?= get_link('index/contact') ?>" class="nav-mobile-top notranslate"><?= get_lang('nav_contact') ?></a>
